@@ -115,6 +115,7 @@ app.get('/catchcode', function(request, response) {
 		response.writeHead(302, {"Location": authorizationEndpoint + fullUrl});
 		response.end();
 	} else {
+		response.write("Making call to get access token");
 		getAccessToken.getTokenResponseWithCode(client_id, client_secret, request.query.code, fullUrl, function(error, tokenResponseData) {
 			if (error) {
 				response.write("Error: " + error);
