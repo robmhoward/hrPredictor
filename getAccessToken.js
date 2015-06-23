@@ -15,7 +15,7 @@ function makeTokenRequest(requestBody, callback) {
     //client_id={client_id}&redirect_uri={redirect_uri}&client_secret={client_secret}&refresh_token={refresh_token}&grant_type=refresh_token
     hostname: 'login.live.com',
     port: 443,
-    path: 'oauth20_token.srf',
+    path: '/oauth20_token.srf',
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded'
