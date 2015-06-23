@@ -121,6 +121,7 @@ app.get('/catchcode', function(request, response) {
 				response.end();
 			} else {
 				response.write("Success: " + tokenResponseData);
+				response.end();
 			}
 		});
 		// getAccessToken.getTokenResponseWithCode("https://" + graph_host + "/", client_id, client_secret, request.query.code, fullUrl, function(error, tokenResponseData) {
@@ -135,8 +136,8 @@ app.get('/catchcode', function(request, response) {
 		// 	response.end();
 		// 	//response.end("Got an id token! " + JSON.stringify(idToken, null, 2));			
 		// });
-		response.write(request.query.code);
-		response.end();
+//		response.write(request.query.code);
+//		response.end();
 
 	}
 });
