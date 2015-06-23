@@ -1,10 +1,10 @@
 var https = require('https');
 
 module.exports = {
-  getTokenResponseWithRefreshToken: function (resource, clientId, clientSecret, refreshToken, redirectUri, callback) {
+  getTokenResponseWithRefreshToken: function (clientId, clientSecret, refreshToken, redirectUri, callback) {
     makeTokenRequest('grant_type=refresh_token&redirect_uri=' + encodeURIComponent(redirectUri) + '&client_id=' + clientId + '&client_secret=' + encodeURIComponent(clientSecret) + '&refresh_token=' + refreshToken, callback);
   },
-  getTokenResponseWithCode: function (resource, clientId, clientSecret, code, redirectUri, callback) {
+  getTokenResponseWithCode: function (clientId, clientSecret, code, redirectUri, callback) {
     makeTokenRequest('grant_type=authorization_code&redirect_uri=' + encodeURIComponent(redirectUri) + '&client_id=' + clientId + '&client_secret=' + encodeURIComponent(clientSecret) + '&code=' + code, callback);
   }
 }
@@ -28,7 +28,7 @@ function makeTokenRequest(requestBody, callback) {
       tokenResponseData += data.toString();
     });
     tokenResponse.on("end", function() {
-      callback(null, JSON.parse(tokenResponseData));
+      callback(null, tokenResponseData);
     });
   });
   tokenRequest.write(requestBody);
