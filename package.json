@@ -1,0 +1,19 @@
+{
+  "name": "hrPredictor",
+  "version": "1.0.0",
+  "description": "Service that predicts heart rate based on historical heart rate, calendar, and exercise data",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robmhoward/hrPredictor.git"
+  },
+  "author": "Rob Howard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robmhoward/hrPredictor/issues"
+  },
+  "homepage": "https://github.com/robmhoward/hrPredictor"
+}
