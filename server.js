@@ -2,7 +2,7 @@ var port = process.env.PORT || 1945;
 var express = require('express');
 var https = require('https');
 // var decodejwt = require('./decodejwt.js');
-// var getAccessToken = require('./getAccessToken.js');
+var getAccessToken = require('./getAccessToken.js');
 var cookieParser = require('cookie-parser')
 
 var tokenCache = {};
@@ -115,6 +115,14 @@ app.get('/catchcode', function(request, response) {
 		response.writeHead(302, {"Location": authorizationEndpoint + fullUrl});
 		response.end();
 	} else {
+		getAccessToken.getTokenResponseWithCode(client_id, client_secret, request.query.code, fullUrl, function(error, tokenResponseData) {
+			if (error) {
+				response.write("Error: " + error);
+				response.end();
+			} else {
+				response.write("Success: " + tokenResponseData);
+			}
+		});
 		// getAccessToken.getTokenResponseWithCode("https://" + graph_host + "/", client_id, client_secret, request.query.code, fullUrl, function(error, tokenResponseData) {
 		// 	var idToken = decodejwt.decodeJwt(tokenResponseData.id_token).payload;
 		// 	tokenCache[idToken.oid] = { 
