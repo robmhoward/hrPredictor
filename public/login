@@ -1,0 +1,11 @@
+<html>
+	
+	<head>
+		<title>Heart Rate Predictor - Login</title>
+	</head>
+		
+	<body>
+		<a href="https://login.live.com/oauth20_authorize.srf?client_id=000000004415354E&scope=mshealth.ReadProfile%20mshealth.ReadActivityHistory%20offline_access&response_type=code&redirect_uri=https://hrpredictor.azurewebsites.net/catchCode">Login</a>
+	</body>
+	
+</html>
