@@ -17,22 +17,24 @@ var authorizationEndpoint = "https://login.live.com/oauth20_authorize.srf?client
 app.use('/', express.static(__dirname + "/public"));
 app.use(cookieParser());
 
-// app.get('/', function(request, response) {
-// 	var user = request.cookies.currentUser;
-// 	if (user && user.oid && tokenCache[user.oid]) {
-// 		//response.writeHead(200, {"Content-Type": "text/plain"});
-// 		//response.write("Hello " + user.given_name + " " + user.family_name + "!");
-// 		//response.write("OID: " + user.oid);
-// 		if (tokenCache[user.oid]) {
-// 			//response.write("Access Token: " + tokenCache[user.oid].accessToken);	
-// 			response.writeHead(302, {"Location": "pickedItem.html"});
-// 		}
-// 	} else {
-// 		var fullUrl = request.protocol + '://' + request.get('host') + '/catchcode';
-// 		response.writeHead(302, {"Location": fullUrl});
-// 	}
-// 	response.end();
-// });
+app.get('/', function(request, response) {
+	var user = request.cookies.currentUser;
+	if (user && user.oid && tokenCache[user.oid]) {
+		//response.writeHead(200, {"Content-Type": "text/plain"});
+		//response.write("Hello " + user.given_name + " " + user.family_name + "!");
+		//response.write("OID: " + user.oid);
+		if (tokenCache[user.oid]) {
+			//response.write("Access Token: " + tokenCache[user.oid].accessToken);	
+			response.writeHead(302, {"Location": "pickedItem.html"});
+		}
+	} else {
+		response.writeHead(200, {"Content-Type": "text/plain"});
+		response.write("No user");
+		// var fullUrl = request.protocol + '://' + request.get('host') + '/catchcode';
+		// response.writeHead(302, {"Location": fullUrl});
+	}
+	response.end();
+});
 
 // app.get('/groupChoices', function(request, response) {
 // 	var currentUser = tokenCache[request.cookies.currentUser.oid];
