@@ -12,11 +12,9 @@ module.exports = {
     return basicUrl; 
   },
   getTokenResponseWithRefreshToken: function (authConfig, refreshToken, redirectUri, callback) {
-    //redirectUri = "https://hrpredictor.azurewebsites.net/catchcode";
     makeTokenRequest(authConfig, constructBaseTokenRequestBody(authConfig, redirectUri) + "&grant_type=refresh_token&refresh_token=" + refreshToken, callback);
   },
   getTokenResponseWithCode: function (authConfig, code, redirectUri, callback) {
-    //redirectUri = "https://hrpredictor.azurewebsites.net/catchcode";
     makeTokenRequest(authConfig, constructBaseTokenRequestBody(authConfig, redirectUri) + "&grant_type=authorization_code&code=" + code, callback);
   }
 };

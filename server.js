@@ -34,7 +34,7 @@ app.use('/', express.static(__dirname + "/public"));
 app.use(cookieParser());
 
 app.get('/', function(request, response) {
-	var user = request.cookies.currentUser;
+	var user = request.cookies.currentAadUser;
 	if (user && user.oid && tokenCache[user.oid]) {
 		response.writeHead(200, {"Content-Type": "text/plain"});
 		response.write("Hello " + user.given_name + " " + user.family_name + "!");
@@ -138,19 +138,14 @@ app.get('/catchCode/msa', function(request, response) {
 				response.write("Error: " + error);
 				response.end();
 			} else {
-				response.writeHead(200, {"Content-Type": "text/plain"});
-				response.write("Success: " + tokenResponseData);
+				var tokenResponse = JSON.parse(tokenResponseData);
+				tokenCache[tokenResponse.user_id] = { 
+					accessToken: tokenResponse.access_token,
+					refreshToken: tokenResponse.refresh_token
+				};
+				response.cookie('currentMsaUser', tokenResponse.user_id, { maxAge: 900000, httpOnly: true });
+				response.writeHead(302, {"Location": request.protocol + '://' + request.get('host') + '/'});
 				response.end();
-				// var tokenReponse = JSON.parse(tokenResponseData);
-				// var idToken = decodejwt.decodeJwt(tokenReponse.id_token).payload;
-				// tokenCache[idToken.oid] = { 
-				// 	accessToken: tokenReponse.access_token,
-				// 	refreshToken: tokenReponse.refresh_token,
-				// 	idToken: idToken 
-				// };
-				// response.cookie('currentUser', idToken, { maxAge: 900000, httpOnly: true });
-				// response.writeHead(302, {"Location": request.protocol + '://' + request.get('host') + '/'});
-				// response.end();
 			}
 		});
 	}
@@ -169,14 +164,14 @@ app.get('/catchCode/aad', function(request, response) {
 				response.write("Error: " + error);
 				response.end();
 			} else {
-				var tokenReponse = JSON.parse(tokenResponseData);
-				var idToken = decodejwt.decodeJwt(tokenReponse.id_token).payload;
+				var tokenResponse = JSON.parse(tokenResponseData);
+				var idToken = decodejwt.decodeJwt(tokenResponse.id_token).payload;
 				tokenCache[idToken.oid] = { 
-					accessToken: tokenReponse.access_token,
-					refreshToken: tokenReponse.refresh_token,
+					accessToken: tokenResponse.access_token,
+					refreshToken: tokenResponse.refresh_token,
 					idToken: idToken 
 				};
-				response.cookie('currentUser', idToken, { maxAge: 900000, httpOnly: true });
+				response.cookie('currentAadUser', idToken, { maxAge: 900000, httpOnly: true });
 				response.writeHead(302, {"Location": request.protocol + '://' + request.get('host') + '/'});
 				response.end();
 			}
