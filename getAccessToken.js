@@ -4,7 +4,7 @@ module.exports = {
   getAuthorizationEndpointUrl: function (authConfig, redirectUri, scopes, resource) {
     var basicUrl = "https://" + authConfig.stsHostName + authConfig.stsAuthorizationPath + "?client_id=" + authConfig.clientId + "&response_type=code&redirect_uri=" + redirectUri; 
     if (scopes) {
-      basicUrl += "&scopes=" + scopes;
+      basicUrl += "&scope=" + scopes;
     }
     if (resource) {
       basicUrl += "&resource=" + resource;
