@@ -1,7 +1,7 @@
 var port = process.env.PORT || 1945;
 var express = require('express');
 var https = require('https');
-// var decodejwt = require('./decodejwt.js');
+var decodejwt = require('./decodejwt.js');
 var getAccessToken = require('./getAccessToken.js');
 var cookieParser = require('cookie-parser')
 
@@ -9,10 +9,24 @@ var tokenCache = {};
 
 var app = express();
 
-var client_id = "000000004415354E";
-var client_secret = "zgDE2DuPotxa4AJNxelJwAarftiwasm3";
+var authConfig = {
+	AAD: {
+		stsTokenPath: "/common/oauth2/token",
+		stsAuthorizationPath: "/common/oauth2/authorize",
+		stsHostName: "login.microsoftonline.com",
+		clientId: "f531c26a-4d16-44b9-80cf-aa49d7394fbb",
+		clientSecret: "%2BoX1vOIHrkkHxYcuvclxi8sHsFn5uEf4bhaGhNXqJqI%3D" //already url encoded
+	},
+	MSA: {
+		stsTokenPath: "/oauth20_token.srf",
+		stsAuthorizationPath: "/oauth20_authorize.srf",
+		stsHostName: "login.live.com",
+		clientId: "000000004415354E",
+		clientSecret: "zgDE2DuPotxa4AJNxelJwAarftiwasm3"
+	}
+}
 
-var authorizationEndpoint = "https://login.live.com/oauth20_authorize.srf?client_id=" + client_id + "&scope=mshealth.ReadProfile%20mshealth.ReadActivityHistory%20offline_access&response_type=code&redirect_uri=";
+var currentAuthConfig = authConfig["MSA"];
 
 app.use('/', express.static(__dirname + "/public"));
 app.use(cookieParser());
@@ -20,13 +34,13 @@ app.use(cookieParser());
 app.get('/', function(request, response) {
 	var user = request.cookies.currentUser;
 	if (user && user.oid && tokenCache[user.oid]) {
-		//response.writeHead(200, {"Content-Type": "text/plain"});
-		//response.write("Hello " + user.given_name + " " + user.family_name + "!");
-		//response.write("OID: " + user.oid);
-		if (tokenCache[user.oid]) {
-			//response.write("Access Token: " + tokenCache[user.oid].accessToken);	
-			response.writeHead(302, {"Location": "pickedItem.html"});
-		}
+		response.writeHead(200, {"Content-Type": "text/plain"});
+		response.write("Hello " + user.given_name + " " + user.family_name + "!");
+		response.write("OID: " + user.oid);
+		// if (tokenCache[user.oid]) {
+		// 	//response.write("Access Token: " + tokenCache[user.oid].accessToken);	
+		// 	response.writeHead(302, {"Location": "pickedItem.html"});
+		// }
 	} else {
 		response.writeHead(200, {"Content-Type": "text/plain"});
 		response.write("No user");
@@ -109,38 +123,60 @@ app.get('/', function(request, response) {
 // });
 
 
-app.get('/catchcode', function(request, response) {
-	var fullUrl = 'https://' + request.get('host') + request.path;
+app.get('/catchCode/msa', function(request, response) {
+	var redirectUrl = request.protocol + '://' + request.get('host') + request.path;
 	if (!request.query.code) {
-		response.writeHead(302, {"Location": authorizationEndpoint + fullUrl});
+		response.writeHead(302, {"Location": getAccessToken.getAuthorizationEndpointUrl(authConfig.MSA, redirectUrl, "mshealth.ReadProfile%20mshealth.ReadActivityHistory%20offline_access")});
 		response.end();
 	} else {
-		response.writeHead(200, {"Content-Type": "text/plain"});
-		response.write("Making call to get access token");
-		getAccessToken.getTokenResponseWithCode(client_id, client_secret, request.query.code, fullUrl, function(error, tokenResponseData) {
+		getAccessToken.getTokenResponseWithCode(authConfig.MSA, request.query.code, redirectUrl, function(error, tokenResponseData) {
 			if (error) {
+				response.writeHead(200, {"Content-Type": "text/plain"});
 				response.write("Error: " + error);
 				response.end();
 			} else {
+				response.writeHead(200, {"Content-Type": "text/plain"});
 				response.write("Success: " + tokenResponseData);
+				response.end();
+				// var tokenReponse = JSON.parse(tokenResponseData);
+				// var idToken = decodejwt.decodeJwt(tokenReponse.id_token).payload;
+				// tokenCache[idToken.oid] = { 
+				// 	accessToken: tokenReponse.access_token,
+				// 	refreshToken: tokenReponse.refresh_token,
+				// 	idToken: idToken 
+				// };
+				// response.cookie('currentUser', idToken, { maxAge: 900000, httpOnly: true });
+				// response.writeHead(302, {"Location": request.protocol + '://' + request.get('host') + '/'});
+				// response.end();
+			}
+		});
+	}
+});
+
+app.get('/catchCode/aad', function(request, response) {
+	var redirectUrl = request.protocol + '://' + request.get('host') + request.path;
+	if (!request.query.code) {
+		response.writeHead(302, {"Location": getAccessToken.getAuthorizationEndpointUrl(authConfig.AAD, redirectUrl, null, "https://outlook.office365.com")});
+		response.end();
+	} else {
+		getAccessToken.getTokenResponseWithCode(authConfig.AAD, request.query.code, redirectUrl, function(error, tokenResponseData) {
+			if (error) {
+				response.writeHead(200, {"Content-Type": "text/plain"});
+				response.write("Error: " + error);
+				response.end();
+			} else {
+				var tokenReponse = JSON.parse(tokenResponseData);
+				var idToken = decodejwt.decodeJwt(tokenReponse.id_token).payload;
+				tokenCache[idToken.oid] = { 
+					accessToken: tokenReponse.access_token,
+					refreshToken: tokenReponse.refresh_token,
+					idToken: idToken 
+				};
+				response.cookie('currentUser', idToken, { maxAge: 900000, httpOnly: true });
+				response.writeHead(302, {"Location": request.protocol + '://' + request.get('host') + '/'});
 				response.end();
 			}
 		});
-		// getAccessToken.getTokenResponseWithCode("https://" + graph_host + "/", client_id, client_secret, request.query.code, fullUrl, function(error, tokenResponseData) {
-		// 	var idToken = decodejwt.decodeJwt(tokenResponseData.id_token).payload;
-		// 	tokenCache[idToken.oid] = { 
-		// 		accessToken: tokenResponseData.access_token,
-		// 		refreshToken: tokenResponseData.refresh_token,
-		// 		idToken: idToken 
-		// 	}
-		// 	response.cookie('currentUser', idToken, { maxAge: 900000, httpOnly: true });
-		// 	response.writeHead(302, {"Location": request.protocol + '://' + request.get('host') + '/'});
-		// 	response.end();
-		// 	//response.end("Got an id token! " + JSON.stringify(idToken, null, 2));			
-		// });
-//		response.write(request.query.code);
-//		response.end();
-
 	}
 });
 

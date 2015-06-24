@@ -1,26 +1,43 @@
 var https = require('https');
 
 module.exports = {
-  getTokenResponseWithRefreshToken: function (clientId, clientSecret, refreshToken, redirectUri, callback) {
-    makeTokenRequest('grant_type=refresh_token&redirect_uri=' + encodeURIComponent(redirectUri) + '&client_id=' + clientId + '&client_secret=' + encodeURIComponent(clientSecret) + '&refresh_token=' + refreshToken, callback);
+  getAuthorizationEndpointUrl: function (authConfig, redirectUri, scopes, resource) {
+    var basicUrl = "https://" + authConfig.stsHostName + authConfig.stsAuthorizationPath + "?client_id=" + authConfig.clientId + "&response_type=code&redirect_uri=" + redirectUri; 
+    if (scopes) {
+      basicUrl += "&scopes=" + scopes;
+    }
+    if (resource) {
+      basicUrl += "&resource=" + resource;
+    }
+    return basicUrl; 
   },
-  getTokenResponseWithCode: function (clientId, clientSecret, code, redirectUri, callback) {
-    makeTokenRequest('grant_type=authorization_code&redirect_uri=' + encodeURIComponent(redirectUri) + '&client_id=' + clientId + '&client_secret=' + encodeURIComponent(clientSecret) + '&code=' + code, callback);
+  getTokenResponseWithRefreshToken: function (authConfig, refreshToken, redirectUri, callback) {
+    //redirectUri = "https://hrpredictor.azurewebsites.net/catchcode";
+    makeTokenRequest(authConfig, constructBaseTokenRequestBody(authConfig, redirectUri) + "&grant_type=refresh_token&refresh_token=" + refreshToken, callback);
+  },
+  getTokenResponseWithCode: function (authConfig, code, redirectUri, callback) {
+    //redirectUri = "https://hrpredictor.azurewebsites.net/catchcode";
+    makeTokenRequest(authConfig, constructBaseTokenRequestBody(authConfig, redirectUri) + "&grant_type=authorization_code&code=" + code, callback);
   }
+};
+
+function constructBaseTokenRequestBody(authConfig, redirectUri) {
+  return "redirect_uri=" + redirectUri + "&client_id=" + authConfig.clientId + "&client_secret=" + authConfig.clientSecret;
 }
 
-function makeTokenRequest(requestBody, callback) {
-  var tokenResponseData = "";
-  var tokenRequest = https.request({
-    //client_id={client_id}&redirect_uri={redirect_uri}&client_secret={client_secret}&refresh_token={refresh_token}&grant_type=refresh_token
-    hostname: 'login.live.com',
+function makeTokenRequest(authConfig, requestBody, callback) {
+  var options = {
+    hostname: authConfig.stsHostName,
+    path: authConfig.stsTokenPath,
+    method: "POST",
     port: 443,
-    path: '/oauth20_token.srf',
-    method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded'
     }
-  }, function(tokenResponse) {
+  };
+  console.log(requestBody);
+  var tokenResponseData = "";
+  var tokenRequest = https.request(options, function(tokenResponse) {
     tokenResponse.on("error", function(error) {
       console.log(error.message);
     });
