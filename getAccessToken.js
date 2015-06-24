@@ -32,7 +32,8 @@ function makeTokenRequest(authConfig, requestBody, callback) {
     method: "POST",
     port: 443,
     headers: {
-      'Content-Type': 'application/x-www-form-urlencoded'
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Content-Length': requestBody.length
     }
   };
   console.log(requestBody);
