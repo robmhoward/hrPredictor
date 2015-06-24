@@ -34,21 +34,15 @@ app.use('/', express.static(__dirname + "/public"));
 app.use(cookieParser());
 
 app.get('/', function(request, response) {
-	var user = request.cookies.currentAadUser;
-	if (user && user.oid && tokenCache[user.oid]) {
-		response.writeHead(200, {"Content-Type": "text/plain"});
-		response.write("Hello " + user.given_name + " " + user.family_name + "!");
-		response.write("OID: " + user.oid);
-		// if (tokenCache[user.oid]) {
-		// 	//response.write("Access Token: " + tokenCache[user.oid].accessToken);	
-		// 	response.writeHead(302, {"Location": "pickedItem.html"});
-		// }
-	} else {
-		response.writeHead(200, {"Content-Type": "text/plain"});
-		response.write("No user");
-		// var fullUrl = request.protocol + '://' + request.get('host') + '/catchcode';
-		// response.writeHead(302, {"Location": fullUrl});
-	}
+	response.writeHead(200, {"Content-Type": "text/plain"});
+	var aadUser = request.cookies.currentAadUser;
+	var msaUserId = request.cookies.currentMsaUserId;
+	if (aadUser && aadUser.oid && tokenCache[aadUser.oid]) {
+		response.write("AAD User " + aadUser.given_name + " " + aadUser.family_name + "!/r/n");
+	} 
+	if (msaUserId) {
+		response.write("MSA User ID " + msaUserId + "!/r/n");
+	} 
 	response.end();
 });
 
@@ -143,7 +137,7 @@ app.get('/catchCode/msa', function(request, response) {
 					accessToken: tokenResponse.access_token,
 					refreshToken: tokenResponse.refresh_token
 				};
-				response.cookie('currentMsaUser', tokenResponse.user_id, { maxAge: 900000, httpOnly: true });
+				response.cookie('currentMsaUserId', tokenResponse.user_id, { maxAge: 900000, httpOnly: true });
 				response.writeHead(302, {"Location": request.protocol + '://' + request.get('host') + '/'});
 				response.end();
 			}
