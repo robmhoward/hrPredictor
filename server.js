@@ -8,6 +8,8 @@ var cookieParser = require('cookie-parser')
 var tokenCache = {};
 
 var app = express();
+app.enable('trust proxy');
+
 
 var authConfig = {
 	AAD: {
@@ -125,7 +127,7 @@ app.get('/', function(request, response) {
 
 app.get('/catchCode/msa', function(request, response) {
 	var protocol = request.connection.encrypted ? "https" : "http";
-	var redirectUrl = protocol + '://' + request.get('host') + request.path;
+	var redirectUrl = request.protocol + '://' + request.get('host') + request.path;
 	if (!request.query.code) {
 		response.writeHead(302, {"Location": getAccessToken.getAuthorizationEndpointUrl(authConfig.MSA, redirectUrl, "mshealth.ReadProfile%20mshealth.ReadActivityHistory%20offline_access")});
 		response.end();
@@ -156,7 +158,7 @@ app.get('/catchCode/msa', function(request, response) {
 
 app.get('/catchCode/aad', function(request, response) {
 	var protocol = request.connection.encrypted ? "https" : "http";
-	var redirectUrl = protocol + '://' + request.get('host') + request.path;
+	var redirectUrl = request.protocol + '://' + request.get('host') + request.path;
 	if (!request.query.code) {
 		response.writeHead(302, {"Location": getAccessToken.getAuthorizationEndpointUrl(authConfig.AAD, redirectUrl, null, "https://outlook.office365.com")});
 		response.end();
