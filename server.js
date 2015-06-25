@@ -39,7 +39,7 @@ app.get('/', function(request, response) {
 	if (aadUser && aadUser.oid && tokenCache[aadUser.oid]) {
 		response.write("AAD User " + aadUser.given_name + " " + aadUser.family_name + "!/r/n");
 	} 
-	if (msaUserId) {
+	if (msaUserId && tokenCache[msaUserId]) {
 		response.write("MSA User ID " + msaUserId + "!/r/n");
 	} 
 	response.end();
@@ -139,6 +139,10 @@ function mergeHealthAndCalendarData(healthData, calendarData) {
 }
 
 function overlap(startDateOne, endDateOne, startDateTwo, endDateTwo) {
+	startDateOne.replace('+00:00','Z');
+	endDateOne.replace('+00:00','Z');
+	startDateTwo.replace('+00:00','Z');
+	endDateTwo.replace('+00:00','Z');
 	if (startDateOne >= startDateTwo && startDateOne < endDateTwo) return true;
 	if (endDateOne <= endDateTwo && endDateOne > startDateTwo) return true;
 	if (startDateOne <= startDateTwo && endDateOne >= endDateTwo) return true;
