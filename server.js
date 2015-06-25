@@ -45,6 +45,21 @@ app.get('/', function(request, response) {
 	response.end();
 });
 
+app.get('/api/me', function(request, response) {
+	response.writeHead(200, {"Content-Type": "application/json"});
+	var aadUser = request.cookies.currentAadUser;
+	var msaUserId = request.cookies.currentMsaUserId;
+	var me = {};
+	if (aadUser && aadUser.oid && tokenCache[aadUser.oid]) {
+		me.aadUser = aadUser;
+	} 
+	if (msaUserId && tokenCache[msaUserId]) {
+		me.msaUserId = msaUserId;
+	} 
+	response.send(me);
+	response.end();
+});
+
 app.get('/api/me/historicalData', function(request, response) {
 	
 	var startDate = "2015-06-23T00:00:00Z";
