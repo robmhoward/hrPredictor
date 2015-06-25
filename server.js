@@ -8,8 +8,6 @@ var cookieParser = require('cookie-parser')
 var tokenCache = {};
 
 var app = express();
-app.enable('trust proxy');
-
 
 var authConfig = {
 	AAD: {
@@ -26,9 +24,9 @@ var authConfig = {
 		clientId: "000000004415354E",
 		clientSecret: "zgDE2DuPotxa4AJNxelJwAarftiwasm3"
 	}
-}
+};
 
-var currentAuthConfig = authConfig["MSA"];
+var msHealthHostName = "apibeta.microsofthealth.net";
 
 app.use('/', express.static(__dirname + "/public"));
 app.use(cookieParser());
@@ -44,6 +42,38 @@ app.get('/', function(request, response) {
 		response.write("MSA User ID " + msaUserId + "!/r/n");
 	} 
 	response.end();
+});
+
+app.get('/api/me/historicalData', function(request, response) {
+	var msaUserId = request.cookies.currentMsaUserId;
+	if (msaUserId && tokenCache[msaUserId]) {
+		var healthResponseData = "";
+		var healthRequest = https.request({
+			hostname: msHealthHostName,
+			port: 443,
+			path: '/v1/me/summaries/hourly?startTime=2015-06-23T00:00:00Z',
+			method: 'GET',
+			headers: {
+				'Accept': 'application/json',
+				'Authorization': 'Bearer ' + tokenCache[msaUserId].accessToken
+			}
+		}, function(healthResponse) {
+			healthResponse.on("error", function(error) {
+				console.log(error.message);
+			});
+			healthResponse.on("data", function(data) {
+				healthResponseData += data.toString();
+			});
+			healthResponse.on("end", function() {
+				response.send(JSON.parse(healthResponseData));
+				response.end();
+			});
+		});
+		healthRequest.end();
+	} else {
+		response.writeHead(500);
+		response.end();	
+	}
 });
 
 // app.get('/groupChoices', function(request, response) {
