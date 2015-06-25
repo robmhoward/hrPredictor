@@ -4,6 +4,9 @@ var https = require('https');
 var decodejwt = require('./decodejwt.js');
 var getAccessToken = require('./getAccessToken.js');
 var cookieParser = require('cookie-parser')
+var mongo = require('mongodb');
+var monk = require('monk');
+var db = monk('mongodb://HRPredictMongo:jwznStM5KoSg8LWr1NkEwKY9oUkEzxWNuH7a8YxzJFY-@ds036648.mongolab.com:36648/HRPredictMongo');
 
 var tokenCache = {};
 
@@ -32,6 +35,11 @@ var calendarHostName = "outlook.office365.com";
 app.use('/', express.static(__dirname + "/public"));
 app.use(cookieParser());
 
+app.use(function(req,res,next){
+    req.db = db;
+    next();
+});
+
 app.get('/', function(request, response) {
 	response.writeHead(200, {"Content-Type": "text/plain"});
 	var aadUser = request.cookies.currentAadUser;
@@ -46,25 +54,36 @@ app.get('/', function(request, response) {
 });
 
 app.get('/api/me', function(request, response) {
-	var aadUser = request.cookies.currentAadUser;
-	var msaUserId = request.cookies.currentMsaUserId;
 	var me = {
 		currentTime: new Date()
 	};
-	if (aadUser && aadUser.oid && tokenCache[aadUser.oid]) {
-		me.aadUser = aadUser;
-	} 
-	if (msaUserId && tokenCache[msaUserId]) {
-		me.msaUserId = msaUserId;
-	} 
-	response.send(me);
-	response.end();
+	
+	var userId = request.cookies.userId;
+	
+	if (userId) {
+		var db = request.db;
+		var userCollection = db.get("usercollection");
+		userCollection.findById(userId)
+			.success(function (user) {
+				console.log("Found user in /api/me lookup");
+				me.aadUser = user.aadTokens.idToken;
+				me.msaUserId = user.msaUserId;
+				response.send(me);
+				response.end();
+			})
+			.error(function (err) {
+				console.log("Error looking up user in /api/me lookup: " + err);
+			});
+	} else {
+		response.send(me);
+		response.end();
+	}
 });
 
 app.get('/api/me/historicalData', function(request, response) {
 	
-	var startDate = "2015-06-23T00:00:00Z";
-	var endDate = "2015-06-24T00:00:00Z";
+	var startDate = request.query.start;
+	var endDate = request.query.end;
 	
 	var msaUserId = request.cookies.currentMsaUserId;
 	var aadUser = request.cookies.currentAadUser;
@@ -165,132 +184,122 @@ function overlap(startDateOne, endDateOne, startDateTwo, endDateTwo) {
 	return false;
 }
 
-// app.get('/groupChoices', function(request, response) {
-// 	var currentUser = tokenCache[request.cookies.currentUser.oid];
-// 	if (currentUser && currentUser.accessToken) {
-// 		var groupResponseData = "";
-// 		var groupRequest = https.request({
-// 			hostname: graph_host,
-// 			port: 443,
-// 			path: '/' + request.cookies.currentUser.tid + '/users/' + request.cookies.currentUser.upn + '/memberOf?api-version=1.5',
-// 			method: 'GET',
-// 			headers: {
-// 				'Accept': 'application/json',
-// 				'Authorization': 'Bearer ' + currentUser.accessToken
-// 			}
-// 		}, function(groupResponse) {
-// 			groupResponse.on("error", function(error) {
-// 				console.log(error.message);
-// 			});
-// 			groupResponse.on("data", function(data) {
-// 				groupResponseData += data.toString();
-// 			});
-// 			groupResponse.on("end", function() {
-// 				response.send(JSON.parse(groupResponseData));
-// 				response.end()
-// 			});
-// 		});
-// 		groupRequest.end();
-// 	} else {
-// 		response.writeHead(500);
-// 		response.end();
-// 	}
-// });
+function catchCode(request, response, authConfig, scopes, resource, documentCreationFunction, documentFindFunction) {
+	var cookieUserId = request.cookies.userId;
+	var db = request.db;
+	var userCollection = db.get('usercollection');
+	var protocol = port == 1945 ? "http" : "https";
 
-// app.get('/siteChoices', function(request, response) {
-// 	var search_host = 'msft-my.spoppe.com';
-// 	var currentUser = tokenCache[request.cookies.currentUser.oid];
-// 	var querytext = "contentclass:STS_Site";
-// 	if (request.query.querytext) {
-// 		querytext = request.query.querytext + "%20AND%20contentclass:STS_Site";
-// 	}
-// 	getAccessToken.getTokenResponseWithRefreshToken("https://" + search_host + "/", client_id, client_secret, currentUser.refreshToken, "", function(error, tokenResponseData) {
-// 		if (!error) {
-// 			var siteResponseData = "";
-// 			var siteRequest = https.request({
-// 				hostname: search_host,
-// 				port: 443,
-// 				path: "/_api/search/query?querytext='" + querytext + "'",
-// 				method: 'GET',
-// 				headers: {
-// 					'Accept': 'application/json',
-// 					'Authorization': 'Bearer ' + tokenResponseData.access_token
-// 				}
-// 			}, function(siteResponse) {
-// 				siteResponse.on("error", function(error) {
-// 					console.log(error.message);
-// 				});
-// 				siteResponse.on("data", function(data) {
-// 					siteResponseData += data.toString();
-// 				});
-// 				siteResponse.on("end", function() {
-// 					response.send(JSON.parse(siteResponseData));
-// 					response.end()
-// 				});
-// 			});
-// 			siteRequest.end();
-// 		} else {
-// 			response.writeHead(500);
-// 			response.end();
-// 		}
-// 	});
+	function updateUserInfo(userId, documentObject) {
+		userCollection.updateById(userId, documentObject)
+			.error(function (err) { console.log("Error: " + err); })
+			.success(function (user) { console.log("Successfully updated user"); });
+	}
 
-// });
-
-
-app.get('/catchCode/msa', function(request, response) {
-	var protocol = "https"; //request.connection.encrypted ? "https" : "http";
+	function setCookieRedirectAndEndRequest(newUserIdCookieValue) {
+		if (newUserIdCookieValue) {
+			console.log("Setting cookie to: " + newUserIdCookieValue);
+			response.cookie('userId', newUserIdCookieValue, { maxAge: 900000, httpOnly: true });
+		}
+		response.writeHead(302, {"Location": request.protocol + '://' + request.get('host') + '/app.html#/login'});
+		response.end();
+	}
+	
 	var redirectUrl = protocol + '://' + request.get('host') + request.path;
 	if (!request.query.code) {
-		response.writeHead(302, {"Location": getAccessToken.getAuthorizationEndpointUrl(authConfig.MSA, redirectUrl, "mshealth.ReadProfile%20mshealth.ReadActivityHistory%20offline_access")});
+		response.writeHead(302, {"Location": getAccessToken.getAuthorizationEndpointUrl(authConfig, redirectUrl, scopes, resource)});
 		response.end();
 	} else {
-		getAccessToken.getTokenResponseWithCode(authConfig.MSA, request.query.code, redirectUrl, function(error, tokenResponseData) {
+		getAccessToken.getTokenResponseWithCode(authConfig, request.query.code, redirectUrl, function(error, tokenResponseData) {
 			if (error) {
+				console.log("Error getting token response");
 				response.writeHead(200, {"Content-Type": "text/plain"});
 				response.write("Error: " + error);
 				response.end();
 			} else {
 				var tokenResponse = JSON.parse(tokenResponseData);
-				tokenCache[tokenResponse.user_id] = { 
-					accessToken: tokenResponse.access_token,
-					refreshToken: tokenResponse.refresh_token
-				};
-				response.cookie('currentMsaUserId', tokenResponse.user_id, { maxAge: 900000, httpOnly: true });
-				response.writeHead(302, {"Location": request.protocol + '://' + request.get('host') + '/app.html#/login'});
-				response.end();
+				
+				var userUpdateDocument = documentCreationFunction(tokenResponse);
+				
+				if (cookieUserId) {
+					console.log("Found user id cookie");
+					//replace the current user's aad user info with what we get back from catchcode
+					updateUserInfo(cookieUserId, userUpdateDocument);
+					setCookieRedirectAndEndRequest();
+				} else {
+					console.log("No user id cookie found");
+					//try to find a current user with this aad id
+					userCollection.findOne(documentFindFunction(tokenResponse))
+						.success(function(user) {
+							updateUserInfo(user._id, userUpdateDocument);
+							setCookieRedirectAndEndRequest(user._id);
+						})
+						.error(function(err) {
+							userCollection.insert(userUpdateDocument)
+								.success(function(user) {
+									setCookieRedirectAndEndRequest(user._id);
+								})
+								.error(function(err) {
+									console.log("Error: " + err);
+								});
+						});
+				}
 			}
 		});
 	}
+}
+
+app.get('/catchCode/msa', function(request, response) {
+	
+	function createMsaDocumentObject(tokenResponse) {
+		return {
+				msaUserId: tokenResponse.user_id,
+				msaTokens: {
+					accessToken: tokenResponse.access_token,
+					refreshToken: tokenResponse.refresh_token
+				}
+			};
+	}
+	
+	function findMsaDocumentObject(tokenResponse) {
+		return { msaUserId: tokenResponse.user_id };
+	}
+		
+	catchCode(request, response, authConfig.MSA, "mshealth.ReadProfile%20mshealth.ReadActivityHistory%20offline_access", null, createMsaDocumentObject, findMsaDocumentObject);		
 });
 
+
+
+
 app.get('/catchCode/aad', function(request, response) {
-	var protocol = "https"; //request.connection.encrypted ? "https" : "http";
-	var redirectUrl = protocol + '://' + request.get('host') + request.path;
-	if (!request.query.code) {
-		response.writeHead(302, {"Location": getAccessToken.getAuthorizationEndpointUrl(authConfig.AAD, redirectUrl, null, "https://outlook.office365.com")});
-		response.end();
-	} else {
-		getAccessToken.getTokenResponseWithCode(authConfig.AAD, request.query.code, redirectUrl, function(error, tokenResponseData) {
-			if (error) {
-				response.writeHead(200, {"Content-Type": "text/plain"});
-				response.write("Error: " + error);
-				response.end();
-			} else {
-				var tokenResponse = JSON.parse(tokenResponseData);
-				var idToken = decodejwt.decodeJwt(tokenResponse.id_token).payload;
-				tokenCache[idToken.oid] = { 
+
+	function createAadDocumentObject(tokenResponse) {
+		var idToken = decodejwt.decodeJwt(tokenResponse.id_token).payload;
+		
+		return {
+				aadUserId: idToken.oid,
+				aadTokens: {
 					accessToken: tokenResponse.access_token,
 					refreshToken: tokenResponse.refresh_token,
 					idToken: idToken 
-				};
-				response.cookie('currentAadUser', idToken, { maxAge: 900000, httpOnly: true });
-				response.writeHead(302, {"Location": request.protocol + '://' + request.get('host') + '/app.html#/login'});
-				response.end();
-			}
-		});
+				}
+			};
 	}
+	
+	function findAadDocumentObject(tokenResponse) {
+		var idToken = decodejwt.decodeJwt(tokenResponse.id_token).payload;
+		return { aadUserId: idToken.oid };
+	}
+
+	catchCode(request, response, authConfig.AAD, null, "https://outlook.office365.com", createAadDocumentObject, findAadDocumentObject);
 });
+
+// /// catch 404 and forwarding to error handler
+// app.use(function(req, res, next) {
+//     var err = new Error('Not Found');
+//     err.status = 404;
+//     next(err);
+// });
 
 console.log("Starting server on port " + port + "...");
 app.listen(port);

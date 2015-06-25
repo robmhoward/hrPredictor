@@ -1,4 +1,4 @@
-var hrPredictorApp = angular.module("hrPredictorApp", ['ngRoute'])
+var hrPredictorApp = angular.module("hrPredictorApp", ['ngRoute', 'ngMaterial'])
 
 hrPredictorApp.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {  
 	$routeProvider

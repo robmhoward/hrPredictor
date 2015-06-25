@@ -34,7 +34,6 @@ function makeTokenRequest(authConfig, requestBody, callback) {
       'Content-Length': requestBody.length
     }
   };
-  console.log(requestBody);
   var tokenResponseData = "";
   var tokenRequest = https.request(options, function(tokenResponse) {
     tokenResponse.on("error", function(error) {
