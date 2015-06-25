@@ -82,7 +82,7 @@ app.get('/api/me/historicalData', function(request, response) {
 		var calendarRequest = https.request({
 			hostname: calendarHostName,
 			port: 443,
-			path: '/api/v1.0/me/calendarview?startDateTime=' + startDate + '&endDateTime=' + endDate + '&$select=Subject,Attendees,Body,Location,Organizer,Start,StartTimeZone,End,EndTimeZone,Importance,Type,ResponseStatus',
+			path: '/api/v1.0/me/calendarview?startDateTime=' + startDate + '&endDateTime=' + endDate + '&$select=Subject,Attendees,Body,Location,Organizer,Start,StartTimeZone,End,EndTimeZone,Importance,Type,ResponseStatus&$orderBy=Start,End',
 			method: 'GET',
 			headers: {
 				'Accept': 'application/json',
