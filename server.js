@@ -27,6 +27,7 @@ var authConfig = {
 };
 
 var msHealthHostName = "apibeta.microsofthealth.net";
+var calendarHostName = "outlook.office365.com";
 
 app.use('/', express.static(__dirname + "/public"));
 app.use(cookieParser());
@@ -45,31 +46,61 @@ app.get('/', function(request, response) {
 });
 
 app.get('/api/me/historicalData', function(request, response) {
+	
+	var startDate = "2015-06-23T00:00:00Z";
+	var endDate = "2015-06-24T00:00:00Z";
+	
 	var msaUserId = request.cookies.currentMsaUserId;
-	if (msaUserId && tokenCache[msaUserId]) {
-		var healthResponseData = "";
-		var healthRequest = https.request({
-			hostname: msHealthHostName,
+	var aadUser = request.cookies.currentAadUser;
+	
+	if (msaUserId && tokenCache[msaUserId] && aadUser && aadUser.oid && tokenCache[aadUser.oid]) {
+		// var healthResponseData = "";
+		// var healthRequest = https.request({
+		// 	hostname: msHealthHostName,
+		// 	port: 443,
+		// 	path: '/v1/me/summaries/hourly?startTime=' + startDate + '&endTime=' + endDate,
+		// 	method: 'GET',
+		// 	headers: {
+		// 		'Accept': 'application/json',
+		// 		'Authorization': 'Bearer ' + tokenCache[msaUserId].accessToken
+		// 	}
+		// }, function(healthResponse) {
+		// 	healthResponse.on("error", function(error) {
+		// 		console.log(error.message);
+		// 	});
+		// 	healthResponse.on("data", function(data) {
+		// 		healthResponseData += data.toString();
+		// 	});
+		// 	healthResponse.on("end", function() {
+		// 		response.send(JSON.parse(healthResponseData));
+		// 		response.end();
+		// 	});
+		// });
+		// healthRequest.end();
+		
+		var calendarResponseData = "";
+		var calendarRequest = https.request({
+			hostname: calendarHostName,
 			port: 443,
-			path: '/v1/me/summaries/hourly?startTime=2015-06-23T00:00:00Z',
+			path: '/api/v1.0/me/calendarview?startDateTime=' + startDate + '&endDateTime=' + endDate + '&$select=Subject,Attendees,Body,Location,Organizer,Start,StartTimeZone,End,EndTimeZone,Importance,Type,ResponseStatus',
 			method: 'GET',
 			headers: {
 				'Accept': 'application/json',
-				'Authorization': 'Bearer ' + tokenCache[msaUserId].accessToken
-			}
-		}, function(healthResponse) {
-			healthResponse.on("error", function(error) {
+				'Authorization': 'Bearer ' + tokenCache[aadUser.oid].accessToken
+			}			
+		}, function(calendarResponse) {
+			calendarResponse.on("error", function(error) {
 				console.log(error.message);
 			});
-			healthResponse.on("data", function(data) {
-				healthResponseData += data.toString();
+			calendarResponse.on("data", function(data) {
+				calendarResponseData += data.toString();
 			});
-			healthResponse.on("end", function() {
-				response.send(JSON.parse(healthResponseData));
+			calendarResponse.on("end", function() {
+				response.send(JSON.parse(calendarResponseData));
 				response.end();
 			});
 		});
-		healthRequest.end();
+		calendarRequest.end();
 	} else {
 		response.writeHead(500);
 		response.end();	
