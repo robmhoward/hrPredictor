@@ -3,8 +3,8 @@
 	<h2>Current Identities</h2>
 	
 	<ul>
-		<li>Microsoft Account - <span ng-hide="aadUser"><a href="/catchCode/msa">Sign in</a></span></li>
-		<li>Office 365 Account - <span ng-hide="msaUser"><a href="/catchCode/aad">Sign in</a></span></li>
+		<li>Microsoft Account - {{me.aadUser.name}} <span ng-hide="me.aadUser"><a href="/catchCode/msa">Sign in</a></span></li>
+		<li>Office 365 Account - {{me.msaUserId}} <span ng-hide="me.msaUserId"><a href="/catchCode/aad">Sign in</a></span></li>
 	</ul>
 	
 </div>
