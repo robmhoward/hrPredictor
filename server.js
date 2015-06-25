@@ -53,32 +53,35 @@ app.get('/api/me/historicalData', function(request, response) {
 	var msaUserId = request.cookies.currentMsaUserId;
 	var aadUser = request.cookies.currentAadUser;
 	
+	var requestsCompleted = 0;
+	
 	if (msaUserId && tokenCache[msaUserId] && aadUser && aadUser.oid && tokenCache[aadUser.oid]) {
-		// var healthResponseData = "";
-		// var healthRequest = https.request({
-		// 	hostname: msHealthHostName,
-		// 	port: 443,
-		// 	path: '/v1/me/summaries/hourly?startTime=' + startDate + '&endTime=' + endDate,
-		// 	method: 'GET',
-		// 	headers: {
-		// 		'Accept': 'application/json',
-		// 		'Authorization': 'Bearer ' + tokenCache[msaUserId].accessToken
-		// 	}
-		// }, function(healthResponse) {
-		// 	healthResponse.on("error", function(error) {
-		// 		console.log(error.message);
-		// 	});
-		// 	healthResponse.on("data", function(data) {
-		// 		healthResponseData += data.toString();
-		// 	});
-		// 	healthResponse.on("end", function() {
-		// 		response.send(JSON.parse(healthResponseData));
-		// 		response.end();
-		// 	});
-		// });
-		// healthRequest.end();
-		
+		var healthResponseData = "";
 		var calendarResponseData = "";
+		
+		var healthRequest = https.request({
+			hostname: msHealthHostName,
+			port: 443,
+			path: '/v1/me/summaries/hourly?startTime=' + startDate + '&endTime=' + endDate,
+			method: 'GET',
+			headers: {
+				'Accept': 'application/json',
+				'Authorization': 'Bearer ' + tokenCache[msaUserId].accessToken
+			}
+		}, function(healthResponse) {
+			healthResponse.on("error", function(error) {
+				console.log(error.message);
+			});
+			healthResponse.on("data", function(data) {
+				healthResponseData += data.toString();
+			});
+			healthResponse.on("end", function() {
+				checkForCompletionAndProceed();
+			});
+		});
+		healthRequest.end();
+		
+		
 		var calendarRequest = https.request({
 			hostname: calendarHostName,
 			port: 443,
@@ -96,16 +99,51 @@ app.get('/api/me/historicalData', function(request, response) {
 				calendarResponseData += data.toString();
 			});
 			calendarResponse.on("end", function() {
-				response.send(JSON.parse(calendarResponseData));
-				response.end();
+				checkForCompletionAndProceed();
 			});
 		});
 		calendarRequest.end();
+		
+		function checkForCompletionAndProceed() {
+			requestsCompleted++;
+			if (requestsCompleted == 2) {
+				response.send(mergeHealthAndCalendarData(JSON.parse(healthResponseData), JSON.parse(calendarResponseData)));
+				response.end();
+			}
+		}
 	} else {
 		response.writeHead(500);
 		response.end();	
 	}
 });
+
+function mergeHealthAndCalendarData(healthData, calendarData) {
+	var healthHours = healthData.summaries;
+	var events = calendarData.value;
+	
+	for (var i = 0; i < events.length; i++) {
+		var heartRateTotal = 0;
+		var overlappingHourCount = 0;
+		for (var j = 0; j < healthHours.length; j++) {
+			if (overlap(healthHours[j].startTime, healthHours[j].endTime, events[i].Start, events[i].End) && healthHours[j].heartRateSummary.averageHeartRate) {
+				overlappingHourCount++;
+				heartRateTotal += healthHours[j].heartRateSummary.averageHeartRate;
+			}
+		}
+		if (overlappingHourCount > 0) {
+			events[i].AverageHeartRate = heartRateTotal / overlappingHourCount;
+		} 
+	}
+	
+	return events;
+}
+
+function overlap(startDateOne, endDateOne, startDateTwo, endDateTwo) {
+	if (startDateOne >= startDateTwo && startDateOne < endDateTwo) return true;
+	if (endDateOne <= endDateTwo && endDateOne > startDateTwo) return true;
+	if (startDateOne <= startDateTwo && endDateOne >= endDateTwo) return true;
+	return false;
+}
 
 // app.get('/groupChoices', function(request, response) {
 // 	var currentUser = tokenCache[request.cookies.currentUser.oid];
