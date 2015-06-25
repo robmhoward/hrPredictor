@@ -46,10 +46,11 @@ app.get('/', function(request, response) {
 });
 
 app.get('/api/me', function(request, response) {
-	response.writeHead(200, {"Content-Type": "application/json"});
 	var aadUser = request.cookies.currentAadUser;
 	var msaUserId = request.cookies.currentMsaUserId;
-	var me = {};
+	var me = {
+		currentTime: new Date()
+	};
 	if (aadUser && aadUser.oid && tokenCache[aadUser.oid]) {
 		me.aadUser = aadUser;
 	} 
