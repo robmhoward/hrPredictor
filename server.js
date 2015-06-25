@@ -191,7 +191,7 @@ function catchCode(request, response, authConfig, scopes, resource, documentCrea
 	var protocol = port == 1945 ? "http" : "https";
 
 	function updateUserInfo(userId, documentObject) {
-		userCollection.updateById(userId, documentObject)
+		userCollection.updateById(userId, { $set: documentObject })
 			.error(function (err) { console.log("Error: " + err); })
 			.success(function (user) { console.log("Successfully updated user"); });
 	}
