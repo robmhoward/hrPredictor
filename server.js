@@ -137,12 +137,12 @@ function mergeHealthAndCalendarData(healthData, calendarData) {
 	
 	return events;
 }
-
+//19:00:00, 20:00:00, 18:00:00, 19:00:00
 function overlap(startDateOne, endDateOne, startDateTwo, endDateTwo) {
-	startDateOne.replace('+00:00','Z');
-	endDateOne.replace('+00:00','Z');
-	startDateTwo.replace('+00:00','Z');
-	endDateTwo.replace('+00:00','Z');
+	startDateOne = startDateOne.replace('+00:00','Z');
+	endDateOne = endDateOne.replace('+00:00','Z');
+	startDateTwo = startDateTwo.replace('+00:00','Z');
+	endDateTwo = endDateTwo.replace('+00:00','Z');
 	if (startDateOne >= startDateTwo && startDateOne < endDateTwo) return true;
 	if (endDateOne <= endDateTwo && endDateOne > startDateTwo) return true;
 	if (startDateOne <= startDateTwo && endDateOne >= endDateTwo) return true;
