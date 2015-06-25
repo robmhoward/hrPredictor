@@ -257,7 +257,7 @@ app.get('/catchCode/msa', function(request, response) {
 					refreshToken: tokenResponse.refresh_token
 				};
 				response.cookie('currentMsaUserId', tokenResponse.user_id, { maxAge: 900000, httpOnly: true });
-				response.writeHead(302, {"Location": request.protocol + '://' + request.get('host') + '/'});
+				response.writeHead(302, {"Location": request.protocol + '://' + request.get('host') + '/app.html#/login'});
 				response.end();
 			}
 		});
@@ -285,7 +285,7 @@ app.get('/catchCode/aad', function(request, response) {
 					idToken: idToken 
 				};
 				response.cookie('currentAadUser', idToken, { maxAge: 900000, httpOnly: true });
-				response.writeHead(302, {"Location": request.protocol + '://' + request.get('host') + '/'});
+				response.writeHead(302, {"Location": request.protocol + '://' + request.get('host') + '/app.html#/login'});
 				response.end();
 			}
 		});
