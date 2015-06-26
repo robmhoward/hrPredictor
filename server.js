@@ -6,6 +6,7 @@ var decodejwt = require('./decodejwt.js');
 var getAccessToken = require('./getAccessToken.js');
 var jsonToCsv = require('./jsonToCsv.js');
 var getServiceData = require('./getServiceData.js');
+var userProfile = require('./userProfile.js');
 var cookieParser = require('cookie-parser')
 var mongo = require('mongodb');
 var monk = require('monk');
@@ -27,7 +28,7 @@ app.get('/', function(request, response) {
 	response.end();
 });
 
-setInterval(sendDigestEmails, 1000 * 60 * 5); // * 60 * 24);
+// setInterval(sendDigestEmails, 1000 * 5);//60 * 60 * 24);
 
 function sendDigestEmails() {
 	var userCollection = db.get('usercollection');
@@ -44,7 +45,7 @@ app.get('/api/me', function(request, response) {
 		currentTime: new Date()
 	};
 	
-	getCurrentUser(request, function(err, user) {
+	userProfile.getCurrentUser(request, function(err, user) {
 		if (user) {
 			me = user;
 			me.addUser = me.aadTokens.idToken;
@@ -95,7 +96,7 @@ app.get('/api/me', function(request, response) {
 		currentTime: new Date()
 	};
 	
-	getCurrentUser(request, function(err, user) {
+	userProfile.getCurrentUser(request, function(err, user) {
 		if (user) {
 			me = user;
 			me.addUser = me.aadTokens.idToken;
@@ -106,28 +107,6 @@ app.get('/api/me', function(request, response) {
 		response.end();
 	});
 });
-
-function getCurrentUser(request, callback) {
-	var cookieUserId = request.cookies.userId;
-	
-	if (cookieUserId) {
-		console.log("current user cookie found");
-		var db = request.db;
-		var userCollection = db.get('usercollection');
-		
-		userCollection.findById(cookieUserId)
-			.success(function (user) {
-				console.log("current user found in db");
-				callback(null, user);
-			})
-			.error(function (err) {
-				console.log("Error finding current user");	
-				callback(err);
-			});
-	} else {
-		callback(null, null);
-	}
-}
 
 app.get('/api/me/historicalDataCsv', function(request, response) {
 	handleHistoricalDataRequest(request, response, true);
@@ -144,7 +123,7 @@ function handleHistoricalDataRequest(request, response, convertToCsv) {
 		var startDate = new Date(request.query.start);
 		var endDate = new Date(request.query.end);
 		
-		getCurrentUser(request, function(err, user) {	
+		userProfile.getCurrentUser(request, function(err, user) {	
 			if (user) {
 				getServiceData.getHistoricalData(startDate, endDate, user, function(err, historicalData) {
 					if (err) {
@@ -194,7 +173,7 @@ app.get('/api/me/predictionData', function(request, response) {
 		var startDate = new Date(request.query.start);
 		var endDate = new Date(request.query.end);
 		
-		getCurrentUser(request, function(err, user) {	
+		userProfile.getCurrentUser(request, function(err, user) {	
 			if (user) {
 				getServiceData.getPredictionData(startDate, endDate, user, function(err, predictionData) {
 					if (err) {
@@ -220,31 +199,35 @@ app.get('/api/me/predictionData', function(request, response) {
 });
 
 function catchCode(request, response, authConfig, scopes, resource, documentCreationFunction, documentUpdateFunction, documentFindFunction) {
-	var cookieUserId = request.cookies.userId;
-	var db = request.db;
-	var userCollection = db.get('usercollection');
+	
 	var protocol = port == 1945 ? "http" : "https";
-
-	function updateUserInfo(userId, documentObject) {
-		userCollection.updateById(userId, { $set: documentObject })
-			.error(function (err) { console.log("Error: " + err); })
-			.success(function (user) { console.log("Successfully updated user"); });
-	}
-
-	function setCookieRedirectAndEndRequest(newUserIdCookieValue) {
-		if (newUserIdCookieValue) {
-			console.log("Setting cookie to: " + newUserIdCookieValue);
-			response.cookie('userId', newUserIdCookieValue, { maxAge: 900000, httpOnly: true });
-		}
-		response.writeHead(302, {"Location": request.protocol + '://' + request.get('host') + '/app.html#/profile'});
-		response.end();
-	}
 	
 	var redirectUrl = protocol + '://' + request.get('host') + request.path;
 	if (!request.query.code) {
 		response.writeHead(302, {"Location": getAccessToken.getAuthorizationEndpointUrl(authConfig, redirectUrl, scopes, resource)});
 		response.end();
 	} else {
+		
+		var cookieUserId = request.cookies.userId;
+		var db = request.db;
+		var userCollection = db.get('usercollection');
+
+		function updateUserInfo(userId, documentObject) {
+			userCollection.updateById(userId, { $set: documentObject })
+				.error(function (err) { console.log("Error: " + err); })
+				.success(function (user) { console.log("Successfully updated user"); });
+		}
+	
+		function setCookieRedirectAndEndRequest(newUserIdCookieValue) {
+			if (newUserIdCookieValue) {
+				console.log("Setting cookie to: " + newUserIdCookieValue);
+				response.cookie('userId', newUserIdCookieValue, { maxAge: 900000, httpOnly: true });
+			}
+			response.writeHead(302, {"Location": request.protocol + '://' + request.get('host') + '/app.html#/profile'});
+			response.end();
+		}
+
+		
 		getAccessToken.getTokenResponseWithCode(authConfig, request.query.code, redirectUrl, function(error, tokenResponseData) {
 			if (error) {
 				console.log("Error getting token response");
@@ -252,6 +235,7 @@ function catchCode(request, response, authConfig, scopes, resource, documentCrea
 				response.write("Error: " + error);
 				response.end();
 			} else {
+				console.log(tokenResponseData);
 				var tokenResponse = JSON.parse(tokenResponseData);
 				
 				var userInsertDocument = documentCreationFunction(tokenResponse);
