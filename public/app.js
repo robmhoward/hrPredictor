@@ -106,15 +106,42 @@ hrPredictorApp.controller("HistoricalDataController", function($scope, $q, hrPre
 
 hrPredictorApp.controller("PredictionDataController", function($scope, $q, hrPredictorFactory) {
 
-	$scope.me = [{name: "Loading..."}];
+	$scope.dateLabel = "(Loading...)";
 	
-	hrPredictorFactory.getMe().then(function(response) {
-		$scope.me = response.data;
+	var startDate = new Date();
+	startDate.setDate(startDate.getDate());
+	startDate.setHours(0);
+	startDate.setMinutes(0);
+	startDate.setSeconds(0);
+	startDate.setMilliseconds(0);
+		
+	var endDate = new Date();
+	endDate.setDate(endDate.getDate() + 1);
+	endDate.setHours(0);
+	endDate.setMinutes(0);
+	endDate.setSeconds(0);
+	endDate.setMilliseconds(0);
+	
+	
+	hrPredictorFactory.getPredictionData(startDate, endDate).then(function(response) {
+		for (var i=0; i < response.data.length; i++) {
+			var event = response.data[i];
+			if (event.PredictedHeartRate < 75) {
+				event.Color = "green";
+			} else if (event.PredictedHeartRate > 90) {
+				event.Color = "red";
+			} else {
+				//event.Color = "blue";
+			}
+		}
+		
+		response.data.sort(function (a, b) {
+			return b.PredictedHeartRate - a.PredictedHeartRate;
+		});
+		
+		$scope.events = response.data;
+		$scope.dateLabel = "for " + startDate.toDateString();
 	});
-	
-	$scope.updateProfile = function() {
-		hrPredictorFactory.updateMe($scope.me);
-	}
 
 
 });

@@ -187,8 +187,35 @@ function handleHistoricalDataRequest(request, response, convertToCsv) {
 }
 
 app.get('/api/me/predictionData', function(request, response) {
-	response.send([{"text": "Not implemented"}]);
-	response.end();
+		
+	if (request.query.start && request.query.end) {
+		
+		var startDate = new Date(request.query.start);
+		var endDate = new Date(request.query.end);
+		
+		getCurrentUser(request, function(err, user) {	
+			if (user) {
+				getServiceData.getPredictionData(startDate, endDate, user, function(err, predictionData) {
+					if (err) {
+						response.writeHead(400);
+						response.write("No user tokens");		
+						response.end();
+					} else {
+						response.send(predictionData);
+						response.end();
+					}
+				});
+			} else {
+				response.writeHead(400);
+				response.write("No current user");		
+				response.end();
+			}
+		});
+	} else {
+		response.writeHead(400);
+		response.write("You have to specify 'start' and 'end' querystring params in ISO8601 format");		
+		response.end();
+	}
 });
 
 function catchCode(request, response, authConfig, scopes, resource, documentCreationFunction, documentUpdateFunction, documentFindFunction) {
