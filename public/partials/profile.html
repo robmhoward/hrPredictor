@@ -1,5 +1,5 @@
 <div class="container" layout="column">
-  <md-card>
+  <md-card style="max-width: 800px">
     <md-toolbar>
       <div class="md-toolbar-tools">
         <h2 class="md-flex">Profile</h2>
@@ -14,18 +14,6 @@
              - <a href="/catchCode/aad">Sign in</a>
           </span></md-chip>
       </md-chips>
-      <!--<ul>
-        <li>Microsoft Account - {{me.msaUserId}}
-          <span ng-hide="me.msaUserId">
-            <a href="/catchCode/msa">Sign in</a>
-          </span>
-        </li>
-        <li>Office 365 Account - {{me.aadUser.name}}
-          <span ng-hide="me.aadUser">
-            <a href="/catchCode/aad">Sign in</a>
-          </span>
-        </li>
-      </ul>-->
     </md-content>
     <md-content layout-padding>
       <form name="userForm">
@@ -45,9 +33,16 @@
             <input ng-model="me.email" type="email">
           </md-input-container>
         </div>
+        <div layout layout-sm="row">
+          <md-switch ng-model="me.sendPredictionEmails" aria-label="Send Predictions">Send Prediction Emails</md-switch>
+          <md-button class="md-icon-button"><md-icon ng-style="{color: #777}" aria-label="email">email</md-icon></md-button>
+        </div>
+        <div layout layout-sm="row">
+          <md-switch ng-model="me.sendSummaryEmails" aria-label="Send Predictions">Send Summary Emails</md-switch>
+          <md-button class="md-icon-button"><md-icon ng-style="{color: #777}" aria-label="email">email</md-icon></md-button>
+        </div>
         <div layout layout-sm="column">
-          <md-checkbox ng-model="me.sendPredictionEmails" aria-label="Send Predictions">Send Prediction Emails</md-checkbox>
-          <md-checkbox ng-model="me.sendSummaryEmails" aria-label="Send Predictions">Send Summary Emails</md-checkbox>
+          <md-button class="md-raised md-primary" ng-click="updateProfile()">Update</md-button>
         </div>
       </form>
     </md-content>

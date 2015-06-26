@@ -274,6 +274,9 @@ function getHistoricalData(startDate, endDate, user, callback) {
 				healthResponseData += data.toString();
 			});
 			healthResponse.on("end", function() {
+				if (healthResponse.statusCode >= 400) {
+					console.log("Error retrieving health info. Code: " + healthResponse.statusCode)
+				}
 				checkForCompletionAndProceed();
 			});
 		});

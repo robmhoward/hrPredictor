@@ -1,33 +1,30 @@
 <html ng-app="hrPredictorApp">
 
 <head>
-<title>Heart Rate Predictor</title>
-
-<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.css">
-
+    <title>Heart Rate Predictor</title>
+    
+    <link rel="stylesheet" href="bower_components/material-date-picker/build/styles/mbdatepicker.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.css">
 </head>
 
 <body>
     
     <md-toolbar>
         <div class="md-toolbar-tools">
-            <md-menu>
+            <md-menu ng-controller="MenuController">
                 <md-button class="md-icon-button" aria-label="Settings" ng-click="$mdOpenMenu()">
                     <md-icon md-menu-origin md-svg-icon="img/icons/menu.svg"></md-icon>
                 </md-button>
                 <md-menu-content width="4">
                     <md-menu-item>
-                        <md-button ng-click="ctrl.redial($event)">
-                            <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>Redial</md-button>
+                        <md-button ng-click="goto('/profile')">Profile</md-button>
                     </md-menu-item>
                     <md-menu-item>
-                        <md-button disabled="disabled" ng-click="ctrl.checkVoicemail()">
-                            <md-icon md-svg-icon="call:voicemail"></md-icon>Check voicemail</md-button>
+                        <md-button ng-click="goto('/historicalData')">Historical Data</md-button>
                     </md-menu-item>
-                    <md-menu-divider></md-menu-divider>
                     <md-menu-item>
-                        <md-button ng-click="ctrl.toggleNotifications()">
-                            <md-icon md-svg-icon="social:notifications-{{ctrl.notificationsEnabled ? 'off' : 'on'}}"></md-icon>{{ctrl.notificationsEnabled ? 'Disable' : 'Enable' }} notifications</md-button>
+                        <md-button ng-click="goto('/predictionData')">Prediction Data</md-button>
                     </md-menu-item>
                 </md-menu-content>
             </md-menu> 
@@ -61,6 +58,8 @@
 	<script type="text/javascript" src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal-angular.min.js"></script>
 
 	<script type="text/javascript" src="app.js"></script>
+    
+    <script src="bower_components/material-date-picker/build/mbdatepicker.js"></script>
 
 </body>
 

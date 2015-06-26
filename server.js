@@ -24,14 +24,6 @@ app.use(function(req,res,next){
 
 app.get('/', function(request, response) {
 	response.writeHead(200, {"Content-Type": "text/plain"});
-	var aadUser = request.cookies.currentAadUser;
-	var msaUserId = request.cookies.currentMsaUserId;
-	if (aadUser && aadUser.oid && tokenCache[aadUser.oid]) {
-		response.write("AAD User " + aadUser.given_name + " " + aadUser.family_name + "!/r/n");
-	} 
-	if (msaUserId && tokenCache[msaUserId]) {
-		response.write("MSA User ID " + msaUserId + "!/r/n");
-	} 
 	response.end();
 });
 
@@ -63,7 +55,7 @@ app.get('/api/me', function(request, response) {
 	});
 });
 
-app.post('/api/me', function(request, response) {
+app.patch('/api/me', function(request, response) {
 	var cookieUserId = request.cookies.userId;
 	if (request.body && cookieUserId) {
 		var updateDocument = {};
@@ -71,7 +63,7 @@ app.post('/api/me', function(request, response) {
 		var updatedProperties = 0;
 		for (var i = 0; i < validProperties.length; i++) {
 			var postedProperty = request.body[validProperties[i]];
-			if (postedProperty) {
+			if (postedProperty || postedProperty === false) {
 				updatedProperties++;
 				updateDocument[validProperties[i]] = postedProperty;
 			}
@@ -95,6 +87,23 @@ app.post('/api/me', function(request, response) {
 		response.write("Request is missing user or body");
 		response.end();
 	}
+});
+
+app.get('/api/me', function(request, response) {
+	var me = {
+		currentTime: new Date()
+	};
+	
+	getCurrentUser(request, function(err, user) {
+		if (user) {
+			me = user;
+			me.addUser = me.aadTokens.idToken;
+			delete me.aadTokens;
+			delete me.msaTokens;
+		}
+		response.send(me);
+		response.end();
+	});
 });
 
 function getCurrentUser(request, callback) {
@@ -128,11 +137,11 @@ app.get('/api/me/historicalData', function(request, response) {
 });
 
 function handleHistoricalDataRequest(request, response, convertToCsv) {
-	
-	var startDate = new Date(request.query.start);
-	var endDate = new Date(request.query.end);
 		
-	if (startDate && endDate) {
+	if (request.query.start && request.query.end) {
+		
+		var startDate = new Date(request.query.start);
+		var endDate = new Date(request.query.end);
 		
 		getCurrentUser(request, function(err, user) {	
 			if (user) {
@@ -177,7 +186,12 @@ function handleHistoricalDataRequest(request, response, convertToCsv) {
 	}
 }
 
-function catchCode(request, response, authConfig, scopes, resource, documentCreationFunction, documentFindFunction) {
+app.get('/api/me/predictionData', function(request, response) {
+	response.send([{"text": "Not implemented"}]);
+	response.end();
+});
+
+function catchCode(request, response, authConfig, scopes, resource, documentCreationFunction, documentUpdateFunction, documentFindFunction) {
 	var cookieUserId = request.cookies.userId;
 	var db = request.db;
 	var userCollection = db.get('usercollection');
@@ -212,7 +226,8 @@ function catchCode(request, response, authConfig, scopes, resource, documentCrea
 			} else {
 				var tokenResponse = JSON.parse(tokenResponseData);
 				
-				var userUpdateDocument = documentCreationFunction(tokenResponse);
+				var userInsertDocument = documentCreationFunction(tokenResponse);
+				var userUpdateDocument = documentUpdateFunction(tokenResponse);
 				
 				if (cookieUserId) {
 					console.log("Found user id cookie");
@@ -221,7 +236,7 @@ function catchCode(request, response, authConfig, scopes, resource, documentCrea
 					setCookieRedirectAndEndRequest();
 				} else {
 					console.log("No user id cookie found");
-					//try to find a current user with this aad id
+					//try to find a current user with this id
 					userCollection.findOne(documentFindFunction(tokenResponse))
 						.success(function(user) {
 							if (user) {
@@ -230,7 +245,7 @@ function catchCode(request, response, authConfig, scopes, resource, documentCrea
 							} else {
 								userUpdateDocument.sendPredictionEmails = true;
 								userUpdateDocument.sendSummaryEmails = true;
-								userCollection.insert(userUpdateDocument)
+								userCollection.insert(userInsertDocument)
 									.success(function(user) {
 										setCookieRedirectAndEndRequest(user._id);
 									})
@@ -264,7 +279,7 @@ app.get('/catchCode/msa', function(request, response) {
 		return { msaUserId: tokenResponse.user_id };
 	}
 		
-	catchCode(request, response, "MSA", "mshealth.ReadProfile%20mshealth.ReadActivityHistory%20offline_access", null, createMsaDocumentObject, findMsaDocumentObject);		
+	catchCode(request, response, "MSA", "mshealth.ReadProfile%20mshealth.ReadActivityHistory%20offline_access", null, createMsaDocumentObject, createMsaDocumentObject ,findMsaDocumentObject);		
 });
 
 
@@ -288,12 +303,25 @@ app.get('/catchCode/aad', function(request, response) {
 			};
 	}
 	
+	function updateAadDocumentObject(tokenResponse) {
+		var idToken = decodejwt.decodeJwt(tokenResponse.id_token).payload;
+		
+		return {
+				aadUserId: idToken.oid,
+				aadTokens: {
+					accessToken: tokenResponse.access_token,
+					refreshToken: tokenResponse.refresh_token,
+					idToken: idToken 
+				}
+			};
+	}
+	
 	function findAadDocumentObject(tokenResponse) {
 		var idToken = decodejwt.decodeJwt(tokenResponse.id_token).payload;
 		return { aadUserId: idToken.oid };
 	}
 
-	catchCode(request, response, "AAD", null, "https://outlook.office365.com", createAadDocumentObject, findAadDocumentObject);
+	catchCode(request, response, "AAD", null, "https://outlook.office365.com", createAadDocumentObject, updateAadDocumentObject, findAadDocumentObject);
 });
 
 // /// catch 404 and forwarding to error handler
