@@ -8,12 +8,30 @@
 </head>
 
 <body>
-
+    
     <md-toolbar>
-      <div class="md-toolbar-tools">
-        <md-button class="md-icon-button" aria-label="Settings">
-          <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
-        </md-button>
+        <div class="md-toolbar-tools">
+            <md-menu>
+                <md-button class="md-icon-button" aria-label="Settings" ng-click="$mdOpenMenu()">
+                    <md-icon md-menu-origin md-svg-icon="img/icons/menu.svg"></md-icon>
+                </md-button>
+                <md-menu-content width="4">
+                    <md-menu-item>
+                        <md-button ng-click="ctrl.redial($event)">
+                            <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>Redial</md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                        <md-button disabled="disabled" ng-click="ctrl.checkVoicemail()">
+                            <md-icon md-svg-icon="call:voicemail"></md-icon>Check voicemail</md-button>
+                    </md-menu-item>
+                    <md-menu-divider></md-menu-divider>
+                    <md-menu-item>
+                        <md-button ng-click="ctrl.toggleNotifications()">
+                            <md-icon md-svg-icon="social:notifications-{{ctrl.notificationsEnabled ? 'off' : 'on'}}"></md-icon>{{ctrl.notificationsEnabled ? 'Disable' : 'Enable' }} notifications</md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu> 
+
         <h2>
           <span>Heart Rate Predictor</span>
         </h2>

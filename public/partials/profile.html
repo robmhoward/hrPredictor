@@ -1,0 +1,55 @@
+<div class="container" layout="column">
+  <md-card>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2 class="md-flex">Profile</h2>
+      </div>
+    </md-toolbar>
+    <md-content md-theme="docs-dark" layout-padding layout="row" layout-sm="column">
+      <md-chips>
+        <md-chip ng-style="me.msaUserId ? { 'background-color': '#a3e9a4'} : {}"">Microsoft Account<span ng-hide="me.msaUserId">
+             - <a href="/catchCode/msa">Sign in</a>
+          </span></md-chip>
+        <md-chip ng-style="me.aadUserId ? { 'background-color': '#a3e9a4'} : {}">Office 365 Account<span ng-hide="me.aadUserId">
+             - <a href="/catchCode/aad">Sign in</a>
+          </span></md-chip>
+      </md-chips>
+      <!--<ul>
+        <li>Microsoft Account - {{me.msaUserId}}
+          <span ng-hide="me.msaUserId">
+            <a href="/catchCode/msa">Sign in</a>
+          </span>
+        </li>
+        <li>Office 365 Account - {{me.aadUser.name}}
+          <span ng-hide="me.aadUser">
+            <a href="/catchCode/aad">Sign in</a>
+          </span>
+        </li>
+      </ul>-->
+    </md-content>
+    <md-content layout-padding>
+      <form name="userForm">
+        <div layout layout-sm="column">
+          <md-input-container flex>
+            <label>First name</label>
+            <input ng-model="me.firstName">
+          </md-input-container>
+          <md-input-container flex>
+            <label>Last Name</label>
+            <input ng-model="me.lastName">
+          </md-input-container>
+        </div>
+        <div layout layout-sm="column">
+          <md-input-container>
+            <label>Email</label>
+            <input ng-model="me.email" type="email">
+          </md-input-container>
+        </div>
+        <div layout layout-sm="column">
+          <md-checkbox ng-model="me.sendPredictionEmails" aria-label="Send Predictions">Send Prediction Emails</md-checkbox>
+          <md-checkbox ng-model="me.sendSummaryEmails" aria-label="Send Predictions">Send Summary Emails</md-checkbox>
+        </div>
+      </form>
+    </md-content>
+  </md-card>
+</div>

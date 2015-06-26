@@ -2,10 +2,10 @@ var hrPredictorApp = angular.module("hrPredictorApp", ['ngRoute', 'ngMaterial'])
 
 hrPredictorApp.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {  
 	$routeProvider
-		.when('/login',
+		.when('/profile',
 			{
 				controller: 'LoginController',
-				templateUrl: 'partials/login.html'
+				templateUrl: 'partials/profile.html'
 			})
 		.otherwise({redirectTo: '/' });
 }]);

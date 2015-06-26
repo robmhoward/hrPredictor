@@ -1,6 +1,7 @@
 var port = process.env.PORT || 1945;
 var express = require('express');
 var https = require('https');
+var bodyParser = require('body-parser');
 var decodejwt = require('./decodejwt.js');
 var getAccessToken = require('./getAccessToken.js');
 var jsonToCsv = require('./jsonToCsv.js');
@@ -10,12 +11,11 @@ var mongo = require('mongodb');
 var monk = require('monk');
 var db = monk('mongodb://HRPredictMongo:jwznStM5KoSg8LWr1NkEwKY9oUkEzxWNuH7a8YxzJFY-@ds036648.mongolab.com:36648/HRPredictMongo');
 
-var tokenCache = {};
-
 var app = express();
 
 app.use('/', express.static(__dirname + "/public"));
 app.use(cookieParser());
+app.use(bodyParser.json()); // for parsing application/json
 
 app.use(function(req,res,next){
     req.db = db;
@@ -35,14 +35,14 @@ app.get('/', function(request, response) {
 	response.end();
 });
 
-setInterval(sendDigestEmail, 1000 * 60 * 60 * 24);
+setInterval(sendDigestEmails, 1000 * 60 * 60 * 24);
 
-function sendDigestEmail() {
+function sendDigestEmails() {
 	var userCollection = db.get('usercollection');
 	userCollection.find({}, { stream: true })
 		.each(function (user) {
 			console.log("send email to " + user.aadTokens.idToken.unique_name);
-			getServiceData.sendPredictionEmail(user); 
+			getServiceData.sendSummaryEmail(user); 
 		});
 }
 
@@ -53,12 +53,48 @@ app.get('/api/me', function(request, response) {
 	
 	getCurrentUser(request, function(err, user) {
 		if (user) {
-			me.aadUser = user.aadTokens.idToken;
-			me.msaUserId = user.msaUserId;
+			me = user;
+			me.addUser = me.aadTokens.idToken;
+			delete me.aadTokens;
+			delete me.msaTokens;
 		}
 		response.send(me);
 		response.end();
 	});
+});
+
+app.post('/api/me', function(request, response) {
+	var cookieUserId = request.cookies.userId;
+	if (request.body && cookieUserId) {
+		var updateDocument = {};
+		var validProperties = ["firstName", "lastName", "email", "sendPredictionEmails", "sendSummaryEmails"];
+		var updatedProperties = 0;
+		for (var i = 0; i < validProperties.length; i++) {
+			var postedProperty = request.body[validProperties[i]];
+			if (postedProperty) {
+				updatedProperties++;
+				updateDocument[validProperties[i]] = postedProperty;
+			}
+		}
+		if (updatedProperties > 0) {
+			var userCollection = db.get('usercollection');
+			userCollection.updateById(cookieUserId, { $set: updateDocument })
+				.error(function (err) { console.log("Error: " + err); })
+				.success(function (user) { 
+						response.writeHead(202);
+						response.end();
+						console.log("Successfully updated user");
+					});
+		} else {
+			response.writeHead(400);
+			response.write("No valid properties to update");
+			response.end();
+		}
+	} else {
+		response.writeHead(400);
+		response.write("Request is missing user or body");
+		response.end();
+	}
 });
 
 function getCurrentUser(request, callback) {
@@ -93,8 +129,8 @@ app.get('/api/me/historicalData', function(request, response) {
 
 function handleHistoricalDataRequest(request, response, convertToCsv) {
 	
-	var startDate = request.query.start;
-	var endDate = request.query.end;
+	var startDate = new Date(request.query.start);
+	var endDate = new Date(request.query.end);
 		
 	if (startDate && endDate) {
 		
@@ -158,7 +194,7 @@ function catchCode(request, response, authConfig, scopes, resource, documentCrea
 			console.log("Setting cookie to: " + newUserIdCookieValue);
 			response.cookie('userId', newUserIdCookieValue, { maxAge: 900000, httpOnly: true });
 		}
-		response.writeHead(302, {"Location": request.protocol + '://' + request.get('host') + '/app.html#/login'});
+		response.writeHead(302, {"Location": request.protocol + '://' + request.get('host') + '/app.html#/profile'});
 		response.end();
 	}
 	
@@ -188,17 +224,23 @@ function catchCode(request, response, authConfig, scopes, resource, documentCrea
 					//try to find a current user with this aad id
 					userCollection.findOne(documentFindFunction(tokenResponse))
 						.success(function(user) {
-							updateUserInfo(user._id, userUpdateDocument);
-							setCookieRedirectAndEndRequest(user._id);
+							if (user) {
+								updateUserInfo(user._id, userUpdateDocument);
+								setCookieRedirectAndEndRequest(user._id);
+							} else {
+								userUpdateDocument.sendPredictionEmails = true;
+								userUpdateDocument.sendSummaryEmails = true;
+								userCollection.insert(userUpdateDocument)
+									.success(function(user) {
+										setCookieRedirectAndEndRequest(user._id);
+									})
+									.error(function(err) {
+										console.log("Error: " + err);
+									});
+							}
 						})
 						.error(function(err) {
-							userCollection.insert(userUpdateDocument)
-								.success(function(user) {
-									setCookieRedirectAndEndRequest(user._id);
-								})
-								.error(function(err) {
-									console.log("Error: " + err);
-								});
+							console.log("Error: " + err);
 						});
 				}
 			}
@@ -239,7 +281,10 @@ app.get('/catchCode/aad', function(request, response) {
 					accessToken: tokenResponse.access_token,
 					refreshToken: tokenResponse.refresh_token,
 					idToken: idToken 
-				}
+				},
+				firstName: idToken.given_name,
+				lastName: idToken.family_name,
+				email: idToken.upn
 			};
 	}
 	
