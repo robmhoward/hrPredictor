@@ -27,14 +27,15 @@ app.get('/', function(request, response) {
 	response.end();
 });
 
-setInterval(sendDigestEmails, 1000 * 60 * 60 * 24);
+setInterval(sendDigestEmails, 1000 * 60 * 5); // * 60 * 24);
 
 function sendDigestEmails() {
 	var userCollection = db.get('usercollection');
 	userCollection.find({}, { stream: true })
 		.each(function (user) {
 			console.log("send email to " + user.aadTokens.idToken.unique_name);
-			getServiceData.sendSummaryEmail(user); 
+			getServiceData.sendSummaryEmail(user);
+			getServiceData.sendPredictionEmail(user);  
 		});
 }
 
