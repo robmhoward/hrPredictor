@@ -3,9 +3,14 @@
 <head>
     <title>Heart Rate Predictor</title>
     
-    <link rel="stylesheet" href="bower_components/material-date-picker/build/styles/mbdatepicker.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.css">
+    <style>
+        @font-face {
+            font-family: Project K Symbol;
+            src: url(ProjectKSymbolRegular.woff);
+        }
+     </style>
 </head>
 
 <body>
@@ -42,7 +47,7 @@
       </div>
     </md-toolbar>
 
-    <md-content layout-padding style="height: 600px;padding: 24px;">
+    <md-content layout-padding style="padding: 24px;">
 
     	<div ng-view>
     	</div>
@@ -59,7 +64,7 @@
 
 	<script type="text/javascript" src="app.js"></script>
     
-    <script src="bower_components/material-date-picker/build/mbdatepicker.js"></script>
+    
 
 </body>
 

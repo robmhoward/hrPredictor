@@ -1,4 +1,4 @@
-var hrPredictorApp = angular.module("hrPredictorApp", ['ngRoute', 'ngMaterial', 'materialDatePicker']);
+var hrPredictorApp = angular.module("hrPredictorApp", ['ngRoute', 'ngMaterial']);
 
 hrPredictorApp.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {  
 	$routeProvider
@@ -61,22 +61,46 @@ hrPredictorApp.controller("LoginController", function($scope, $q, hrPredictorFac
 	$scope.updateProfile = function() {
 		hrPredictorFactory.updateMe($scope.me);
 	};
-
-
 });
 
 hrPredictorApp.controller("HistoricalDataController", function($scope, $q, hrPredictorFactory) {
 
-	$scope.me = [{name: "Loading..."}];
+	$scope.events = [{Subject: "Loading..."}];
 	
-	hrPredictorFactory.getMe().then(function(response) {
-		$scope.me = response.data;
+	var startDate = new Date();
+	startDate.setDate(startDate.getDate() - 1);
+	startDate.setHours(0);
+	startDate.setMinutes(0);
+	startDate.setSeconds(0);
+	startDate.setMilliseconds(0);
+		
+	var endDate = new Date();
+	endDate.setDate(endDate.getDate());
+	endDate.setHours(0);
+	endDate.setMinutes(0);
+	endDate.setSeconds(0);
+	endDate.setMilliseconds(0);
+	
+	
+	hrPredictorFactory.getHistoricalData(startDate, endDate).then(function(response) {
+		for (var i=0; i < response.data.length; i++) {
+			var event = response.data[i];
+			if (event.AverageHeartRate < 75) {
+				event.Color = "green";
+			} else if (event.AverageHeartRate > 90) {
+				event.Color = "red";
+			} else {
+				//event.Color = "blue";
+			}
+		}
+		
+		response.data.sort(function (a, b) {
+			return b.AverageHeartRate - a.AverageHeartRate;
+		});
+		
+		$scope.events = response.data;
+		
 	});
-	
-	$scope.updateProfile = function() {
-		hrPredictorFactory.updateMe($scope.me);
-	}
-
 
 });
 

@@ -1,9 +1,29 @@
 <div class="container">
-	<md-card style="max-width: 800px">
+	<md-card>
 		<md-toolbar>
 			<div class="md-toolbar-tools">
 				<h2 class="md-flex">Historical Data</h2>
 			</div>
 		</md-toolbar>
+		<md-content>
+			<md-card ng-repeat="event in events">
+				<md-toolbar ng-style="{'background-color': event.Color}">
+					<div class="md-toolbar-tools">
+						<h2 class="md-flex">{{event.Subject}}</h2>
+					</div>
+				</md-toolbar>
+				<md-content layout-padding style="max-height: 300px;padding: 24px;">
+					<p>
+					<md-icon md-svg-icon="img/icons/favorite.svg" style="color: red;"></md-icon> {{event.AverageHeartRate}}
+					</p>
+					<p>
+					<span style="font-size: 20pt; font-family: 'Project K Symbol'"></span> {{event.StepsTaken}}<br/>
+					</p>
+					<p>
+					{{event.BodyPreview}}
+					</p>
+				</md-content>
+			</md-card>
+		</md-content>
 	</md-card>
 </div>
