@@ -65,7 +65,7 @@ hrPredictorApp.controller("LoginController", function($scope, $q, hrPredictorFac
 
 hrPredictorApp.controller("HistoricalDataController", function($scope, $q, hrPredictorFactory) {
 
-	$scope.events = [{Subject: "Loading..."}];
+	$scope.dateLabel = "(Loading...)";
 	
 	var startDate = new Date();
 	startDate.setDate(startDate.getDate() - 1);
@@ -99,7 +99,7 @@ hrPredictorApp.controller("HistoricalDataController", function($scope, $q, hrPre
 		});
 		
 		$scope.events = response.data;
-		
+		$scope.dateLabel = "for " + startDate.toDateString();
 	});
 
 });
