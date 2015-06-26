@@ -1,7 +1,25 @@
 var https = require('https');
 
+var authConfigs = {
+	AAD: {
+		stsTokenPath: "/common/oauth2/token",
+		stsAuthorizationPath: "/common/oauth2/authorize",
+		stsHostName: "login.microsoftonline.com",
+		clientId: "f531c26a-4d16-44b9-80cf-aa49d7394fbb",
+		clientSecret: "%2BoX1vOIHrkkHxYcuvclxi8sHsFn5uEf4bhaGhNXqJqI%3D" //already url encoded
+	},
+	MSA: {
+		stsTokenPath: "/oauth20_token.srf",
+		stsAuthorizationPath: "/oauth20_authorize.srf",
+		stsHostName: "login.live.com",
+		clientId: "000000004415354E",
+		clientSecret: "zgDE2DuPotxa4AJNxelJwAarftiwasm3"
+	}
+};
+
 module.exports = {
-  getAuthorizationEndpointUrl: function (authConfig, redirectUri, scopes, resource) {
+  getAuthorizationEndpointUrl: function (authConfigName, redirectUri, scopes, resource) {
+    var authConfig = authConfigs[authConfigName];
     var basicUrl = "https://" + authConfig.stsHostName + authConfig.stsAuthorizationPath + "?client_id=" + authConfig.clientId + "&response_type=code&redirect_uri=" + redirectUri; 
     if (scopes) {
       basicUrl += "&scope=" + scopes;
@@ -11,16 +29,41 @@ module.exports = {
     }
     return basicUrl; 
   },
-  getTokenResponseWithRefreshToken: function (authConfig, refreshToken, redirectUri, callback) {
-    makeTokenRequest(authConfig, constructBaseTokenRequestBody(authConfig, redirectUri) + "&grant_type=refresh_token&refresh_token=" + refreshToken, callback);
+  getTokenResponseWithRefreshToken: function (authConfigName, refreshToken, redirectUri, callback) {
+    var authConfig = authConfigs[authConfigName];
+    makeRefreshTokenRequest(authConfig, refreshToken, redirectUri, callback);
   },
-  getTokenResponseWithCode: function (authConfig, code, redirectUri, callback) {
+  getTokenResponseWithCode: function (authConfigName, code, redirectUri, callback) {
+    var authConfig = authConfigs[authConfigName];
     makeTokenRequest(authConfig, constructBaseTokenRequestBody(authConfig, redirectUri) + "&grant_type=authorization_code&code=" + code, callback);
-  }
+  },
+  refreshAccessTokensIfNecessary: refreshTokensIfNecessary
 };
 
+function refreshTokensIfNecessary(user, callback) {
+  var completedCalls = 0;
+  makeRefreshTokenRequest(authConfigs.AAD, user.aadTokens.refreshToken, null, function(error, tokenResponseData) {
+    completedCalls++;
+    var tokenResponse = JSON.parse(tokenResponseData);
+    user.aadTokens.accessToken = tokenResponse.access_token;
+    if (completedCalls == 2) callback();
+  });
+  makeRefreshTokenRequest(authConfigs.MSA, user.msaTokens.refreshToken, null, function(error, tokenResponseData) {
+    completedCalls++;
+    var tokenResponse = JSON.parse(tokenResponseData);
+    user.msaTokens.accessToken = tokenResponse.access_token;
+    if (completedCalls == 2) callback();
+  });
+}
+
+function makeRefreshTokenRequest(authConfig, refreshToken, redirectUri, callback) {
+  makeTokenRequest(authConfig, constructBaseTokenRequestBody(authConfig, redirectUri) + "&grant_type=refresh_token&refresh_token=" + refreshToken, callback);
+}
+
 function constructBaseTokenRequestBody(authConfig, redirectUri) {
-  return "redirect_uri=" + redirectUri + "&client_id=" + authConfig.clientId + "&client_secret=" + authConfig.clientSecret;
+  var baseRequest = "client_id=" + authConfig.clientId + "&client_secret=" + authConfig.clientSecret;
+  if (redirectUri) baseRequest += "&redirect_uri=" + redirectUri;
+  return baseRequest;
 }
 
 function makeTokenRequest(authConfig, requestBody, callback) {
