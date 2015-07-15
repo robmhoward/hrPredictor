@@ -31,7 +31,7 @@
 			"Response": "Organizer",
 			"Time": "0001-01-01T00:00:00Z"
 		},
-		"PredictedHeartRate": "72.9733405390362"
+		"PredictedHeartRate": "73.2"
 	},
 	{
 		"@odata.id": "https://outlook.office365.com/api/v1.0/Users('rhoward@exchange.microsoft.com')/Events('AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQBGAAAAAABlDZTRoj6wTqag8Dj1DWJ6BwB1iIl5MD4gRrMKULg8JkZSAAACOEvIAAB_iIRpyhT3TLrzPaTKcCmSAAHuAYf_AAA=')",
@@ -94,7 +94,7 @@
 			"Response": "Accepted",
 			"Time": "2015-07-09T17:34:00Z"
 		},
-		"PredictedHeartRate": "72.9733405390362"
+		"PredictedHeartRate": "70"
 	},
 	{
 		"@odata.id": "https://outlook.office365.com/api/v1.0/Users('rhoward@exchange.microsoft.com')/Events('AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQBGAAAAAABlDZTRoj6wTqag8Dj1DWJ6BwB1iIl5MD4gRrMKULg8JkZSAAACOEvIAAB_iIRpyhT3TLrzPaTKcCmSAAHuAYf-AAA=')",
@@ -157,7 +157,7 @@
 			"Response": "Accepted",
 			"Time": "2015-07-09T17:34:00Z"
 		},
-		"PredictedHeartRate": "72.9733405390362"
+		"PredictedHeartRate": "67"
 	},
 	{
 		"@odata.id": "https://outlook.office365.com/api/v1.0/Users('rhoward@exchange.microsoft.com')/Events('AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQBGAAAAAABlDZTRoj6wTqag8Dj1DWJ6BwB1iIl5MD4gRrMKULg8JkZSAAACOEvIAAB_iIRpyhT3TLrzPaTKcCmSAAHuAYgUAAA=')",
@@ -260,7 +260,7 @@
 			"Response": "Accepted",
 			"Time": "2015-07-14T00:26:00Z"
 		},
-		"PredictedHeartRate": "72.9733405390362"
+		"PredictedHeartRate": "72"
 	},
 	{
 		"@odata.id": "https://outlook.office365.com/api/v1.0/Users('rhoward@exchange.microsoft.com')/Events('AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQFRAAgI0oyoU73AAEYAAAAAZQ2U0aI_sE6moPA49Q1iegcAdYiJeTA_IEazClC4PCZGUgAAAjhLyAAAfoiEacoU90y68z2kynApkgABLne4RAAAEA==')",
@@ -371,7 +371,7 @@
 			"Response": "Accepted",
 			"Time": "2015-07-13T16:51:00Z"
 		},
-		"PredictedHeartRate": "51.0972978123966"
+		"PredictedHeartRate": "52"
 	},
 	{
 		"@odata.id": "https://outlook.office365.com/api/v1.0/Users('rhoward@exchange.microsoft.com')/Events('AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQBGAAAAAABlDZTRoj6wTqag8Dj1DWJ6BwB1iIl5MD4gRrMKULg8JkZSAAACOEvIAAB_iIRpyhT3TLrzPaTKcCmSAAHuAYgDAAA=')",
@@ -506,7 +506,7 @@
 			"Response": "TentativelyAccepted",
 			"Time": "2015-07-10T15:56:00Z"
 		},
-		"PredictedHeartRate": "72.9733405390362"
+		"PredictedHeartRate": "84"
 	},
 	{
 		"@odata.id": "https://outlook.office365.com/api/v1.0/Users('rhoward@exchange.microsoft.com')/Events('AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQBGAAAAAABlDZTRoj6wTqag8Dj1DWJ6BwB1iIl5MD4gRrMKULg8JkZSAAACOEvIAAAPwSiPJrG6R6-c1CxJ2auaAAA9bmx0AAA=')",
@@ -643,7 +643,7 @@
 			"Response": "Organizer",
 			"Time": "0001-01-01T00:00:00Z"
 		},
-		"PredictedHeartRate": "51.0972978123966"
+		"PredictedHeartRate": "54"
 	},
 	{
 		"@odata.id": "https://outlook.office365.com/api/v1.0/Users('rhoward@exchange.microsoft.com')/Events('AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQFRAAgI0oyoU73AAEYAAAAAZQ2U0aI_sE6moPA49Q1iegcAdYiJeTA_IEazClC4PCZGUgAAAjhLyAAAfoiEacoU90y68z2kynApkgABnpEm7gAAEA==')",
@@ -1010,7 +1010,7 @@
 			"Response": "Accepted",
 			"Time": "2015-04-22T16:47:00Z"
 		},
-		"PredictedHeartRate": "51.0972978123966"
+		"PredictedHeartRate": "66"
 	},
 	{
 		"@odata.id": "https://outlook.office365.com/api/v1.0/Users('rhoward@exchange.microsoft.com')/Events('AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQFRAAgI0oyoU73AAEYAAAAAZQ2U0aI_sE6moPA49Q1iegcAdYiJeTA_IEazClC4PCZGUgAAAjhLyAAAD8Eojyaxukev3NQsSdmrmgAAJhSlRAAAEA==')",
@@ -1169,6 +1169,6 @@
 			"Response": "TentativelyAccepted",
 			"Time": "0001-01-01T00:00:00Z"
 		},
-		"PredictedHeartRate": "51.0972978123966"
+		"PredictedHeartRate": "97"
 	}
 ]
