@@ -1,0 +1,1174 @@
+[
+	{
+		"@odata.id": "https://outlook.office365.com/api/v1.0/Users('rhoward@exchange.microsoft.com')/Events('AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQBGAAAAAABlDZTRoj6wTqag8Dj1DWJ6BwB1iIl5MD4gRrMKULg8JkZSAAACOEvIAAAPwSiPJrG6R6-c1CxJ2auaAAAfWuCGAAA=')",
+		"@odata.etag": "W/\"D8Eojyaxukev3NQsSdmrmgAAPSb/Tw==\"",
+		"Id": "AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQBGAAAAAABlDZTRoj6wTqag8Dj1DWJ6BwB1iIl5MD4gRrMKULg8JkZSAAACOEvIAAAPwSiPJrG6R6-c1CxJ2auaAAAfWuCGAAA=",
+		"Subject": "On call",
+		"Attendees": [],
+		"Body": {
+			"ContentType": "HTML",
+			"Content": "<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\r\n</head>\r\n<body style=\"word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space; color: rgb(0, 0, 0); font-size: 14px; font-family: Calibri, sans-serif;\">\r\n<div><br>\r\n</div>\r\n</body>\r\n</html>\r\n"
+		},
+		"BodyPreview": "",
+		"Location": {
+			"DisplayName": "",
+			"Address": null,
+			"Coordinates": null
+		},
+		"Organizer": {
+			"EmailAddress": {
+				"Address": "rhoward@exchange.microsoft.com",
+				"Name": "Rob Howard (OFFICE)"
+			}
+		},
+		"Start": "2015-07-13T00:00:00Z",
+		"StartTimeZone": "UTC",
+		"End": "2015-07-28T00:00:00Z",
+		"EndTimeZone": "UTC",
+		"Importance": "Normal",
+		"Type": "SingleInstance",
+		"ResponseStatus": {
+			"Response": "Organizer",
+			"Time": "0001-01-01T00:00:00Z"
+		},
+		"PredictedHeartRate": "72.9733405390362"
+	},
+	{
+		"@odata.id": "https://outlook.office365.com/api/v1.0/Users('rhoward@exchange.microsoft.com')/Events('AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQBGAAAAAABlDZTRoj6wTqag8Dj1DWJ6BwB1iIl5MD4gRrMKULg8JkZSAAACOEvIAAB_iIRpyhT3TLrzPaTKcCmSAAHuAYf_AAA=')",
+		"@odata.etag": "W/\"D8Eojyaxukev3NQsSdmrmgAAPY7vTA==\"",
+		"Id": "AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQBGAAAAAABlDZTRoj6wTqag8Dj1DWJ6BwB1iIl5MD4gRrMKULg8JkZSAAACOEvIAAB_iIRpyhT3TLrzPaTKcCmSAAHuAYf_AAA=",
+		"Subject": "LOCATION UPDATED-Bhargav Krishna, Internal Candidate Interview - 913312 - SWE II - July 13, 2015, July 15, 2015, and July 16, 2015 (##5832419##)",
+		"Attendees": [
+			{
+				"EmailAddress": {
+					"Address": "stafiaas@microsoft.com",
+					"Name": "MS Staffing"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "rhoward@exchange.microsoft.com",
+					"Name": "Rob Howard (OFFICE)"
+				},
+				"Status": null,
+				"Type": "Required"
+			}
+		],
+		"Body": {
+			"ContentType": "HTML",
+			"Content": "<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\r\n</head>\r\n<body>\r\n<font color=\"red\" size=\"2\" face=\"Tahoma\">\r\n<p class=\"x_x_x_x_x_MsoNormal\" style=\"MARGIN: 14pt 0in 0pt; TEXT-AUTOSPACE: \"><span style=\"COLOR: red\"><font size=\"3\" face=\"Calibri\">Accept this meeting request by selecting the option:\r\n<b>“Send the Response Now”</b> to accurately record your acceptance.<span> </span>\r\nOtherwise, your scheduler will need to follow up via email to reconfirm.</font></span><span style=\"FONT-SIZE: 12pt; FONT-FAMILY: \" TimesNewRoman?,serif?=\"\"></span></p>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"MARGIN: 0in 0in 0pt\">\r\n</p>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"MARGIN: 0in 0in 0pt\">\r\n** This is a public meeting request sent from an <strong><u>unmonitored mailbox</u></strong> on behalf of Monet Dailey-Hoxter**</font></p>\r\n<p><font size=\"2\" face=\"Tahoma\">Stephen Oliver has identified you as a participant in this interview loop.</font></p>\r\n<p><strong><font color=\"red\" size=\"2\" face=\"Tahoma\">Required Actions:</font></strong></p>\r\n<font size=\"2\" face=\"Tahoma\">\r\n<ol>\r\n<li><font color=\"red\"><strong>Respond to this meeting request. </strong></font></li><li><font color=\"red\"><strong>You must select send a response; otherwise your response will not be recorded.\r\n</strong></font></li><li><font color=\"red\"><strong>In your response, specify if you need a conference room.</strong></font></li></ol>\r\n</font>\r\n<p><font size=\"2\" face=\"Tahoma\">The following is included in this email:</font></p>\r\n<font size=\"2\" face=\"Tahoma\">\r\n<ol>\r\n<li>Resume &amp; Feedback Link </li><li>Job Description, Schedule &amp; Next Steps </li><li>Effective Interviews &amp; Selling Microsoft to Candidates </li><li>Interviewing Tools and Messaging Links </li><li><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\"><font color=\"green\"><font color=\"black\">Skype for Business Information</font><strong>\r\n</strong></font></span></li></ol>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"BACKGROUND: white; COLOR: #00b050; MARGIN: 0in 0in 0pt\">\r\n<b><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\"></span></b></p>\r\n<ol>\r\n</font><font size=\"2\" face=\"Tahoma\"><strong>\r\n<li>Resume &amp; Feedback Link:<br>\r\n<br>\r\n</font></strong><font face=\"Tahoma\"><font size=\"2\"><font color=\"black\"><strong>Resume:</strong>\r\n<a href=\"https://recweb/recweb/nav.aspx?REDMONDv-modail87201593243.pdf\">Krishna, Bhargav.pdf</a><br>\r\n</font></font></font><font face=\"Tahoma\"><font size=\"2\"><strong><font color=\"red\">Feedback Link:</font></strong>\r\n<span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Verdana','sans-serif'; COLOR: black\">\r\n<a href=\"https://ivfeedback/ivf/feedback/Feedback.aspx?29-BC-4B-EF-4B-49-45-61-E9-41-AB-45-D1-B9-78-B3\">Bhargav Krishna</a></span><br>\r\n</font></font><font size=\"2\" face=\"Tahoma\"><strong></li><li>Job Description, Schedule &amp; Next Steps</font></strong>\r\n<ol>\r\n<li><font size=\"2\" face=\"Tahoma\">To view the most up-to-date schedule, job description , or review any special interview instructions from the recruiter or hiring manager visit the Interview Feedback site link above (the job description is accessed by selecting\r\n the Requisition Number link)</font> </li><li><font size=\"2\" face=\"Tahoma\">A final email confirmation will be sent by 12pm on the business day prior to the interview day and will include the final schedule.</font>\r\n</li><li><font size=\"2\" face=\"Tahoma\">Immediately following your interview, <strong>please visit the Interview Feedback Site to submit your individual Hire/No Hire decision</strong> and specific interview feedback.<br>\r\n</li></ol>\r\n</font><font size=\"2\" face=\"Tahoma\"><strong></li><li>Effective Interviews &amp; Selling Microsoft to Candidates</strong><br>\r\nAs an interviewer, it's important to remember that you represent Microsoft in the eyes of candidates. More than anything,\r\n<strong>it is the people and conversations they’ll remember most</strong> about this experience, including the style and focus of their discussion with you. As you engage in these conversations please keep in mind the diversity of communication and personal\r\n styles that may be different from yours, and consider that we will need the talents of diverse populations to yield superior results. It's incredibly important that we interact with every candidate with this in mind, whether s/he is a hire or no hire, so each\r\n comes away with a positive impression and can spread the word about Microsoft being a great place to work.<br>\r\n</font><font size=\"2\" face=\"Tahoma\"><br>\r\nAlso don’t forget that strong candidates are probably considering multiple opportunities from other companies. Do not miss the chance to remind candidates of the many reasons to work at Microsoft and\r\n<strong>ensure they have a truly great experience with us!<br>\r\n</strong></font><font size=\"2\" face=\"Tahoma\"><strong></li><li>Interviewing Tools and Messaging Links:</strong></font><font size=\"2\" face=\"Tahoma\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\"></li></ol>\r\n<ul style=\"MARGIN-TOP: 0in\" type=\"disc\">\r\n<li class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"BACKGROUND: white; COLOR: black; MARGIN: 0in 0in 0pt\">\r\n<strong><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; FONT-WEIGHT: normal; COLOR: windowtext\">Interviewing Tools and Messaging:\r\n</span></strong><span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: black\">Improve your candidate assessment capability by using the</span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #1f497d\">\r\n</span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: blue\"><a href=\"http://competencyivq/\"><span style=\"COLOR: blue\">Microsoft Competency Based Interview Questions Guide</span></a></span></span>\r\n</li><li class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"BACKGROUND: white; COLOR: black; MARGIN: 0in 0in 0pt\">\r\n<span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: black\"></span></span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: black\"></span></span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\">Use\r\n materials and websites to describe what makes MS unique: </span><span class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoHyperlink\"><a href=\"http://hrweb/career/jobs/hiringmanager/findcandidates/Pages/msstory.aspx\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\"><font color=\"#0000ff\">Candidate\r\n Ready Messaging – Why work here?</font></span></a></span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\">\r\n</span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Verdana','sans-serif'\"></span></li><li class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"BACKGROUND: white; COLOR: black; MARGIN: 0in 0in 0pt\">\r\n<span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\">Use the following guidelines before</span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #1f497d\">\r\n</span><u><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: blue\"><a href=\"http://hrweb/career/jobs/interview/feedback/Pages/hiringrecommendation.aspx\"><font color=\"#0000ff\">Making a Hiring Recommendation</font></a></span></u><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Verdana','sans-serif'\">\r\n</span></li><li class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"BACKGROUND: white; COLOR: black; MARGIN: 0in 0in 0pt\">\r\n<span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\">Review our mission and\r\n<u><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;COLOR:blue?=\"\"><a href=\"https://microsoft.sharepoint.com/sites/msw/Company/Values\"><font color=\"#0000ff\">Microsoft Company Values</font></a></span></u></span></li></ul>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"BACKGROUND: white; COLOR: black; MARGIN: 0in 0in 0pt\">\r\n<span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Verdana','sans-serif'\"><span><strong><span><span style=\"FONT: 7pt 'Times New Roman'\"><font face=\"Tahoma\"><font size=\"2\"><font color=\"black\">5.</font>\r\n</font></font></span></span><font color=\"green\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\"><font color=\"green\"><font color=\"black\">Skype for Business Information</font>\r\n</font></span></font></strong></span></span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Verdana','sans-serif'\"></p>\r\n<p class=\"MsoNormal\" style=\"MARGIN: 0in 0in 0pt; TEXT-AUTOSPACE: ; mso-pagination: none; mso-layout-grid-align: none\">\r\n<span style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;COLOR:#404040?=\"\">.........................................................................................................................................</span><b><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif?=\"\">\r\n<?xml:namespace prefix = \"o\" ns = \"urn:schemas-microsoft-com:office:office\" />\r\n <o:p></o:p></span></b></p>\r\n<p class=\"MsoNormal\" style=\"MARGIN: 0in 0in 0pt; TEXT-AUTOSPACE: ; mso-pagination: none; mso-layout-grid-align: none\">\r\n<a name=\"OutJoinLink\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: Wingdings; COLOR: #0066cc; mso-bidi-font-family: Tahoma; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma; mso-char-type: symbol; mso-symbol-font-family: Wingdings\"><span style=\"mso-char-type: symbol; mso-symbol-font-family: Wingdings\">à</span></span></a><span style=\"mso-bookmark: OutJoinLink\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;COLOR:#0066cc?=\"\">\r\n</span></span><a href=\"https://join.microsoft.com/meet/v-modail/7VK3YD9V\"><span style=\"mso-bookmark: OutJoinLink\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;COLOR:#0066cc?=\"\">Join Skype Meeting</span></span></a><span style=\"mso-bookmark: OutJoinLink\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif?=\"\"><span style=\"mso-spacerun: yes\">\r\n</span><a name=\"OutSharedNoteBorder\"><span style=\"mso-spacerun: yes\"></span></a><span style=\"mso-spacerun: yes\"></span><a name=\"OutSharedNoteLink\"><span style=\"mso-spacerun: yes\"></span></a></span></span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif?=\"\"><o:p></o:p></span></p>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"BACKGROUND: white; COLOR: black; MARGIN: 0in 0in 0pt\">\r\n<table class=\"MsoNormalTable\" style=\"BORDER-COLLAPSE: collapse; mso-table-layout-alt: fixed; mso-padding-alt: 0in 0in 0in 0in\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\r\n<tbody>\r\n<tr style=\"mso-yfti-irow: 0; mso-yfti-firstrow: yes; mso-yfti-lastrow: yes\">\r\n<td style=\"BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; WIDTH: 300pt; BORDER-BOTTOM: #f0f0f0; PADDING-BOTTOM: 0in; PADDING-TOP: 0in; PADDING-LEFT: 0in; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0in; BACKGROUND-COLOR: transparent\" valign=\"top\" width=\"400\">\r\n<p class=\"MsoNormal\" style=\"MARGIN: 3pt 0in 12pt 16pt; LINE-HEIGHT: 125%; TEXT-AUTOSPACE: ; mso-pagination: none; mso-layout-grid-align: none\">\r\n<span style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;LINE-HEIGHT:125%?=\"\">This is an online meeting for Skype for Business, the professional meetings and communications app formerly known as Lync.<o:p></o:p></span></p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</p>\r\n<p class=\"MsoNormal\" style=\"MARGIN: 0in 0in 0pt; TEXT-AUTOSPACE: ; mso-pagination: none; mso-layout-grid-align: none\">\r\n<span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;COLOR:black;mso-ansi-language:EN?=\"\">Join by phone</span><span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;mso-ansi-language:EN?=\"\"><o:p></o:p></span></p>\r\n<p class=\"MsoNormal\" style=\"MARGIN: 0in 0in 2pt; TEXT-AUTOSPACE: ; mso-pagination: none; mso-layout-grid-align: none\">\r\n<span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;mso-ansi-language:EN?=\"\"><a href=\"tel:&#43;14257063500\"><span style=\"COLOR: #0066cc\">&#43;14257063500</span></a> (USA - Redmond Campus)\r\n<span style=\"mso-tab-count: 2\"></span>English (United States) <o:p></o:p></span></p>\r\n<p class=\"MsoNormal\" style=\"MARGIN: 0in 0in 2pt; TEXT-AUTOSPACE: ; mso-pagination: none; mso-layout-grid-align: none\">\r\n<span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;mso-ansi-language:EN?=\"\"><a href=\"tel:&#43;18883203585\"><span style=\"COLOR: #0066cc\">&#43;18883203585</span></a> (USA - Redmond Campus)\r\n<span style=\"mso-tab-count: 2\"></span>English (United States)<span style=\"mso-spacerun: yes\">\r\n</span><o:p></o:p></span></p>\r\n<p class=\"MsoNormal\" style=\"MARGIN: 0in 0in 2pt; TEXT-AUTOSPACE: ; mso-pagination: none; mso-layout-grid-align: none\">\r\n<u><span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;COLOR:#943634;mso-ansi-language:EN?=\"\"><a href=\"https://join.microsoft.com/dialin\"><span style=\"COLOR: #0066cc\">Find a local number</span></a></span></u><span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;mso-ansi-language:EN?=\"\">\r\n<o:p></o:p></span></p>\r\n<p class=\"MsoNormal\" style=\"MARGIN: 0in 0in 2pt; TEXT-AUTOSPACE: ; mso-pagination: none; mso-layout-grid-align: none\">\r\n<span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;mso-ansi-language:EN?=\"\"><o:p></o:p></span></p>\r\n<p class=\"MsoNormal\" style=\"MARGIN: 0in 0in 2pt; TEXT-AUTOSPACE: ; mso-pagination: none; mso-layout-grid-align: none\">\r\n<span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;mso-ansi-language:EN?=\"\">Conference ID: 782457244<o:p></o:p></span></p>\r\n<p class=\"MsoNormal\" style=\"MARGIN: 0in 0in 0pt; TEXT-AUTOSPACE: ; mso-pagination: none; mso-layout-grid-align: none\">\r\n<span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;mso-ansi-language:EN?=\"\"><span style=\"mso-spacerun: yes\"></span><span style=\"COLOR: #0066cc\"><a href=\"https://join.microsoft.com/dialin\"><span style=\"COLOR: #0066cc\">Forgot your dial-in\r\n PIN?</span></a></span> |<a href=\"http://o15.officeredir.microsoft.com/r/rlidLync15?clid=1033&amp;p1=5&amp;p2=2009\"><span style=\"COLOR: #0066cc\">Help</span></a><span style=\"mso-spacerun: yes\">\r\n</span></span><sub><span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;COLOR:white;mso-ansi-language:EN?=\"\">1033])!]</span></sub><span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;mso-ansi-language:EN?=\"\"><o:p></o:p></span></p>\r\n<p class=\"MsoNormal\" style=\"MARGIN: 0in 0in 10pt; LINE-HEIGHT: 115%; TEXT-AUTOSPACE: ; mso-pagination: none; mso-layout-grid-align: none\">\r\n<span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;COLOR:#404040;LINE-HEIGHT:115%;mso-ansi-language:EN?=\"\">.........................................................................................................................................</span><span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;LINE-HEIGHT:115%;mso-ansi-language:EN?=\"\"><o:p></o:p></span></p>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"BACKGROUND: white; COLOR: black; MARGIN: 0in 0in 0pt\">\r\n<span></span></p>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"MARGIN: 0in 0in 0pt 0.5in\">\r\n<span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: red\">Please note that when not calling in from the corporate network (your PC or UC phone), your PIN is required. PIN numbers must be created by Microsoft employees. Please\r\n</span><a href=\"https://cwa.microsoft.com/dialin\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\"><font color=\"#0000ff\">set up</font></span></a><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: red\"> your PIN in advance.\r\n</span></p>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"MARGIN: 0in 0in 0pt 0.5in\">\r\n<span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: red\"></span></p>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"MARGIN: 0in 0in 0pt 0.5in\">\r\n<b><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: black\">You will be the leader, please initiate the call using your PIN if prompted:\r\n</span></b></p>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"MARGIN: 0in 0in 0pt 0.5in\">\r\n<span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: black\"></span></p>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoListParagraphCxSpFirst\" style=\"MARGIN: 0in 0in 0pt 1in; LINE-HEIGHT: normal; TEXT-INDENT: -0.25in\">\r\n<span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: black\"><span>a.<span style=\"FONT: 7pt 'Times New Roman'\">\r\n</span></span></span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: black\">Enter Conference ID number, your extension, then your PIN. –or-</span></p>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoListParagraphCxSpLast\" style=\"MARGIN: 0in 0in 2pt 1in; LINE-HEIGHT: normal; TEXT-AUTOSPACE: ; TEXT-INDENT: -0.25in\">\r\n<span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: black\"><span>b.<span style=\"FONT: 7pt 'Times New Roman'\">\r\n</span></span></span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: black\">Enter Conference ID number, your phone number with a 1 before the number, then your PIN\r\n</span></p>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"BACKGROUND: white; COLOR: black; MARGIN: 0in 0in 0pt\">\r\n</p>\r\n</span></span>\r\n<p></font><font size=\"2\" face=\"Tahoma\">Thank you,</font></p>\r\n<font size=\"2\" face=\"Tahoma\">\r\n<p style=\"BACKGROUND: white; MARGIN: 0in 0in 0pt\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\">Monet Dailey-Hoxter\r\n</span></p>\r\n<p style=\"BACKGROUND: white; MARGIN: 0in 0in 0pt\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\">Interview Scheduler</span></p>\r\n<p style=\"BACKGROUND: white; MARGIN: 0in 0in 0pt\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\">Microsoft Staffing</span></font></p>\r\n</body>\r\n</html>\r\n"
+		},
+		"BodyPreview": "Accept this meeting request by selecting the option: “Send the Response Now” to accurately record your acceptance. Otherwise, your scheduler will need to follow up via email to reconfirm.\r\n\r\n** This is a public meeting request sent from an unmonitored mai",
+		"Location": {
+			"DisplayName": "Via Skype Conference Call. Please see details below.",
+			"Address": {
+				"Street": "",
+				"City": "",
+				"State": "",
+				"CountryOrRegion": "",
+				"PostalCode": ""
+			},
+			"Coordinates": {
+				"Accuracy": "NaN",
+				"Altitude": "NaN",
+				"AltitudeAccuracy": "NaN",
+				"Latitude": "NaN",
+				"Longitude": "NaN"
+			}
+		},
+		"Organizer": {
+			"EmailAddress": {
+				"Address": "stafiaas@microsoft.com",
+				"Name": "MS Staffing"
+			}
+		},
+		"Start": "2015-07-15T15:00:00Z",
+		"StartTimeZone": "Pacific Standard Time",
+		"End": "2015-07-15T16:00:00Z",
+		"EndTimeZone": "Pacific Standard Time",
+		"Importance": "Normal",
+		"Type": "SingleInstance",
+		"ResponseStatus": {
+			"Response": "Accepted",
+			"Time": "2015-07-09T17:34:00Z"
+		},
+		"PredictedHeartRate": "72.9733405390362"
+	},
+	{
+		"@odata.id": "https://outlook.office365.com/api/v1.0/Users('rhoward@exchange.microsoft.com')/Events('AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQBGAAAAAABlDZTRoj6wTqag8Dj1DWJ6BwB1iIl5MD4gRrMKULg8JkZSAAACOEvIAAB_iIRpyhT3TLrzPaTKcCmSAAHuAYf-AAA=')",
+		"@odata.etag": "W/\"D8Eojyaxukev3NQsSdmrmgAAPY7vSw==\"",
+		"Id": "AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQBGAAAAAABlDZTRoj6wTqag8Dj1DWJ6BwB1iIl5MD4gRrMKULg8JkZSAAACOEvIAAB_iIRpyhT3TLrzPaTKcCmSAAHuAYf-AAA=",
+		"Subject": "Bhargav Krishna, Internal Candidate Interview - 913312 - SWE II - July 15, 2015 (##5832419##)",
+		"Attendees": [
+			{
+				"EmailAddress": {
+					"Address": "stafiaas@microsoft.com",
+					"Name": "MS Staffing"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "rhoward@exchange.microsoft.com",
+					"Name": "Rob Howard (OFFICE)"
+				},
+				"Status": null,
+				"Type": "Required"
+			}
+		],
+		"Body": {
+			"ContentType": "HTML",
+			"Content": "<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\r\n</head>\r\n<body>\r\n<font color=\"red\" size=\"2\" face=\"Tahoma\">\r\n<p class=\"x_x_x_x_x_MsoNormal\" style=\"MARGIN: 14pt 0in 0pt; TEXT-AUTOSPACE: \"><span style=\"COLOR: red\"><font size=\"3\" face=\"Calibri\">Accept this meeting request by selecting the option:\r\n<b>“Send the Response Now”</b> to accurately record your acceptance.<span> </span>\r\nOtherwise, your scheduler will need to follow up via email to reconfirm.</font></span><span style=\"FONT-SIZE: 12pt; FONT-FAMILY: \" TimesNewRoman?,serif?=\"\"></span></p>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"MARGIN: 0in 0in 0pt\">\r\n</p>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"MARGIN: 0in 0in 0pt\">\r\n** This is a public meeting request sent from an <strong><u>unmonitored mailbox</u></strong> on behalf of Monet Dailey-Hoxter**</font></p>\r\n<p><font size=\"2\" face=\"Tahoma\">Stephen Oliver has identified you as a participant in this interview loop.</font></p>\r\n<p><strong><font color=\"red\" size=\"2\" face=\"Tahoma\">Required Actions:</font></strong></p>\r\n<font size=\"2\" face=\"Tahoma\">\r\n<ol>\r\n<li><font color=\"red\"><strong>Respond to this meeting request. </strong></font></li><li><font color=\"red\"><strong>You must select send a response; otherwise your response will not be recorded.\r\n</strong></font></li><li><font color=\"red\"><strong>In your response, specify if you need a conference room.</strong></font></li></ol>\r\n</font>\r\n<p><font size=\"2\" face=\"Tahoma\">The following is included in this email:</font></p>\r\n<font size=\"2\" face=\"Tahoma\">\r\n<ol>\r\n<li>Resume &amp; Feedback Link </li><li>Job Description, Schedule &amp; Next Steps </li><li>Effective Interviews &amp; Selling Microsoft to Candidates </li><li>Interviewing Tools and Messaging Links </li><li><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\"><font color=\"green\"><font color=\"black\">Skype for Business Information</font><strong>\r\n</strong></font></span></li></ol>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"BACKGROUND: white; COLOR: #00b050; MARGIN: 0in 0in 0pt\">\r\n<b><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\"></span></b></p>\r\n<ol>\r\n</font><font size=\"2\" face=\"Tahoma\"><strong>\r\n<li>Resume &amp; Feedback Link:<br>\r\n<br>\r\n</font></strong><font face=\"Tahoma\"><font size=\"2\"><font color=\"black\"><strong>Resume:</strong>\r\n<a href=\"https://recweb/recweb/nav.aspx?REDMONDv-modail87201593243.pdf\">Krishna, Bhargav.pdf</a><br>\r\n</font></font></font><font face=\"Tahoma\"><font size=\"2\"><strong><font color=\"red\">Feedback Link:</font></strong>\r\n<span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Verdana','sans-serif'; COLOR: black\">\r\n<a href=\"https://ivfeedback/ivf/feedback/Feedback.aspx?29-BC-4B-EF-4B-49-45-61-E9-41-AB-45-D1-B9-78-B3\">Bhargav Krishna</a></span><br>\r\n</font></font><font size=\"2\" face=\"Tahoma\"><strong></li><li>Job Description, Schedule &amp; Next Steps</font></strong>\r\n<ol>\r\n<li><font size=\"2\" face=\"Tahoma\">To view the most up-to-date schedule, job description , or review any special interview instructions from the recruiter or hiring manager visit the Interview Feedback site link above (the job description is accessed by selecting\r\n the Requisition Number link)</font> </li><li><font size=\"2\" face=\"Tahoma\">A final email confirmation will be sent by 12pm on the business day prior to the interview day and will include the final schedule.</font>\r\n</li><li><font size=\"2\" face=\"Tahoma\">Immediately following your interview, <strong>please visit the Interview Feedback Site to submit your individual Hire/No Hire decision</strong> and specific interview feedback.<br>\r\n</li></ol>\r\n</font><font size=\"2\" face=\"Tahoma\"><strong></li><li>Effective Interviews &amp; Selling Microsoft to Candidates</strong><br>\r\nAs an interviewer, it's important to remember that you represent Microsoft in the eyes of candidates. More than anything,\r\n<strong>it is the people and conversations they’ll remember most</strong> about this experience, including the style and focus of their discussion with you. As you engage in these conversations please keep in mind the diversity of communication and personal\r\n styles that may be different from yours, and consider that we will need the talents of diverse populations to yield superior results. It's incredibly important that we interact with every candidate with this in mind, whether s/he is a hire or no hire, so each\r\n comes away with a positive impression and can spread the word about Microsoft being a great place to work.<br>\r\n</font><font size=\"2\" face=\"Tahoma\"><br>\r\nAlso don’t forget that strong candidates are probably considering multiple opportunities from other companies. Do not miss the chance to remind candidates of the many reasons to work at Microsoft and\r\n<strong>ensure they have a truly great experience with us!<br>\r\n</strong></font><font size=\"2\" face=\"Tahoma\"><strong></li><li>Interviewing Tools and Messaging Links:</strong></font><font size=\"2\" face=\"Tahoma\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\"></li></ol>\r\n<ul style=\"MARGIN-TOP: 0in\" type=\"disc\">\r\n<li class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"BACKGROUND: white; COLOR: black; MARGIN: 0in 0in 0pt\">\r\n<strong><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; FONT-WEIGHT: normal; COLOR: windowtext\">Interviewing Tools and Messaging:\r\n</span></strong><span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: black\">Improve your candidate assessment capability by using the</span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #1f497d\">\r\n</span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: blue\"><a href=\"http://competencyivq/\"><span style=\"COLOR: blue\">Microsoft Competency Based Interview Questions Guide</span></a></span></span>\r\n</li><li class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"BACKGROUND: white; COLOR: black; MARGIN: 0in 0in 0pt\">\r\n<span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: black\"></span></span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: black\"></span></span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\">Use\r\n materials and websites to describe what makes MS unique: </span><span class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoHyperlink\"><a href=\"http://hrweb/career/jobs/hiringmanager/findcandidates/Pages/msstory.aspx\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\"><font color=\"#0000ff\">Candidate\r\n Ready Messaging – Why work here?</font></span></a></span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\">\r\n</span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Verdana','sans-serif'\"></span></li><li class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"BACKGROUND: white; COLOR: black; MARGIN: 0in 0in 0pt\">\r\n<span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\">Use the following guidelines before</span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #1f497d\">\r\n</span><u><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: blue\"><a href=\"http://hrweb/career/jobs/interview/feedback/Pages/hiringrecommendation.aspx\"><font color=\"#0000ff\">Making a Hiring Recommendation</font></a></span></u><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Verdana','sans-serif'\">\r\n</span></li><li class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"BACKGROUND: white; COLOR: black; MARGIN: 0in 0in 0pt\">\r\n<span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\">Review our mission and\r\n<u><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;COLOR:blue?=\"\"><a href=\"https://microsoft.sharepoint.com/sites/msw/Company/Values\"><font color=\"#0000ff\">Microsoft Company Values</font></a></span></u></span></li></ul>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"BACKGROUND: white; COLOR: black; MARGIN: 0in 0in 0pt\">\r\n<span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Verdana','sans-serif'\"><span><strong><span><span style=\"FONT: 7pt 'Times New Roman'\"><font face=\"Tahoma\"><font size=\"2\"><font color=\"black\">5.</font>\r\n</font></font></span></span><font color=\"green\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\"><font color=\"green\"><font color=\"black\">Skype for Business Information</font>\r\n</font></span></font></strong></span></span></p>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"BACKGROUND: white; COLOR: black; MARGIN: 0in 0in 0pt\">\r\n<span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Verdana','sans-serif'\"><b><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #00b050\"></span></b></span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Verdana','sans-serif'\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;COLOR:#404040?=\"\">.........................................................................................................................................</span><b><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif?=\"\">\r\n<?xml:namespace prefix = \"o\" ns = \"urn:schemas-microsoft-com:office:office\" />\r\n <o:p></o:p></span></b></p>\r\n<p class=\"MsoNormal\" style=\"MARGIN: 0in 0in 0pt; TEXT-AUTOSPACE: ; mso-pagination: none; mso-layout-grid-align: none\">\r\n<a name=\"OutJoinLink\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: Wingdings; COLOR: #0066cc; mso-bidi-font-family: Tahoma; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma; mso-char-type: symbol; mso-symbol-font-family: Wingdings\"><span style=\"mso-char-type: symbol; mso-symbol-font-family: Wingdings\">à</span></span></a><span style=\"mso-bookmark: OutJoinLink\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;COLOR:#0066cc?=\"\">\r\n</span></span><a href=\"https://join.microsoft.com/meet/v-modail/7VK3YD9V\"><span style=\"mso-bookmark: OutJoinLink\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;COLOR:#0066cc?=\"\">Join Skype Meeting</span></span></a><span style=\"mso-bookmark: OutJoinLink\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif?=\"\"><span style=\"mso-spacerun: yes\">\r\n</span><a name=\"OutSharedNoteBorder\"><span style=\"mso-spacerun: yes\"></span></a><span style=\"mso-spacerun: yes\"></span><a name=\"OutSharedNoteLink\"><span style=\"mso-spacerun: yes\"></span></a></span></span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif?=\"\"><o:p></o:p></span></p>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"BACKGROUND: white; COLOR: black; MARGIN: 0in 0in 0pt\">\r\n<table class=\"MsoNormalTable\" style=\"BORDER-COLLAPSE: collapse; mso-table-layout-alt: fixed; mso-padding-alt: 0in 0in 0in 0in\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\r\n<tbody>\r\n<tr style=\"mso-yfti-irow: 0; mso-yfti-firstrow: yes; mso-yfti-lastrow: yes\">\r\n<td style=\"BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; WIDTH: 300pt; BORDER-BOTTOM: #f0f0f0; PADDING-BOTTOM: 0in; PADDING-TOP: 0in; PADDING-LEFT: 0in; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0in; BACKGROUND-COLOR: transparent\" valign=\"top\" width=\"400\">\r\n<p class=\"MsoNormal\" style=\"MARGIN: 3pt 0in 12pt 16pt; LINE-HEIGHT: 125%; TEXT-AUTOSPACE: ; mso-pagination: none; mso-layout-grid-align: none\">\r\n<span style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;LINE-HEIGHT:125%?=\"\">This is an online meeting for Skype for Business, the professional meetings and communications app formerly known as Lync.<o:p></o:p></span></p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</p>\r\n<p class=\"MsoNormal\" style=\"MARGIN: 0in 0in 0pt; TEXT-AUTOSPACE: ; mso-pagination: none; mso-layout-grid-align: none\">\r\n<span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;COLOR:black;mso-ansi-language:EN?=\"\">Join by phone</span><span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;mso-ansi-language:EN?=\"\"><o:p></o:p></span></p>\r\n<p class=\"MsoNormal\" style=\"MARGIN: 0in 0in 2pt; TEXT-AUTOSPACE: ; mso-pagination: none; mso-layout-grid-align: none\">\r\n<span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;mso-ansi-language:EN?=\"\"><a href=\"tel:&#43;14257063500\"><span style=\"COLOR: #0066cc\">&#43;14257063500</span></a> (USA - Redmond Campus)\r\n<span style=\"mso-tab-count: 2\"></span>English (United States) <o:p></o:p></span></p>\r\n<p class=\"MsoNormal\" style=\"MARGIN: 0in 0in 2pt; TEXT-AUTOSPACE: ; mso-pagination: none; mso-layout-grid-align: none\">\r\n<span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;mso-ansi-language:EN?=\"\"><a href=\"tel:&#43;18883203585\"><span style=\"COLOR: #0066cc\">&#43;18883203585</span></a> (USA - Redmond Campus)\r\n<span style=\"mso-tab-count: 2\"></span>English (United States)<span style=\"mso-spacerun: yes\">\r\n</span><o:p></o:p></span></p>\r\n<p class=\"MsoNormal\" style=\"MARGIN: 0in 0in 2pt; TEXT-AUTOSPACE: ; mso-pagination: none; mso-layout-grid-align: none\">\r\n<u><span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;COLOR:#943634;mso-ansi-language:EN?=\"\"><a href=\"https://join.microsoft.com/dialin\"><span style=\"COLOR: #0066cc\">Find a local number</span></a></span></u><span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;mso-ansi-language:EN?=\"\">\r\n<o:p></o:p></span></p>\r\n<p class=\"MsoNormal\" style=\"MARGIN: 0in 0in 2pt; TEXT-AUTOSPACE: ; mso-pagination: none; mso-layout-grid-align: none\">\r\n<span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;mso-ansi-language:EN?=\"\"><o:p></o:p></span></p>\r\n<p class=\"MsoNormal\" style=\"MARGIN: 0in 0in 2pt; TEXT-AUTOSPACE: ; mso-pagination: none; mso-layout-grid-align: none\">\r\n<span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;mso-ansi-language:EN?=\"\">Conference ID: 782457244<o:p></o:p></span></p>\r\n<p class=\"MsoNormal\" style=\"MARGIN: 0in 0in 0pt; TEXT-AUTOSPACE: ; mso-pagination: none; mso-layout-grid-align: none\">\r\n<span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;mso-ansi-language:EN?=\"\"><span style=\"mso-spacerun: yes\"></span><span style=\"COLOR: #0066cc\"><a href=\"https://join.microsoft.com/dialin\"><span style=\"COLOR: #0066cc\">Forgot your dial-in\r\n PIN?</span></a></span> |<a href=\"http://o15.officeredir.microsoft.com/r/rlidLync15?clid=1033&amp;p1=5&amp;p2=2009\"><span style=\"COLOR: #0066cc\">Help</span></a><span style=\"mso-spacerun: yes\">\r\n</span></span><sub><span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;COLOR:white;mso-ansi-language:EN?=\"\">OC([1033])!]</span></sub><span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;mso-ansi-language:EN?=\"\"><o:p></o:p></span></p>\r\n<p class=\"MsoNormal\" style=\"MARGIN: 0in 0in 10pt; LINE-HEIGHT: 115%; TEXT-AUTOSPACE: ; mso-pagination: none; mso-layout-grid-align: none\">\r\n<span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;COLOR:#404040;LINE-HEIGHT:115%;mso-ansi-language:EN?=\"\">.........................................................................................................................................</span><span lang=\"EN\" style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif;LINE-HEIGHT:115%;mso-ansi-language:EN?=\"\"><o:p></o:p></span></p>\r\n<p class=\"MsoNormal\" style=\"MARGIN: 0in 0in 0pt\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: \" Tahoma?,sans-serif?=\"\"><o:p></o:p></span></p>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"BACKGROUND: white; COLOR: black; MARGIN: 0in 0in 0pt\">\r\n<span></span></p>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"MARGIN: 0in 0in 0pt 0.5in\">\r\n<span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: red\">Please note that when not calling in from the corporate network (your PC or UC phone), your PIN is required. PIN numbers must be created by Microsoft employees. Please\r\n</span><a href=\"https://cwa.microsoft.com/dialin\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\"><font color=\"#0000ff\">set up</font></span></a><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: red\"> your PIN in advance.\r\n</span></p>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"MARGIN: 0in 0in 0pt 0.5in\">\r\n<span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: red\"></span></p>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"MARGIN: 0in 0in 0pt 0.5in\">\r\n<b><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: black\">You will be the leader, please initiate the call using your PIN if prompted:\r\n</span></b></p>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"MARGIN: 0in 0in 0pt 0.5in\">\r\n<span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: black\"></span></p>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoListParagraphCxSpFirst\" style=\"MARGIN: 0in 0in 0pt 1in; LINE-HEIGHT: normal; TEXT-INDENT: -0.25in\">\r\n<span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: black\"><span>a.<span style=\"FONT: 7pt 'Times New Roman'\">\r\n</span></span></span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: black\">Enter Conference ID number, your extension, then your PIN. –or-</span></p>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoListParagraphCxSpLast\" style=\"MARGIN: 0in 0in 2pt 1in; LINE-HEIGHT: normal; TEXT-AUTOSPACE: ; TEXT-INDENT: -0.25in\">\r\n<span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: black\"><span>b.<span style=\"FONT: 7pt 'Times New Roman'\">\r\n</span></span></span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: black\">Enter Conference ID number, your phone number with a 1 before the number, then your PIN\r\n</span></p>\r\n<p class=\"x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_MsoNormal\" style=\"BACKGROUND: white; COLOR: black; MARGIN: 0in 0in 0pt\">\r\n</p>\r\n</span></span>\r\n<p></font><font size=\"2\" face=\"Tahoma\">Thank you,</font></p>\r\n<font size=\"2\" face=\"Tahoma\">\r\n<p style=\"BACKGROUND: white; MARGIN: 0in 0in 0pt\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\">Monet Dailey-Hoxter\r\n</span></p>\r\n<p style=\"BACKGROUND: white; MARGIN: 0in 0in 0pt\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\">Interview Scheduler</span></p>\r\n<p style=\"BACKGROUND: white; MARGIN: 0in 0in 0pt\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'\">Microsoft Staffing</span></font></p>\r\n</body>\r\n</html>\r\n"
+		},
+		"BodyPreview": "Accept this meeting request by selecting the option: “Send the Response Now” to accurately record your acceptance. Otherwise, your scheduler will need to follow up via email to reconfirm.\r\n\r\n** This is a public meeting request sent from an unmonitored mai",
+		"Location": {
+			"DisplayName": "35/3876 +1 (425) 7071863 X71863",
+			"Address": {
+				"Street": "",
+				"City": "",
+				"State": "",
+				"CountryOrRegion": "",
+				"PostalCode": ""
+			},
+			"Coordinates": {
+				"Accuracy": "NaN",
+				"Altitude": "NaN",
+				"AltitudeAccuracy": "NaN",
+				"Latitude": "NaN",
+				"Longitude": "NaN"
+			}
+		},
+		"Organizer": {
+			"EmailAddress": {
+				"Address": "stafiaas@microsoft.com",
+				"Name": "MS Staffing"
+			}
+		},
+		"Start": "2015-07-15T15:00:00Z",
+		"StartTimeZone": "Pacific Standard Time",
+		"End": "2015-07-15T16:00:00Z",
+		"EndTimeZone": "Pacific Standard Time",
+		"Importance": "Normal",
+		"Type": "SingleInstance",
+		"ResponseStatus": {
+			"Response": "Accepted",
+			"Time": "2015-07-09T17:34:00Z"
+		},
+		"PredictedHeartRate": "72.9733405390362"
+	},
+	{
+		"@odata.id": "https://outlook.office365.com/api/v1.0/Users('rhoward@exchange.microsoft.com')/Events('AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQBGAAAAAABlDZTRoj6wTqag8Dj1DWJ6BwB1iIl5MD4gRrMKULg8JkZSAAACOEvIAAB_iIRpyhT3TLrzPaTKcCmSAAHuAYgUAAA=')",
+		"@odata.etag": "W/\"D8Eojyaxukev3NQsSdmrmgAAPY7vVQ==\"",
+		"Id": "AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQBGAAAAAABlDZTRoj6wTqag8Dj1DWJ6BwB1iIl5MD4gRrMKULg8JkZSAAACOEvIAAB_iIRpyhT3TLrzPaTKcCmSAAHuAYgUAAA=",
+		"Subject": "NoAuth work for PowerBI",
+		"Attendees": [
+			{
+				"EmailAddress": {
+					"Address": "pedramr@microsoft.com",
+					"Name": "Pedram Rezaei"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "rhoward@exchange.microsoft.com",
+					"Name": "Rob Howard (OFFICE)"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "MARKYANG@exchange.microsoft.com",
+					"Name": "Mark Young (YANG)"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "josefl@exchange.microsoft.com",
+					"Name": "Josef Larsson"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "cristp@microsoft.com",
+					"Name": "Cristian Petculescu"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "shaozhu@exchange.microsoft.com",
+					"Name": "Shaofeng Zhu"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "russellp@exchange.microsoft.com",
+					"Name": "Russell Palmer"
+				},
+				"Status": null,
+				"Type": "Required"
+			}
+		],
+		"Body": {
+			"ContentType": "HTML",
+			"Content": "<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\r\n<meta name=\"Generator\" content=\"Microsoft Exchange Server\">\r\n<!-- converted from rtf -->\r\n<style><!-- .EmailQuote { margin-left: 1pt; padding-left: 4pt; border-left: #800000 2px solid; } --></style>\r\n</head>\r\n<body>\r\n<font face=\"Times New Roman\" size=\"3\"><span style=\"font-size:12pt;\"><a name=\"_InsertRtfSavedPosition\"></a>\r\n<div><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\">Quick sync on how the PowerBI team can help accelerate this work.</span></font></div>\r\n<div><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\">&nbsp;</span></font></div>\r\n<div><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\">&nbsp;</span></font></div>\r\n<div><font face=\"Calibri\" size=\"1\" color=\"#404040\"><span style=\"font-size:8pt;\">.........................................................................................................................................</span></font></div>\r\n<a name=\"OutJoinLink\"></a>\r\n<div><font face=\"Calibri\" size=\"4\" color=\"#0066CC\"><span style=\"font-size:14pt;\"><font face=\"Wingdings\">à</font> <a href=\"https://join.microsoft.com/meet/pedramr/CKZM7NHJ\"><font size=\"4\"><span style=\"font-size:16pt;\"><u>Join Skype Meeting</u></span></font></a><font color=\"black\">&nbsp;\r\n</font><a name=\"OutSharedNoteBorder\"></a>&nbsp;&nbsp; <a name=\"OutSharedNoteLink\"></a> </span></font></div>\r\n<table width=\"500\" style=\"width:300pt;margin-left:5.4pt;\">\r\n<col width=\"500\" style=\"width:300pt;\">\r\n<tr>\r\n<td style=\"margin-top:3pt;margin-bottom:12pt;padding-left:16pt;\"><font face=\"Calibri\" size=\"2\"><span style=\"font-size:10pt;\">This is an online meeting for Skype for Business, the professional meetings and communications app formerly known as Lync.</span></font></td>\r\n</tr>\r\n</table>\r\n<div><font face=\"Calibri\" size=\"3\"><span style=\"font-size:13pt;\">Join by phone</span></font></div>\r\n<div style=\"margin-bottom:2pt;\"><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\"><a href=\"tel:&#43;14257063500\"><font size=\"2\" color=\"#0066CC\"><span style=\"font-size:10pt;\"><u>&#43;14257063500</u></span></font></a><font size=\"2\"><span style=\"font-size:10pt;\">\r\n(USA - Redmond Campus)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; English (United States) </span></font></span></font></div>\r\n<div style=\"margin-bottom:2pt;\"><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\"><a href=\"tel:&#43;18883203585\"><font size=\"2\" color=\"#0066CC\"><span style=\"font-size:10pt;\"><u>&#43;18883203585</u></span></font></a><font size=\"2\"><span style=\"font-size:10pt;\">\r\n(USA - Redmond Campus)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; English (United States) </span></font><font size=\"1\"><span style=\"font-size:3pt;\"> </span></font></span></font></div>\r\n<div style=\"margin-bottom:2pt;\"><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\"><a href=\"https://join.microsoft.com/dialin\"><font size=\"2\" color=\"#0066CC\"><span style=\"font-size:10pt;\"><u>Find a local number</u></span></font></a> </span></font></div>\r\n<div style=\"margin-bottom:2pt;\"><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\">&nbsp;</span></font></div>\r\n<div style=\"margin-bottom:2pt;\"><font face=\"Calibri\" size=\"2\"><span style=\"font-size:10pt;\">Conference ID: 61136962</span></font></div>\r\n<div><font face=\"Calibri\" size=\"1\"><span style=\"font-size:3pt;\"> <a href=\"https://join.microsoft.com/dialin\"><font size=\"2\" color=\"#0066CC\"><span style=\"font-size:10pt;\"><u>Forgot your dial-in PIN?</u></span></font></a> <font size=\"2\"><span style=\"font-size:11pt;\">|</span></font><a href=\"http://o15.officeredir.microsoft.com/r/rlidLync15?clid=1033&amp;p1=5&amp;p2=2009\"><font size=\"2\" color=\"#0066CC\"><span style=\"font-size:10pt;\"><u>Help</u></span></font></a>&nbsp;&nbsp;&nbsp;&nbsp;\r\n</span></font></div>\r\n<div><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\">&nbsp;</span></font></div>\r\n<div><font face=\"Calibri\" size=\"1\" color=\"#CFCFCF\"><span style=\"font-size:1pt;\"><font size=\"1\"><span style=\"font-size:0.65pt;\"><sub>[!OC([1033])!]</sub></span></font></span></font></div>\r\n<div style=\"margin-bottom:10pt;\"><font face=\"Calibri\" size=\"1\" color=\"#404040\"><span style=\"font-size:8pt;\">.........................................................................................................................................</span></font></div>\r\n<div><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\">&nbsp;</span></font></div>\r\n<div><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\">&nbsp;</span></font></div>\r\n</span></font>\r\n</body>\r\n</html>\r\n"
+		},
+		"BodyPreview": "Quick sync on how the PowerBI team can help accelerate this work.\r\n\r\n\r\n.........................................................................................................................................\r\n--> Join Skype Meeting<https://join.microsoft",
+		"Location": {
+			"DisplayName": "Skype Meeting",
+			"Address": {
+				"Street": "",
+				"City": "",
+				"State": "",
+				"CountryOrRegion": "",
+				"PostalCode": ""
+			},
+			"Coordinates": {
+				"Accuracy": "NaN",
+				"Altitude": "NaN",
+				"AltitudeAccuracy": "NaN",
+				"Latitude": "NaN",
+				"Longitude": "NaN"
+			}
+		},
+		"Organizer": {
+			"EmailAddress": {
+				"Address": "pedramr@microsoft.com",
+				"Name": "Pedram Rezaei"
+			}
+		},
+		"Start": "2015-07-15T16:30:00Z",
+		"StartTimeZone": "Pacific Standard Time",
+		"End": "2015-07-15T17:00:00Z",
+		"EndTimeZone": "Pacific Standard Time",
+		"Importance": "Normal",
+		"Type": "SingleInstance",
+		"ResponseStatus": {
+			"Response": "Accepted",
+			"Time": "2015-07-14T00:26:00Z"
+		},
+		"PredictedHeartRate": "72.9733405390362"
+	},
+	{
+		"@odata.id": "https://outlook.office365.com/api/v1.0/Users('rhoward@exchange.microsoft.com')/Events('AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQFRAAgI0oyoU73AAEYAAAAAZQ2U0aI_sE6moPA49Q1iegcAdYiJeTA_IEazClC4PCZGUgAAAjhLyAAAfoiEacoU90y68z2kynApkgABLne4RAAAEA==')",
+		"@odata.etag": "W/\"D8Eojyaxukev3NQsSdmrmgAAPY7vUg==\"",
+		"Id": "AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQFRAAgI0oyoU73AAEYAAAAAZQ2U0aI_sE6moPA49Q1iegcAdYiJeTA_IEazClC4PCZGUgAAAjhLyAAAfoiEacoU90y68z2kynApkgABLne4RAAAEA==",
+		"Subject": "D-ISVs Weekly Sync",
+		"Attendees": [
+			{
+				"EmailAddress": {
+					"Address": "aditim@microsoft.com",
+					"Name": "Aditi Maheshwari"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "rhoward@exchange.microsoft.com",
+					"Name": "Rob Howard (OFFICE)"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "dapae@microsoft.com",
+					"Name": "Dave Pae"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "aaronmi@microsoft.com",
+					"Name": "Aaron Miao"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "Steve.Walker@microsoft.com",
+					"Name": "Steve Walker"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "kikishux@microsoft.com",
+					"Name": "Kiki Shuxteau"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "Bert.Jansen@microsoft.com",
+					"Name": "Bert Jansen"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "Luca.Bandinelli@microsoft.com",
+					"Name": "Luca Bandinelli"
+				},
+				"Status": null,
+				"Type": "Required"
+			}
+		],
+		"Body": {
+			"ContentType": "HTML",
+			"Content": "<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\r\n<meta name=\"Generator\" content=\"Microsoft Exchange Server\">\r\n<!-- converted from rtf -->\r\n<style><!-- .EmailQuote { margin-left: 1pt; padding-left: 4pt; border-left: #800000 2px solid; } --></style>\r\n</head>\r\n<body>\r\n<font face=\"Times New Roman\" size=\"3\"><span style=\"font-size:12pt;\"><a name=\"_InsertRtfSavedPosition\"></a>\r\n<div><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\">Hi Rob, Dave, Aaron, Steve, Kiki and Bert,</span></font></div>\r\n<div><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\">&nbsp;</span></font></div>\r\n<div><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\">Per our discussion, we would like to set up a weekly sync call to discuss D-ISV issues (that are lingering, need attention, need owner, need clarification).</span></font></div>\r\n<div><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\">&nbsp;</span></font></div>\r\n<div><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\">Thanks!</span></font></div>\r\n<div><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\">Aditi</span></font></div>\r\n<div><font face=\"Calibri\" size=\"1\" color=\"#404040\"><span style=\"font-size:8pt;\">.........................................................................................................................................</span></font></div>\r\n<a name=\"OutJoinLink\"></a>\r\n<div><font face=\"Calibri\" size=\"4\" color=\"#0066CC\"><span style=\"font-size:14pt;\"><font face=\"Wingdings\">à</font> <a href=\"https://join.microsoft.com/meet/aditim/65FM262B\"><font size=\"4\"><span style=\"font-size:16pt;\"><u>Join Skype Meeting</u></span></font></a><font color=\"black\">&nbsp;\r\n</font><a name=\"OutSharedNoteBorder\"></a>&nbsp;&nbsp; <a name=\"OutSharedNoteLink\"></a> </span></font></div>\r\n<table width=\"500\" style=\"width:300pt;margin-left:5.4pt;\">\r\n<col width=\"500\" style=\"width:300pt;\">\r\n<tr>\r\n<td style=\"margin-top:3pt;margin-bottom:12pt;padding-left:16pt;\"><font face=\"Calibri\" size=\"2\"><span style=\"font-size:10pt;\">This is an online meeting for Skype for Business, the professional meetings and communications app formerly known as Lync.</span></font></td>\r\n</tr>\r\n</table>\r\n<div><font face=\"Calibri\" size=\"3\"><span style=\"font-size:13pt;\">Join by phone</span></font></div>\r\n<div style=\"margin-bottom:2pt;\"><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\"><a href=\"tel:&#43;14158395900\"><font size=\"2\" color=\"#0066CC\"><span style=\"font-size:10pt;\"><u>&#43;14158395900</u></span></font></a><font size=\"2\"><span style=\"font-size:10pt;\">\r\n(USA, San Francisco)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; English (United States) </span></font></span></font></div>\r\n<div style=\"margin-bottom:2pt;\"><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\"><a href=\"https://join.microsoft.com/dialin\"><font size=\"2\" color=\"#0066CC\"><span style=\"font-size:10pt;\"><u>Find a local number</u></span></font></a> </span></font></div>\r\n<div style=\"margin-bottom:2pt;\"><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\">&nbsp;</span></font></div>\r\n<div style=\"margin-bottom:2pt;\"><font face=\"Calibri\" size=\"2\"><span style=\"font-size:10pt;\">Conference ID: 244123217</span></font></div>\r\n<div><font face=\"Calibri\" size=\"1\"><span style=\"font-size:3pt;\"> <a href=\"https://join.microsoft.com/dialin\"><font size=\"2\" color=\"#0066CC\"><span style=\"font-size:10pt;\"><u>Forgot your dial-in PIN?</u></span></font></a> <font size=\"2\"><span style=\"font-size:11pt;\">|</span></font><a href=\"http://o15.officeredir.microsoft.com/r/rlidLync15?clid=1033&amp;p1=5&amp;p2=2009\"><font size=\"2\" color=\"#0066CC\"><span style=\"font-size:10pt;\"><u>Help</u></span></font></a>&nbsp;&nbsp;&nbsp;&nbsp;\r\n</span></font></div>\r\n<div><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\">&nbsp;</span></font></div>\r\n<div><font face=\"Calibri\" size=\"1\" color=\"#CFCFCF\"><span style=\"font-size:1pt;\"><font size=\"1\"><span style=\"font-size:0.65pt;\"><sub>[!OC([1033])!]</sub></span></font></span></font></div>\r\n<div style=\"margin-bottom:10pt;\"><font face=\"Calibri\" size=\"1\" color=\"#404040\"><span style=\"font-size:8pt;\">.........................................................................................................................................</span></font></div>\r\n<div><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\">&nbsp;</span></font></div>\r\n<div><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\">&nbsp;</span></font></div>\r\n</span></font>\r\n</body>\r\n</html>\r\n"
+		},
+		"BodyPreview": "Hi Rob, Dave, Aaron, Steve, Kiki and Bert,\r\n\r\nPer our discussion, we would like to set up a weekly sync call to discuss D-ISV issues (that are lingering, need attention, need owner, need clarification).\r\n\r\nThanks!\r\nAditi\r\n.................................",
+		"Location": {
+			"DisplayName": "Skype Meeting",
+			"Address": {
+				"Street": "",
+				"City": "",
+				"State": "",
+				"CountryOrRegion": "",
+				"PostalCode": ""
+			},
+			"Coordinates": {
+				"Accuracy": "NaN",
+				"Altitude": "NaN",
+				"AltitudeAccuracy": "NaN",
+				"Latitude": "NaN",
+				"Longitude": "NaN"
+			}
+		},
+		"Organizer": {
+			"EmailAddress": {
+				"Address": "aditim@microsoft.com",
+				"Name": "Aditi Maheshwari"
+			}
+		},
+		"Start": "2015-07-15T16:30:00Z",
+		"StartTimeZone": "Pacific Standard Time",
+		"End": "2015-07-15T17:30:00Z",
+		"EndTimeZone": "Pacific Standard Time",
+		"Importance": "Normal",
+		"Type": "Occurrence",
+		"ResponseStatus": {
+			"Response": "Accepted",
+			"Time": "2015-07-13T16:51:00Z"
+		},
+		"PredictedHeartRate": "51.0972978123966"
+	},
+	{
+		"@odata.id": "https://outlook.office365.com/api/v1.0/Users('rhoward@exchange.microsoft.com')/Events('AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQBGAAAAAABlDZTRoj6wTqag8Dj1DWJ6BwB1iIl5MD4gRrMKULg8JkZSAAACOEvIAAB_iIRpyhT3TLrzPaTKcCmSAAHuAYgDAAA=')",
+		"@odata.etag": "W/\"D8Eojyaxukev3NQsSdmrmgAAPY7vVA==\"",
+		"Id": "AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQBGAAAAAABlDZTRoj6wTqag8Dj1DWJ6BwB1iIl5MD4gRrMKULg8JkZSAAACOEvIAAB_iIRpyhT3TLrzPaTKcCmSAAHuAYgDAAA=",
+		"Subject": "FW: Office 16 Bug Bash!",
+		"Attendees": [
+			{
+				"EmailAddress": {
+					"Address": "v-westi@microsoft.com",
+					"Name": "Wendy Stidmon (Allegis Group Services Inc)"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "DFPulse@microsoft.com",
+					"Name": "The Pulse"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "Beth.Petry@microsoft.com",
+					"Name": "Beth Petry"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "Anita.Oakley@microsoft.com",
+					"Name": "Anita Oakley"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "bethpvteam@microsoft.com",
+					"Name": "Beth Petry Direct Reports (Vendor Team)"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "brianlew@microsoft.com",
+					"Name": "Brian Lewis"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "v-denca@microsoft.com",
+					"Name": "Denise Carlevato (CompuCom Systems Inc)"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "v-renek@microsoft.com",
+					"Name": "Renee Kutch (Projectline Services)"
+				},
+				"Status": null,
+				"Type": "Optional"
+			},
+			{
+				"EmailAddress": {
+					"Address": "timrau@microsoft.com",
+					"Name": "Timothy Rauenbusch"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "v-tomp@microsoft.com",
+					"Name": "Tom Pollock (Allegis Group Services Inc)"
+				},
+				"Status": null,
+				"Type": "Optional"
+			},
+			{
+				"EmailAddress": {
+					"Address": "v-wyblue@microsoft.com",
+					"Name": "Wynne Blue (Insight Global)"
+				},
+				"Status": null,
+				"Type": "Optional"
+			}
+		],
+		"Body": {
+			"ContentType": "HTML",
+			"Content": "<html xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:w=\"urn:schemas-microsoft-com:office:word\" xmlns:m=\"http://schemas.microsoft.com/office/2004/12/omml\" xmlns=\"http://www.w3.org/TR/REC-html40\">\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\r\n<meta name=\"Generator\" content=\"Microsoft Word 15 (filtered medium)\">\r\n<style><!--\r\n/* Font Definitions */\r\n@font-face\r\n\t{font-family:Wingdings;\r\n\tpanose-1:5 0 0 0 0 0 0 0 0 0;}\r\n@font-face\r\n\t{font-family:\"Cambria Math\";\r\n\tpanose-1:2 4 5 3 5 4 6 3 2 4;}\r\n@font-face\r\n\t{font-family:Calibri;\r\n\tpanose-1:2 15 5 2 2 2 4 3 2 4;}\r\n@font-face\r\n\t{font-family:\"Segoe UI\";\r\n\tpanose-1:2 11 5 2 4 2 4 2 2 3;}\r\n/* Style Definitions */\r\np.MsoNormal, li.MsoNormal, div.MsoNormal\r\n\t{margin:0in;\r\n\tmargin-bottom:.0001pt;\r\n\tfont-size:11.0pt;\r\n\tfont-family:\"Calibri\",sans-serif;}\r\na:link, span.MsoHyperlink\r\n\t{mso-style-priority:99;\r\n\tcolor:#0563C1;\r\n\ttext-decoration:underline;}\r\na:visited, span.MsoHyperlinkFollowed\r\n\t{mso-style-priority:99;\r\n\tcolor:#954F72;\r\n\ttext-decoration:underline;}\r\np\r\n\t{mso-style-priority:99;\r\n\tmso-margin-top-alt:auto;\r\n\tmargin-right:0in;\r\n\tmso-margin-bottom-alt:auto;\r\n\tmargin-left:0in;\r\n\tfont-size:12.0pt;\r\n\tfont-family:\"Times New Roman\",serif;}\r\np.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph\r\n\t{mso-style-priority:34;\r\n\tmargin-top:0in;\r\n\tmargin-right:0in;\r\n\tmargin-bottom:0in;\r\n\tmargin-left:.5in;\r\n\tmargin-bottom:.0001pt;\r\n\tmso-add-space:auto;\r\n\tfont-size:10.0pt;\r\n\tfont-family:\"Segoe UI\",sans-serif;}\r\np.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst\r\n\t{mso-style-priority:34;\r\n\tmso-style-type:export-only;\r\n\tmargin-top:0in;\r\n\tmargin-right:0in;\r\n\tmargin-bottom:0in;\r\n\tmargin-left:.5in;\r\n\tmargin-bottom:.0001pt;\r\n\tmso-add-space:auto;\r\n\tfont-size:10.0pt;\r\n\tfont-family:\"Segoe UI\",sans-serif;}\r\np.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle\r\n\t{mso-style-priority:34;\r\n\tmso-style-type:export-only;\r\n\tmargin-top:0in;\r\n\tmargin-right:0in;\r\n\tmargin-bottom:0in;\r\n\tmargin-left:.5in;\r\n\tmargin-bottom:.0001pt;\r\n\tmso-add-space:auto;\r\n\tfont-size:10.0pt;\r\n\tfont-family:\"Segoe UI\",sans-serif;}\r\np.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast\r\n\t{mso-style-priority:34;\r\n\tmso-style-type:export-only;\r\n\tmargin-top:0in;\r\n\tmargin-right:0in;\r\n\tmargin-bottom:0in;\r\n\tmargin-left:.5in;\r\n\tmargin-bottom:.0001pt;\r\n\tmso-add-space:auto;\r\n\tfont-size:10.0pt;\r\n\tfont-family:\"Segoe UI\",sans-serif;}\r\np.msonormal0, li.msonormal0, div.msonormal0\r\n\t{mso-style-name:msonormal;\r\n\tmso-style-priority:99;\r\n\tmso-margin-top-alt:auto;\r\n\tmargin-right:0in;\r\n\tmso-margin-bottom-alt:auto;\r\n\tmargin-left:0in;\r\n\tfont-size:12.0pt;\r\n\tfont-family:\"Times New Roman\",serif;}\r\nspan.SPROUTHeading1Char\r\n\t{mso-style-name:\"SPROUT_Heading1 Char\";\r\n\tmso-style-link:SPROUT_Heading1;\r\n\tfont-family:\"Segoe UI\",sans-serif;\r\n\tcolor:#70AD47;\r\n\tfont-weight:bold;}\r\np.SPROUTHeading1, li.SPROUTHeading1, div.SPROUTHeading1\r\n\t{mso-style-name:SPROUT_Heading1;\r\n\tmso-style-priority:99;\r\n\tmso-style-link:\"SPROUT_Heading1 Char\";\r\n\tmargin:0in;\r\n\tmargin-bottom:.0001pt;\r\n\tfont-size:14.0pt;\r\n\tfont-family:\"Segoe UI\",sans-serif;\r\n\tcolor:#70AD47;\r\n\tfont-weight:bold;}\r\nspan.EmailStyle22\r\n\t{mso-style-type:personal;\r\n\tfont-family:\"Calibri\",sans-serif;\r\n\tcolor:windowtext;}\r\nspan.EmailStyle23\r\n\t{mso-style-type:personal;\r\n\tfont-family:\"Calibri\",sans-serif;\r\n\tcolor:#1F497D;}\r\nspan.EmailStyle24\r\n\t{mso-style-type:personal-reply;\r\n\tfont-family:\"Calibri\",sans-serif;\r\n\tcolor:#1F497D;}\r\n.MsoChpDefault\r\n\t{mso-style-type:export-only;\r\n\tfont-size:10.0pt;}\r\n@page WordSection1\r\n\t{size:8.5in 11.0in;\r\n\tmargin:1.0in 1.0in 1.0in 1.0in;}\r\ndiv.WordSection1\r\n\t{page:WordSection1;}\r\n/* List Definitions */\r\n@list l0\r\n\t{mso-list-id:77136898;\r\n\tmso-list-type:hybrid;\r\n\tmso-list-template-ids:-814175896 67698697 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}\r\n@list l0:level1\r\n\t{mso-level-number-format:bullet;\r\n\tmso-level-text:\\F076;\r\n\tmso-level-tab-stop:none;\r\n\tmso-level-number-position:left;\r\n\tmargin-left:35.1pt;\r\n\ttext-indent:-.25in;\r\n\tfont-family:Wingdings;}\r\n@list l0:level2\r\n\t{mso-level-number-format:alpha-lower;\r\n\tmso-level-tab-stop:none;\r\n\tmso-level-number-position:left;\r\n\tmargin-left:71.1pt;\r\n\ttext-indent:-.25in;}\r\n@list l0:level3\r\n\t{mso-level-number-format:roman-lower;\r\n\tmso-level-tab-stop:none;\r\n\tmso-level-number-position:right;\r\n\tmargin-left:107.1pt;\r\n\ttext-indent:-9.0pt;}\r\n@list l0:level4\r\n\t{mso-level-tab-stop:none;\r\n\tmso-level-number-position:left;\r\n\tmargin-left:143.1pt;\r\n\ttext-indent:-.25in;}\r\n@list l0:level5\r\n\t{mso-level-number-format:alpha-lower;\r\n\tmso-level-tab-stop:none;\r\n\tmso-level-number-position:left;\r\n\tmargin-left:179.1pt;\r\n\ttext-indent:-.25in;}\r\n@list l0:level6\r\n\t{mso-level-number-format:roman-lower;\r\n\tmso-level-tab-stop:none;\r\n\tmso-level-number-position:right;\r\n\tmargin-left:215.1pt;\r\n\ttext-indent:-9.0pt;}\r\n@list l0:level7\r\n\t{mso-level-tab-stop:none;\r\n\tmso-level-number-position:left;\r\n\tmargin-left:251.1pt;\r\n\ttext-indent:-.25in;}\r\n@list l0:level8\r\n\t{mso-level-number-format:alpha-lower;\r\n\tmso-level-tab-stop:none;\r\n\tmso-level-number-position:left;\r\n\tmargin-left:287.1pt;\r\n\ttext-indent:-.25in;}\r\n@list l0:level9\r\n\t{mso-level-number-format:roman-lower;\r\n\tmso-level-tab-stop:none;\r\n\tmso-level-number-position:right;\r\n\tmargin-left:323.1pt;\r\n\ttext-indent:-9.0pt;}\r\nol\r\n\t{margin-bottom:0in;}\r\nul\r\n\t{margin-bottom:0in;}\r\n--></style><!--[if gte mso 9]><xml>\r\n<o:shapedefaults v:ext=\"edit\" spidmax=\"1026\" />\r\n</xml><![endif]--><!--[if gte mso 9]><xml>\r\n<o:shapelayout v:ext=\"edit\">\r\n<o:idmap v:ext=\"edit\" data=\"1\" />\r\n</o:shapelayout></xml><![endif]-->\r\n</head>\r\n<body lang=\"EN-US\" link=\"#0563C1\" vlink=\"#954F72\">\r\n<div class=\"WordSection1\">\r\n<p class=\"MsoNormal\"><span style=\"color:#1F497D\">As promised in this week’s Pulse, here is the invite information for the Bug Bash on July 15<sup>th</sup> – next Wednesday!<o:p></o:p></span></p>\r\n<p class=\"MsoNormal\"><span style=\"color:#1F497D\">Hope to see you there if you are in Redmond, join via Skype if you are in other locations.<o:p></o:p></span></p>\r\n<p class=\"MsoNormal\"><a name=\"_MailEndCompose\"></a><span style=\"color:#1F497D\"><o:p>&nbsp;</o:p></span></p>\r\n<div>\r\n<p class=\"MsoNormal\">-----Original Appointment-----<br>\r\n<b>From:</b> Wendy Stidmon (Allegis Group Services Inc) <br>\r\n<b>Sent:</b> Thursday, July 9, 2015 10:45 AM<br>\r\n<b>To:</b> Wendy Stidmon (Allegis Group Services Inc); Beth Petry; Anita Oakley; Beth Petry Direct Reports (Vendor Team); Brian Lewis; Denise Carlevato (CompuCom Systems Inc); Timothy Rauenbusch<br>\r\n<b>Cc:</b> Renee Kutch (Projectline Services); Tom Pollock (Allegis Group Services Inc); Wynne Blue (Insight Global)<br>\r\n<b>Subject:</b> Office 16 Bug Bash!<br>\r\n<b>When:</b> Wednesday, July 15, 2015 10:00 AM-1:00 PM (UTC-08:00) Pacific Time (US &amp; Canada).<br>\r\n<b>Where:</b> 36 / Shilshole<o:p></o:p></p>\r\n</div>\r\n<p class=\"MsoNormal\"><o:p>&nbsp;</o:p></p>\r\n<p style=\"margin:0in;margin-bottom:.0001pt\"><b><span style=\"font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:red\">**DO not forward to customers. The Skype meeting is for MS staff only**</span></b><span style=\"font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:red\"><o:p></o:p></span></p>\r\n<p class=\"MsoNormal\"><o:p>&nbsp;</o:p></p>\r\n<p class=\"MsoNormal\"><o:p>&nbsp;</o:p></p>\r\n<p class=\"SPROUTHeading1\" align=\"center\" style=\"text-align:center\"><span style=\"font-size:20.0pt\">Office 16 Bug Bash<o:p></o:p></span></p>\r\n<p class=\"SPROUTHeading1\" align=\"center\" style=\"text-align:center\"><a href=\"https://meet.lync.com/microsoft/v-westi/FLYQKMJ8\">Click here to Join the Skype Call</a><o:p></o:p></p>\r\n<p class=\"SPROUTHeading1\"><span style=\"font-size:12.0pt\"><o:p>&nbsp;</o:p></span></p>\r\n<p class=\"MsoNormal\"><b><span style=\"font-size:12.0pt;text-transform:uppercase\">What:</span></b><span style=\"font-size:12.0pt\"> The first ever external Office 16 bug Bash!<o:p></o:p></span></p>\r\n<p class=\"MsoNormal\"><span style=\"font-size:12.0pt\"><o:p>&nbsp;</o:p></span></p>\r\n<p class=\"MsoNormal\"><b><span style=\"font-size:12.0pt;text-transform:uppercase\">Why:</span></b><span style=\"font-size:12.0pt\"> This is your last chance to ensure your feature experience is what you want customers to see.<o:p></o:p></span></p>\r\n<p class=\"MsoNormal\"><span style=\"font-size:12.0pt\"><o:p>&nbsp;</o:p></span></p>\r\n<p class=\"MsoNormal\"><b><span style=\"font-size:12.0pt;text-transform:uppercase\">Who in MS:</span></b><span style=\"font-size:12.0pt\"> RDX, all feature PMs and Devs, Ship Drivers, release management | Anyone connected to shipping a great Office 16!<o:p></o:p></span></p>\r\n<p class=\"MsoNormal\"><span style=\"font-size:12.0pt\"><o:p>&nbsp;</o:p></span></p>\r\n<p class=\"MsoNormal\"><b><span style=\"font-size:12.0pt;text-transform:uppercase\">Who Externally:</span></b><span style=\"font-size:12.0pt\"> All our ~100K Office Technical Preview business and consumer participants.<o:p></o:p></span></p>\r\n<p class=\"MsoNormal\"><span style=\"font-size:12.0pt\"><o:p>&nbsp;</o:p></span></p>\r\n<p class=\"MsoNormal\"><b><span style=\"font-size:12.0pt;text-transform:uppercase\">Time</span></b><b><span style=\"font-size:12.0pt\">:</span></b><span style=\"font-size:12.0pt\"> 10:00 – 1:00 pm<o:p></o:p></span></p>\r\n<p class=\"MsoNormal\"><b><span style=\"font-size:12.0pt;text-transform:uppercase\">Where:</span></b><b><span style=\"font-size:12.0pt\">\r\n</span></b><span style=\"font-size:12.0pt\">36 / Shilshole<br>\r\n<br>\r\n<b>THINGS TO KNOW:<o:p></o:p></b></span></p>\r\n<p class=\"MsoListParagraphCxSpFirst\" style=\"margin-left:17.1pt;mso-add-space:auto;text-indent:-.25in;mso-list:l0 level1 lfo2\">\r\n<![if !supportLists]><span style=\"font-size:12.0pt;font-family:Wingdings\"><span style=\"mso-list:Ignore\">v<span style=\"font:7.0pt &quot;Times New Roman&quot;\">&nbsp;\r\n</span></span></span><![endif]><span style=\"font-size:12.0pt\">Delicious snacks and lunch will be provided<o:p></o:p></span></p>\r\n<p class=\"MsoListParagraphCxSpMiddle\" style=\"margin-left:17.1pt;mso-add-space:auto;text-indent:-.25in;mso-list:l0 level1 lfo2\">\r\n<![if !supportLists]><span style=\"font-size:12.0pt;font-family:Wingdings\"><span style=\"mso-list:Ignore\">v<span style=\"font:7.0pt &quot;Times New Roman&quot;\">&nbsp;\r\n</span></span></span><![endif]><span style=\"font-size:12.0pt\">Lots of opportunities to win some cool Office SWAG!<o:p></o:p></span></p>\r\n<p class=\"MsoListParagraphCxSpLast\" style=\"margin-left:17.1pt;mso-add-space:auto;text-indent:-.25in;mso-list:l0 level1 lfo2\">\r\n<![if !supportLists]><span style=\"font-size:12.0pt;font-family:Wingdings\"><span style=\"mso-list:Ignore\">v<span style=\"font:7.0pt &quot;Times New Roman&quot;\">&nbsp;\r\n</span></span></span><![endif]><span style=\"font-size:12.0pt\">Your manager will be there<o:p></o:p></span></p>\r\n<p class=\"MsoNormal\"><span style=\"font-size:10.0pt\"><o:p>&nbsp;</o:p></span></p>\r\n<p class=\"SPROUTHeading1\">FAQ<o:p></o:p></p>\r\n<p class=\"SPROUTHeading1\"><o:p>&nbsp;</o:p></p>\r\n<p class=\"MsoNormal\"><b><span style=\"font-size:12.0pt\">Q: Do I really need to participate – will I make a difference?<o:p></o:p></span></b></p>\r\n<p class=\"MsoNormal\"><b><span style=\"font-size:12.0pt\">A:</span></b><span style=\"font-size:12.0pt\"> Yes! This is our last chance to polish the product that will be used by millions of customers in the coming months.<o:p></o:p></span></p>\r\n<p class=\"SPROUTHeading1\"><o:p>&nbsp;</o:p></p>\r\n<p class=\"MsoNormal\"><b><span style=\"font-size:12.0pt\">Q: How do I participate if I’m in Redmond?<o:p></o:p></span></b></p>\r\n<p class=\"MsoNormal\"><b><span style=\"font-size:12.0pt\">A:</span></b><span style=\"font-size:12.0pt\"> Bring your laptops to Shilshole, claim your space, and go to the designated Yammer Group for the bash and start triaging bugs in your area.<o:p></o:p></span></p>\r\n<p class=\"MsoNormal\"><a href=\"https://www.yammer.com/itpronetwork/#/threads/inGroup?type=in_group&amp;feedId=6031612\"><span style=\"font-size:12.0pt\">https://www.yammer.com/itpronetwork/#/threads/inGroup?type=in_group&amp;feedId=6031612</span></a><span style=\"font-size:12.0pt\"><o:p></o:p></span></p>\r\n<p class=\"MsoNormal\"><span style=\"font-size:12.0pt\"><o:p>&nbsp;</o:p></span></p>\r\n<p class=\"MsoNormal\"><b><span style=\"font-size:12.0pt\">Q: How do I participate if I’m not in Redmond?<o:p></o:p></span></b></p>\r\n<p class=\"MsoNormal\"><b><span style=\"font-size:12.0pt\">A:</span></b><span style=\"font-size:12.0pt\"> Join the Skype meeting here and go to the designated Yammer Group for the bash and start triaging bugs in your area.<o:p></o:p></span></p>\r\n<p class=\"MsoNormal\"><a href=\"https://www.yammer.com/itpronetwork/#/threads/inGroup?type=in_group&amp;feedId=6031612\"><span style=\"font-size:12.0pt\">https://www.yammer.com/itpronetwork/#/threads/inGroup?type=in_group&amp;feedId=6031612</span></a><span style=\"font-size:12.0pt\"><o:p></o:p></span></p>\r\n<p class=\"MsoNormal\"><span style=\"font-size:12.0pt\"><o:p>&nbsp;</o:p></span></p>\r\n<p class=\"MsoNormal\"><b><span style=\"font-size:12.0pt\">Q: Are we accepting Android, Universal, Mac, or phone issues during this event?<o:p></o:p></span></b></p>\r\n<p class=\"MsoNormal\"><b><span style=\"font-size:12.0pt\">A:</span></b><span style=\"font-size:12.0pt\"> No, this event is focused strictly on the desktop bits.<o:p></o:p></span></p>\r\n<p class=\"MsoNormal\"><span style=\"font-size:10.0pt\"><o:p>&nbsp;</o:p></span></p>\r\n<p class=\"MsoNormal\"><b><span style=\"font-size:12.0pt\">Q: How do I decide if a customer should win some SWAG?<o:p></o:p></span></b></p>\r\n<p class=\"MsoNormal\"><b><span style=\"font-size:12.0pt\">A:</span></b><span style=\"font-size:12.0pt\"> This is up to you, but should be based on severity and impact. However, at this stage any bug you choose to open and/or fix for 16 should be a winner. Please\r\n see Beth Petry or Wendy Stidmon for any questions during the event OR to confirm a winner so we can get them on the follow-up list.<o:p></o:p></span></p>\r\n<p class=\"MsoNormal\"><span style=\"font-size:12.0pt\"><o:p>&nbsp;</o:p></span></p>\r\n<p class=\"MsoNormal\"><b><span style=\"font-size:12.0pt\">Q: Is this event under NDA?<o:p></o:p></span></b></p>\r\n<p class=\"MsoNormal\"><b><span style=\"font-size:12.0pt\">A:</span></b><span style=\"font-size:12.0pt\"> No. It is open to anyone running the preview bits however we are advertising mainly to our current program customers.<o:p></o:p></span></p>\r\n<p class=\"MsoNormal\"><span style=\"font-size:10.0pt\"><o:p>&nbsp;</o:p></span></p>\r\n<p class=\"MsoNormal\"><b><span style=\"font-size:12.0pt\">Q: Will there be an audio component such as Skype?<o:p></o:p></span></b></p>\r\n<p class=\"MsoNormal\"><b><span style=\"font-size:12.0pt\">A:</span></b><span style=\"font-size:12.0pt\"> Yes and no. There will be a Skype event for MS staff only to ensure smooth communication with product teams not located in Redmond. There will be no audio for\r\n customers.<o:p></o:p></span></p>\r\n<p class=\"MsoNormal\"><span style=\"font-size:12.0pt\"><o:p>&nbsp;</o:p></span></p>\r\n<p class=\"MsoNormal\"><o:p>&nbsp;</o:p></p>\r\n<p class=\"MsoNormal\"><o:p>&nbsp;</o:p></p>\r\n<p class=\"MsoNormal\"><o:p>&nbsp;</o:p></p>\r\n<p class=\"MsoNormal\"><o:p>&nbsp;</o:p></p>\r\n</div>\r\n</body>\r\n</html>\r\n"
+		},
+		"BodyPreview": "As promised in this week’s Pulse, here is the invite information for the Bug Bash on July 15th – next Wednesday!\r\nHope to see you there if you are in Redmond, join via Skype if you are in other locations.\r\n\r\n-----Original Appointment-----\r\nFrom: Wendy Sti",
+		"Location": {
+			"DisplayName": "36 / Shilshole",
+			"Address": {
+				"Street": "",
+				"City": "",
+				"State": "",
+				"CountryOrRegion": "",
+				"PostalCode": ""
+			},
+			"Coordinates": {
+				"Accuracy": "NaN",
+				"Altitude": "NaN",
+				"AltitudeAccuracy": "NaN",
+				"Latitude": "NaN",
+				"Longitude": "NaN"
+			}
+		},
+		"Organizer": {
+			"EmailAddress": {
+				"Address": "v-westi@microsoft.com",
+				"Name": "Wendy Stidmon (Allegis Group Services Inc)"
+			}
+		},
+		"Start": "2015-07-15T17:00:00Z",
+		"StartTimeZone": "Pacific Standard Time",
+		"End": "2015-07-15T20:00:00Z",
+		"EndTimeZone": "Pacific Standard Time",
+		"Importance": "Normal",
+		"Type": "SingleInstance",
+		"ResponseStatus": {
+			"Response": "TentativelyAccepted",
+			"Time": "2015-07-10T15:56:00Z"
+		},
+		"PredictedHeartRate": "72.9733405390362"
+	},
+	{
+		"@odata.id": "https://outlook.office365.com/api/v1.0/Users('rhoward@exchange.microsoft.com')/Events('AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQBGAAAAAABlDZTRoj6wTqag8Dj1DWJ6BwB1iIl5MD4gRrMKULg8JkZSAAACOEvIAAAPwSiPJrG6R6-c1CxJ2auaAAA9bmx0AAA=')",
+		"@odata.etag": "W/\"D8Eojyaxukev3NQsSdmrmgAAPY7vQg==\"",
+		"Id": "AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQBGAAAAAABlDZTRoj6wTqag8Dj1DWJ6BwB1iIl5MD4gRrMKULg8JkZSAAACOEvIAAAPwSiPJrG6R6-c1CxJ2auaAAA9bmx0AAA=",
+		"Subject": "Discuss Bhargav interview impressions",
+		"Attendees": [
+			{
+				"EmailAddress": {
+					"Address": "soliver@exchange.microsoft.com",
+					"Name": "Stephen Oliver"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "Seth.Grossman@microsoft.com",
+					"Name": "Seth Grossman"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "luken@microsoft.com",
+					"Name": "Luke Nyswonger"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "rhoward@exchange.microsoft.com",
+					"Name": "Rob Howard (OFFICE)"
+				},
+				"Status": null,
+				"Type": "Required"
+			}
+		],
+		"Body": {
+			"ContentType": "HTML",
+			"Content": "<html xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:w=\"urn:schemas-microsoft-com:office:word\" xmlns:m=\"http://schemas.microsoft.com/office/2004/12/omml\" xmlns=\"http://www.w3.org/TR/REC-html40\">\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\r\n<meta name=\"Generator\" content=\"Microsoft Word 15 (filtered medium)\">\r\n<style><!--\r\n/* Font Definitions */\r\n@font-face\r\n\t{font-family:\"Cambria Math\";\r\n\tpanose-1:2 4 5 3 5 4 6 3 2 4;}\r\n@font-face\r\n\t{font-family:Calibri;\r\n\tpanose-1:2 15 5 2 2 2 4 3 2 4;}\r\n/* Style Definitions */\r\np.MsoNormal, li.MsoNormal, div.MsoNormal\r\n\t{margin:0in;\r\n\tmargin-bottom:.0001pt;\r\n\tfont-size:11.0pt;\r\n\tfont-family:\"Calibri\",sans-serif;}\r\na:link, span.MsoHyperlink\r\n\t{mso-style-priority:99;\r\n\tcolor:#0563C1;\r\n\ttext-decoration:underline;}\r\na:visited, span.MsoHyperlinkFollowed\r\n\t{mso-style-priority:99;\r\n\tcolor:#954F72;\r\n\ttext-decoration:underline;}\r\np.msonormal0, li.msonormal0, div.msonormal0\r\n\t{mso-style-name:msonormal;\r\n\tmso-margin-top-alt:auto;\r\n\tmargin-right:0in;\r\n\tmso-margin-bottom-alt:auto;\r\n\tmargin-left:0in;\r\n\tfont-size:12.0pt;\r\n\tfont-family:\"Times New Roman\",serif;}\r\nspan.EmailStyle18\r\n\t{mso-style-type:personal-compose;\r\n\tfont-family:\"Calibri\",sans-serif;\r\n\tcolor:windowtext;}\r\n.MsoChpDefault\r\n\t{mso-style-type:export-only;\r\n\tfont-size:10.0pt;\r\n\tfont-family:\"Calibri\",sans-serif;}\r\n@page WordSection1\r\n\t{size:8.5in 11.0in;\r\n\tmargin:1.0in 1.0in 1.0in 1.0in;}\r\ndiv.WordSection1\r\n\t{page:WordSection1;}\r\n--></style>\r\n</head>\r\n<body lang=\"EN-US\" link=\"#0563C1\" vlink=\"#954F72\">\r\n<div class=\"WordSection1\">\r\n<p class=\"MsoNormal\"><o:p></o:p></p>\r\n</div>\r\n</body>\r\n</html>\r\n"
+		},
+		"BodyPreview": "",
+		"Location": {
+			"DisplayName": "Rob's office (35/3876)",
+			"Address": {
+				"Street": "",
+				"City": "",
+				"State": "",
+				"CountryOrRegion": "",
+				"PostalCode": ""
+			},
+			"Coordinates": {
+				"Accuracy": "NaN",
+				"Altitude": "NaN",
+				"AltitudeAccuracy": "NaN",
+				"Latitude": "NaN",
+				"Longitude": "NaN"
+			}
+		},
+		"Organizer": {
+			"EmailAddress": {
+				"Address": "soliver@exchange.microsoft.com",
+				"Name": "Stephen Oliver"
+			}
+		},
+		"Start": "2015-07-15T17:30:00Z",
+		"StartTimeZone": "Pacific Standard Time",
+		"End": "2015-07-15T18:00:00Z",
+		"EndTimeZone": "Pacific Standard Time",
+		"Importance": "Normal",
+		"Type": "SingleInstance",
+		"ResponseStatus": {
+			"Response": "Accepted",
+			"Time": "2015-07-15T00:09:51.4312669Z"
+		},
+		"PredictedHeartRate": "72.9733405390362"
+	},
+	{
+		"@odata.id": "https://outlook.office365.com/api/v1.0/Users('rhoward@exchange.microsoft.com')/Events('AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQFRAAgI0oyoU73AAEYAAAAAZQ2U0aI_sE6moPA49Q1iegcAdYiJeTA_IEazClC4PCZGUgAAAjhLyAAAfoiEacoU90y68z2kynApkgABnpEmDQAAEA==')",
+		"@odata.etag": "W/\"D8Eojyaxukev3NQsSdmrmgAAOHglCQ==\"",
+		"Id": "AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQFRAAgI0oyoU73AAEYAAAAAZQ2U0aI_sE6moPA49Q1iegcAdYiJeTA_IEazClC4PCZGUgAAAjhLyAAAfoiEacoU90y68z2kynApkgABnpEmDQAAEA==",
+		"Subject": "Rob : Tristan 1 on 1",
+		"Attendees": [
+			{
+				"EmailAddress": {
+					"Address": "tristand@exchange.microsoft.com",
+					"Name": "Tristan Davis"
+				},
+				"Status": {
+					"Response": "Accepted",
+					"Time": "0001-01-01T00:00:00Z"
+				},
+				"Type": "Required"
+			}
+		],
+		"Body": {
+			"ContentType": "HTML",
+			"Content": "<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\r\n<meta name=\"Generator\" content=\"Microsoft Exchange Server\">\r\n<!-- converted from rtf --><style><!-- .EmailQuote { margin-left: 1pt; padding-left: 4pt; border-left: #800000 2px solid; } --></style>\r\n</head>\r\n<body>\r\n<font face=\"Times New Roman\" size=\"2\"><span style=\"font-size:11pt;\">\r\n<div></div>\r\n<div></div>\r\n</span></font>\r\n</body>\r\n</html>\r\n"
+		},
+		"BodyPreview": "",
+		"Location": {
+			"DisplayName": "Rob's Office",
+			"Address": {
+				"Street": "",
+				"City": "",
+				"State": "",
+				"CountryOrRegion": "",
+				"PostalCode": ""
+			},
+			"Coordinates": {
+				"Accuracy": "NaN",
+				"Altitude": "NaN",
+				"AltitudeAccuracy": "NaN",
+				"Latitude": "NaN",
+				"Longitude": "NaN"
+			}
+		},
+		"Organizer": {
+			"EmailAddress": {
+				"Address": "rhoward@exchange.microsoft.com",
+				"Name": "Rob Howard (OFFICE)"
+			}
+		},
+		"Start": "2015-07-15T18:00:00Z",
+		"StartTimeZone": "Pacific Standard Time",
+		"End": "2015-07-15T19:00:00Z",
+		"EndTimeZone": "Pacific Standard Time",
+		"Importance": "Normal",
+		"Type": "Occurrence",
+		"ResponseStatus": {
+			"Response": "Organizer",
+			"Time": "0001-01-01T00:00:00Z"
+		},
+		"PredictedHeartRate": "51.0972978123966"
+	},
+	{
+		"@odata.id": "https://outlook.office365.com/api/v1.0/Users('rhoward@exchange.microsoft.com')/Events('AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQFRAAgI0oyoU73AAEYAAAAAZQ2U0aI_sE6moPA49Q1iegcAdYiJeTA_IEazClC4PCZGUgAAAjhLyAAAfoiEacoU90y68z2kynApkgABnpEm7gAAEA==')",
+		"@odata.etag": "W/\"D8Eojyaxukev3NQsSdmrmgAANUWEBQ==\"",
+		"Id": "AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQFRAAgI0oyoU73AAEYAAAAAZQ2U0aI_sE6moPA49Q1iegcAdYiJeTA_IEazClC4PCZGUgAAAjhLyAAAfoiEacoU90y68z2kynApkgABnpEm7gAAEA==",
+		"Subject": "Microsoft Graph (building 32) weekly meeting - workloads",
+		"Attendees": [
+			{
+				"EmailAddress": {
+					"Address": "dkershaw@microsoft.com",
+					"Name": "Dan Kershaw"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "kjetilbe@microsoft.com",
+					"Name": "Kjetil Bergstrand"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "Marek.Rycharski@microsoft.com",
+					"Name": "Marek Rycharski"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "ppantel@microsoft.com",
+					"Name": "Patrick Pantel"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "Venkat.Ayyadevara@microsoft.com",
+					"Name": "Venkat Ayyadevara"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "fernangv@exchange.microsoft.com",
+					"Name": "Fernando Garcia (TEAMSPACE)"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "jimk@exchange.microsoft.com",
+					"Name": "Jim Kleewein"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "jefwight@service.exchange.microsoft.com",
+					"Name": "Jeff Wight"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "lucia@exchange.microsoft.com",
+					"Name": "Lucia Andrei"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "taowan@microsoft.com",
+					"Name": "Tao Wang (OSF)"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "yinaa@exchange.microsoft.com",
+					"Name": "Yina Arenas"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "murlis@microsoft.com",
+					"Name": "Murli Satagopan"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "rhoward@exchange.microsoft.com",
+					"Name": "Rob Howard (OFFICE)"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "vtaranov@exchange.microsoft.com",
+					"Name": "Victoria Taranov"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "johannes@microsoft.com",
+					"Name": "Johannes Gehrke"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "skafka@microsoft.com",
+					"Name": "Steve Kafka"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "titusm@exchange.microsoft.com",
+					"Name": "Titus Miron"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "shaozhu@exchange.microsoft.com",
+					"Name": "Shaofeng Zhu"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "Dmitry.Pugachev@microsoft.com",
+					"Name": "Dmitry Pugachev"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "dilobo@exchange.microsoft.com",
+					"Name": "Dianne Lobo"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "sanakhan@exchange.microsoft.com",
+					"Name": "Sana Khan"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "Tom.Laird-McConnell@microsoft.com",
+					"Name": "Tom Laird-McConnell"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "Paul.Elliott@microsoft.com",
+					"Name": "Paul Elliott"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "rohitag@microsoft.com",
+					"Name": "Rohit Nagarmal"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "ZLATKOM@exchange.microsoft.com",
+					"Name": "Zlatko Michailov"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "Haytham.Abuel-Futuh@microsoft.com",
+					"Name": "Haytham Abuel-Futuh (AZURE XSTORE)"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "subashb@microsoft.com",
+					"Name": "Subash Bhamidipati"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "ananthar@exchange.microsoft.com",
+					"Name": "Ananth Ramanathan"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "erayc@exchange.microsoft.com",
+					"Name": "Eray Chou"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "Howard.Crow@microsoft.com",
+					"Name": "Howard Crow"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "abahgat@microsoft.com",
+					"Name": "Abdelkader Bahgat"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "markenc@microsoft.com",
+					"Name": "Mark Encarnacion"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "gkroe@exchange.microsoft.com",
+					"Name": "Gunter Kroe"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "briankih@exchange.microsoft.com",
+					"Name": "Brian Kihneman"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "jfilcik@exchange.microsoft.com",
+					"Name": "Joe Filcik"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "tracef@exchange.microsoft.com",
+					"Name": "Trace Ferrier"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "Geoffrey.King@microsoft.com",
+					"Name": "Geoffrey King"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "JINHOJ@exchange.microsoft.com",
+					"Name": "Jin Ho Jeon"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "feliciaw@exchange.microsoft.com",
+					"Name": "Felicia Werchan"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "gabehall@exchange.microsoft.com",
+					"Name": "Gabe Hall"
+				},
+				"Status": null,
+				"Type": "Required"
+			}
+		],
+		"Body": {
+			"ContentType": "HTML",
+			"Content": "<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\r\n<meta name=\"Generator\" content=\"Microsoft Exchange Server\">\r\n<!-- converted from rtf --><style><!-- .EmailQuote { margin-left: 1pt; padding-left: 4pt; border-left: #800000 2px solid; } --></style>\r\n</head>\r\n<body>\r\n<font face=\"Times New Roman\" size=\"3\"><span style=\"font-size:12pt;\"><a name=\"_InsertRtfSavedPosition\"></a>\r\n<div><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\">Renewing the series</span></font></div>\r\n<div><font face=\"Calibri\" size=\"1\" color=\"#404040\"><span style=\"font-size:8pt;\">.........................................................................................................................................</span></font></div>\r\n<a name=\"OutJoinLink\"></a>\r\n<div><font face=\"Calibri\" size=\"4\" color=\"#0066CC\"><span style=\"font-size:14pt;\"><font face=\"Wingdings\">à</font>\r\n<a href=\"https://meet.lync.com/microsoft/dkershaw/714J53YF\"><font size=\"4\"><span style=\"font-size:16pt;\"><u>Join Lync Meeting</u></span></font></a><font color=\"black\">\r\n</font><a name=\"OutSharedNoteBorder\"></a><a name=\"OutSharedNoteLink\"></a></span></font></div>\r\n<div><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\"></span></font></div>\r\n<div><font face=\"Calibri\" size=\"3\"><span style=\"font-size:13pt;\">Join by phone</span></font></div>\r\n<div style=\"margin-bottom:2pt;\"><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\"><a href=\"tel:&#43;14257063470\"><font size=\"2\" color=\"#0066CC\"><span style=\"font-size:10pt;\"><u>&#43;14257063470</u></span></font></a><font size=\"2\"><span style=\"font-size:10pt;\">\r\n (Redmond) English (United States) </span></font></span></font></div>\r\n<div style=\"margin-bottom:2pt;\"><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\"><a href=\"tel:&#43;14257070048\"><font size=\"2\" color=\"#0066CC\"><span style=\"font-size:10pt;\"><u>&#43;14257070048</u></span></font></a><font size=\"2\"><span style=\"font-size:10pt;\">\r\n (Redmond) English (United States) </span></font><font size=\"1\"><span style=\"font-size:3pt;\"></span></font></span></font></div>\r\n<div style=\"margin-bottom:2pt;\"><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\"><a href=\"tel:&#43;14255380005\"><font size=\"2\" color=\"#0066CC\"><span style=\"font-size:10pt;\"><u>&#43;14255380005</u></span></font></a><font size=\"2\"><span style=\"font-size:10pt;\">\r\n (Redmond) English (United States) </span></font><font size=\"1\"><span style=\"font-size:3pt;\"></span></font></span></font></div>\r\n<div style=\"margin-bottom:2pt;\"><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\"><a href=\"tel:&#43;14255380006\"><font size=\"2\" color=\"#0066CC\"><span style=\"font-size:10pt;\"><u>&#43;14255380006</u></span></font></a><font size=\"2\"><span style=\"font-size:10pt;\">\r\n (Redmond) English (United States) </span></font><font size=\"1\"><span style=\"font-size:3pt;\"></span></font></span></font></div>\r\n<div style=\"margin-bottom:2pt;\"><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\"><a href=\"https://dialin.lync.com/microsoft.com\"><font size=\"2\" color=\"#0066CC\"><span style=\"font-size:10pt;\"><u>Find a local number</u></span></font></a>\r\n</span></font></div>\r\n<div style=\"margin-bottom:2pt;\"><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\"></span></font></div>\r\n<div style=\"margin-bottom:2pt;\"><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\">Conference ID: 259784</span></font></div>\r\n<div><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\"></span></font></div>\r\n<div><font face=\"Calibri\" size=\"1\"><span style=\"font-size:3pt;\"><a href=\"https://dialin.lync.com/microsoft.com\"><font size=\"2\" color=\"#0066CC\"><span style=\"font-size:11pt;\"><u>Forgot your dial-in PIN?</u></span></font></a>\r\n<font size=\"2\"><span style=\"font-size:11pt;\">|</span></font><a href=\"http://go.microsoft.com/fwlink/?LinkId=389737\"><font size=\"2\" color=\"#0066CC\"><span style=\"font-size:11pt;\"><u>Help</u></span></font></a>\r\n</span></font></div>\r\n<div><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\"></span></font></div>\r\n<div><font face=\"Calibri\" size=\"1\" color=\"#CFCFCF\"><span style=\"font-size:1pt;\"><font size=\"1\"><span style=\"font-size:0.65pt;\"><sub>[!OC([1033])!]</sub></span></font></span></font></div>\r\n<div style=\"margin-bottom:10pt;\"><font face=\"Calibri\" size=\"1\" color=\"#404040\"><span style=\"font-size:8pt;\">.........................................................................................................................................</span></font></div>\r\n<div><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\"></span></font></div>\r\n<div><font face=\"Calibri\" size=\"2\"><span style=\"font-size:11pt;\"></span></font></div>\r\n</span></font>\r\n</body>\r\n</html>\r\n"
+		},
+		"BodyPreview": "Renewing the series\r\n.........................................................................................................................................\r\n--> Join Lync Meeting<https://meet.lync.com/microsoft/dkershaw/714J53YF>\r\n\r\nJoin by phone\r\n+1",
+		"Location": {
+			"DisplayName": "Conf Room 32/3403 (18) AV",
+			"Address": {
+				"Street": "",
+				"City": "",
+				"State": "",
+				"CountryOrRegion": "",
+				"PostalCode": ""
+			},
+			"Coordinates": {
+				"Accuracy": "NaN",
+				"Altitude": "NaN",
+				"AltitudeAccuracy": "NaN",
+				"Latitude": "NaN",
+				"Longitude": "NaN"
+			}
+		},
+		"Organizer": {
+			"EmailAddress": {
+				"Address": "dkershaw@microsoft.com",
+				"Name": "Dan Kershaw"
+			}
+		},
+		"Start": "2015-07-15T19:00:00Z",
+		"StartTimeZone": "Pacific Standard Time",
+		"End": "2015-07-15T20:00:00Z",
+		"EndTimeZone": "Pacific Standard Time",
+		"Importance": "Normal",
+		"Type": "Occurrence",
+		"ResponseStatus": {
+			"Response": "Accepted",
+			"Time": "2015-04-22T16:47:00Z"
+		},
+		"PredictedHeartRate": "51.0972978123966"
+	},
+	{
+		"@odata.id": "https://outlook.office365.com/api/v1.0/Users('rhoward@exchange.microsoft.com')/Events('AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQFRAAgI0oyoU73AAEYAAAAAZQ2U0aI_sE6moPA49Q1iegcAdYiJeTA_IEazClC4PCZGUgAAAjhLyAAAD8Eojyaxukev3NQsSdmrmgAAJhSlRAAAEA==')",
+		"@odata.etag": "W/\"++ZKcluuGkupEB+ay39vmAAXSc4=\"",
+		"Id": "AAMkAGQ5MGIyODY4LTg0MTEtNDVkOC1iYTE1LWU5NjYwYjMxNzRmOQFRAAgI0oyoU73AAEYAAAAAZQ2U0aI_sE6moPA49Q1iegcAdYiJeTA_IEazClC4PCZGUgAAAjhLyAAAD8Eojyaxukev3NQsSdmrmgAAJhSlRAAAEA==",
+		"Subject": "Recurring: Office API Patterns Discussion",
+		"Attendees": [
+			{
+				"EmailAddress": {
+					"Address": "suramam@exchange.microsoft.com",
+					"Name": "Sudhi Ramamurthy"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "rhoward@exchange.microsoft.com",
+					"Name": "Rob Howard (OFFICE)"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "rolandoj@exchange.microsoft.com",
+					"Name": "Rolando Jimenez Salgado"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "juanbl@exchange.microsoft.com",
+					"Name": "Juan Balmori Labra"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "shaozhu@exchange.microsoft.com",
+					"Name": "Shaofeng Zhu"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "MIZLATKO@exchange.microsoft.com",
+					"Name": "Michael Zlatkovsky"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "TrangLuu@microsoft.com",
+					"Name": "Trang Luu"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "alexcro@exchange.microsoft.com",
+					"Name": "Alexandru Croicu"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "tristand@exchange.microsoft.com",
+					"Name": "Tristan Davis"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "MARKYANG@exchange.microsoft.com",
+					"Name": "Mark Young (YANG)"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "justhua@exchange.microsoft.com",
+					"Name": "Justin Hua"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "Yu.Liu@microsoft.com",
+					"Name": "Yu Liu (SKY)"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "sanonsen@microsoft.com",
+					"Name": "Steve Anonsen"
+				},
+				"Status": null,
+				"Type": "Required"
+			},
+			{
+				"EmailAddress": {
+					"Address": "heidimu@exchange.microsoft.com",
+					"Name": "Heidi Munson"
+				},
+				"Status": null,
+				"Type": "Required"
+			}
+		],
+		"Body": {
+			"ContentType": "HTML",
+			"Content": "<html xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:w=\"urn:schemas-microsoft-com:office:word\" xmlns:m=\"http://schemas.microsoft.com/office/2004/12/omml\" xmlns=\"http://www.w3.org/TR/REC-html40\">\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\r\n<meta name=\"Generator\" content=\"Microsoft Word 15 (filtered medium)\">\r\n<style><!--\r\n/* Font Definitions */\r\n@font-face\r\n\t{font-family:Wingdings;\r\n\tpanose-1:5 0 0 0 0 0 0 0 0 0;}\r\n@font-face\r\n\t{font-family:\"Cambria Math\";\r\n\tpanose-1:2 4 5 3 5 4 6 3 2 4;}\r\n@font-face\r\n\t{font-family:Calibri;\r\n\tpanose-1:2 15 5 2 2 2 4 3 2 4;}\r\n/* Style Definitions */\r\np.MsoNormal, li.MsoNormal, div.MsoNormal\r\n\t{margin:0in;\r\n\tmargin-bottom:.0001pt;\r\n\tfont-size:11.0pt;\r\n\tfont-family:\"Calibri\",sans-serif;}\r\na:link, span.MsoHyperlink\r\n\t{mso-style-priority:99;\r\n\tcolor:#0563C1;\r\n\ttext-decoration:underline;}\r\na:visited, span.MsoHyperlinkFollowed\r\n\t{mso-style-priority:99;\r\n\tcolor:#954F72;\r\n\ttext-decoration:underline;}\r\np.msonormal0, li.msonormal0, div.msonormal0\r\n\t{mso-style-name:msonormal;\r\n\tmso-margin-top-alt:auto;\r\n\tmargin-right:0in;\r\n\tmso-margin-bottom-alt:auto;\r\n\tmargin-left:0in;\r\n\tfont-size:12.0pt;\r\n\tfont-family:\"Times New Roman\",serif;}\r\nspan.EmailStyle18\r\n\t{mso-style-type:personal-compose;\r\n\tfont-family:\"Calibri\",sans-serif;\r\n\tcolor:windowtext;}\r\n.MsoChpDefault\r\n\t{mso-style-type:export-only;\r\n\tfont-size:10.0pt;\r\n\tfont-family:\"Calibri\",sans-serif;}\r\n@page WordSection1\r\n\t{size:8.5in 11.0in;\r\n\tmargin:1.0in 1.0in 1.0in 1.0in;}\r\ndiv.WordSection1\r\n\t{page:WordSection1;}\r\n--></style><!--[if gte mso 9]><xml>\r\n<o:shapedefaults v:ext=\"edit\" spidmax=\"1026\" />\r\n</xml><![endif]--><!--[if gte mso 9]><xml>\r\n<o:shapelayout v:ext=\"edit\">\r\n<o:idmap v:ext=\"edit\" data=\"1\" />\r\n</o:shapelayout></xml><![endif]-->\r\n</head>\r\n<body lang=\"EN-US\" link=\"#0563C1\" vlink=\"#954F72\">\r\n<div class=\"WordSection1\">\r\n<p class=\"MsoNormal\">Hi All,<o:p></o:p></p>\r\n<p class=\"MsoNormal\"><o:p></o:p></p>\r\n<p class=\"MsoNormal\">Adding this calendar invite back on your calendar as many seemed to have lost it. The timing is the same: Wed, Fri: 1-2pm. In 35/4347.\r\n<o:p></o:p></p>\r\n<p class=\"MsoNormal\"><o:p></o:p></p>\r\n<p class=\"MsoNormal\">Document: <o:p></o:p></p>\r\n<p class=\"MsoNormal\"><a href=\"https://msft.spoppe.com/teams/ODP/dev/Dev%20Design%20Docs/Excel%20API%20Backlog.docx?web=1\">https://msft.spoppe.com/teams/ODP/dev/Dev%20Design%20Docs/Excel%20API%20Backlog.docx?web=1</a><o:p></o:p></p>\r\n<p class=\"MsoNormal\"><o:p></o:p></p>\r\n<p class=\"MsoNormal\" style=\"text-autospace:none\"><a name=\"_InsertRtfSavedPosition\"></a><span style=\"font-size:8.0pt;color:#404040\">.........................................................................................................................................</span><b><span style=\"font-size:14.0pt\"><o:p></o:p></span></b></p>\r\n<p class=\"MsoNormal\" style=\"text-autospace:none\"><a name=\"OutJoinLink\"><span style=\"font-size:14.0pt;font-family:Wingdings;color:#0066CC\">à</span></a><span style=\"font-size:14.0pt;color:#0066CC\">\r\n</span><a href=\"https://join.microsoft.com/meet/suramam/D3F416U1\"><span style=\"font-size:16.0pt;color:#0066CC\">Join Skype Meeting</span></a><span style=\"font-size:14.0pt\">\r\n<a name=\"OutSharedNoteBorder\"></a><a name=\"OutSharedNoteLink\"></a></span><span style=\"font-size:14.0pt\"><o:p></o:p></span></p>\r\n<table class=\"MsoNormalTable\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"border-collapse:collapse\">\r\n<tbody>\r\n<tr>\r\n<td width=\"400\" valign=\"top\" style=\"width:300.0pt;padding:0in 0in 0in 0in\">\r\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt:3.0pt;margin-right:0in;margin-bottom:12.0pt;margin-left:16.0pt;line-height:125%;text-autospace:none\">\r\n<span style=\"font-size:10.0pt;line-height:125%\">This is an online meeting for Skype for Business, the professional meetings and communications app formerly known as Lync.<o:p></o:p></span></p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p class=\"MsoNormal\" style=\"text-autospace:none\"><span lang=\"EN\" style=\"font-size:13.0pt;color:black\">Join by phone</span><span lang=\"EN\" style=\"font-size:8.0pt\"><o:p></o:p></span></p>\r\n<p class=\"MsoNormal\" style=\"margin-bottom:2.0pt;text-autospace:none\"><span lang=\"EN\" style=\"font-size:10.0pt\"><a href=\"tel:&#43;14257063500\"><span style=\"color:#0066CC\">&#43;14257063500</span></a> (USA - Redmond Campus) English (United States)\r\n</span><span lang=\"EN\" style=\"font-size:8.0pt\"><o:p></o:p></span></p>\r\n<p class=\"MsoNormal\" style=\"margin-bottom:2.0pt;text-autospace:none\"><span lang=\"EN\" style=\"font-size:10.0pt\"><a href=\"tel:&#43;18883203585\"><span style=\"color:#0066CC\">&#43;18883203585</span></a> (USA - Redmond Campus) English (United States)\r\n</span><span lang=\"EN\" style=\"font-size:3.0pt\"><o:p></o:p></span></p>\r\n<p class=\"MsoNormal\" style=\"margin-bottom:2.0pt;text-autospace:none\"><u><span lang=\"EN\" style=\"font-size:10.0pt;color:#943634\"><a href=\"https://join.microsoft.com/dialin\"><span style=\"color:#0066CC\">Find a local number</span></a></span></u><span lang=\"EN\">\r\n</span><span lang=\"EN\" style=\"font-size:10.5pt\"><o:p></o:p></span></p>\r\n<p class=\"MsoNormal\" style=\"margin-bottom:2.0pt;text-autospace:none\"><span lang=\"EN\" style=\"font-size:8.0pt\"><o:p></o:p></span></p>\r\n<p class=\"MsoNormal\" style=\"margin-bottom:2.0pt;text-autospace:none\"><span lang=\"EN\" style=\"font-size:10.0pt\">Conference ID: 475780230</span><span lang=\"EN\" style=\"font-size:10.5pt\"><o:p></o:p></span></p>\r\n<p class=\"MsoNormal\" style=\"text-autospace:none\"><span lang=\"EN\" style=\"font-size:10.0pt;color:#0066CC\"><a href=\"https://join.microsoft.com/dialin\"><span style=\"color:#0066CC\">Forgot your dial-in PIN?</span></a></span><span lang=\"EN\" style=\"font-size:3.0pt\">\r\n</span><span lang=\"EN\">|</span><span lang=\"EN\" style=\"font-size:10.0pt\"><a href=\"http://o15.officeredir.microsoft.com/r/rlidLync15?clid=1033&amp;p1=5&amp;p2=2009\"><span style=\"color:#0066CC\">Help</span></a></span><span lang=\"EN\" style=\"font-size:3.0pt\">\r\n</span><span lang=\"EN\" style=\"font-size:8.0pt\"><o:p></o:p></span></p>\r\n<p class=\"MsoNormal\" style=\"text-autospace:none\"><span lang=\"EN\" style=\"font-size:14.0pt\"><o:p></o:p></span></p>\r\n<p class=\"MsoNormal\" style=\"text-autospace:none\"><sub><span lang=\"EN\" style=\"font-size:1.0pt;color:white\">[!OC([1033])!]</span></sub><span lang=\"EN\" style=\"font-size:3.0pt\"><o:p></o:p></span></p>\r\n<p class=\"MsoNormal\" style=\"margin-bottom:10.0pt;line-height:115%;text-autospace:none\">\r\n<span lang=\"EN\" style=\"font-size:8.0pt;line-height:115%;color:#404040\">.........................................................................................................................................</span><span lang=\"EN\" style=\"font-size:10.5pt;line-height:115%\"><o:p></o:p></span></p>\r\n<p class=\"MsoNormal\"><o:p></o:p></p>\r\n</div>\r\n</body>\r\n</html>\r\n"
+		},
+		"BodyPreview": "Hi All,\r\n\r\nAdding this calendar invite back on your calendar as many seemed to have lost it. The timing is the same: Wed, Fri: 1-2pm. In 35/4347.\r\n\r\nDocument:\r\nhttps://msft.spoppe.com/teams/ODP/dev/Dev%20Design%20Docs/Excel%20API%20Backlog.docx?web=1\r\n\r\n.",
+		"Location": {
+			"DisplayName": "Conf Room 35/4347 (12)",
+			"Address": {
+				"Street": "",
+				"City": "",
+				"State": "",
+				"CountryOrRegion": "",
+				"PostalCode": ""
+			},
+			"Coordinates": {
+				"Accuracy": "NaN",
+				"Altitude": "NaN",
+				"AltitudeAccuracy": "NaN",
+				"Latitude": "NaN",
+				"Longitude": "NaN"
+			}
+		},
+		"Organizer": {
+			"EmailAddress": {
+				"Address": "suramam@exchange.microsoft.com",
+				"Name": "Sudhi Ramamurthy"
+			}
+		},
+		"Start": "2015-07-15T20:00:00Z",
+		"StartTimeZone": "Pacific Standard Time",
+		"End": "2015-07-15T21:00:00Z",
+		"EndTimeZone": "Pacific Standard Time",
+		"Importance": "Normal",
+		"Type": "Occurrence",
+		"ResponseStatus": {
+			"Response": "TentativelyAccepted",
+			"Time": "0001-01-01T00:00:00Z"
+		},
+		"PredictedHeartRate": "51.0972978123966"
+	}
+]

@@ -1,0 +1,30 @@
+{
+	"_id": "55a5a6244453be321465384e",
+	"aadUserId": "cde8e228-00b5-4cb6-90c0-e6991b6f82d6",
+	"firstName": "Rob",
+	"lastName": "Howard (OFFICE)",
+	"email": "rhoward@microsoft.com",
+	"msaUserId": "f7834847e83230e406bc1a8335ea0243",
+	"sendPredictionEmails": true,
+	"sendSummaryEmails": true,
+	"addUser": {
+		"aud": "f531c26a-4d16-44b9-80cf-aa49d7394fbb",
+		"iss": "https://sts.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47/",
+		"iat": 1436988381,
+		"nbf": 1436988381,
+		"exp": 1436992281,
+		"ver": "1.0",
+		"tid": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+		"oid": "cde8e228-00b5-4cb6-90c0-e6991b6f82d6",
+		"upn": "rhoward@microsoft.com",
+		"sub": "qMcsv4lR3UETynFdrKoBrSE0SmZ2uX_KezMDNMvhKUo",
+		"given_name": "Rob",
+		"family_name": "Howard (OFFICE)",
+		"name": "Rob Howard (OFFICE)",
+		"amr": [
+			"pwd"
+		],
+		"unique_name": "rhoward@microsoft.com",
+		"onprem_sid": "S-1-5-21-2127521184-1604012920-1887927527-2490351"
+	}
+}
